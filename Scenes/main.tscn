@@ -1,47 +1,8 @@
 [gd_scene load_steps=7 format=4 uid="uid://d3qdva6rk1xkp"]
 
 [ext_resource type="Texture2D" uid="uid://cdabw38tq3c07" path="res://assets/background/tile_grid_test_3.png" id="1_b684o"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_tmp6v"]
 [ext_resource type="PackedScene" uid="uid://bc3lfejnfa42e" path="res://Scenes/car.tscn" id="2_olyx2"]
-
-[sub_resource type="GDScript" id="GDScript_oqkaj"]
-script/source = "extends Node2D
-
-@export var mob_scene: PackedScene
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	$MobTimer.start()
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
-func _on_mob_timer_timeout() -> void:
-	# Create a new instance of the Mob scene.
-	var mob = mob_scene.instantiate()
-
-	# Choose a random location on Path2D.
-	var mob_spawn_location = $MobPath/MobSpawnLocation
-	mob_spawn_location.progress_ratio = randf()
-
-	# Set the mob's direction perpendicular to the path direction.
-	var direction = mob_spawn_location.rotation + PI / 2
-
-	# Set the mob's position to a random location.
-	mob.position = mob_spawn_location.position
-
-	# Add some randomness to the direction.
-	direction += randf_range(-PI / 4, PI / 4)
-	mob.rotation = direction
-
-	# Choose the velocity for the mob.
-	var velocity = Vector2(randf_range(150.0, 250.0), 0.0)
-
-	# Spawn the mob by adding it to the Main scene.
-	add_child(mob)
-"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ufy20"]
 texture = ExtResource("1_b684o")
@@ -79,10 +40,11 @@ _data = {
 }
 point_count = 7
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" node_paths=PackedStringArray("mob_path")]
 position = Vector2(1, 0)
-script = SubResource("GDScript_oqkaj")
+script = ExtResource("1_tmp6v")
 mob_scene = ExtResource("2_olyx2")
+mob_path = NodePath("MobPath/MobSpawnPath")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(0, -1)
@@ -96,8 +58,8 @@ wait_time = 0.5
 curve = SubResource("Curve2D_i2ke7")
 
 [node name="MobSpawnPath" type="PathFollow2D" parent="MobPath"]
-position = Vector2(101.47, 82.9015)
+position = Vector2(58.732, 56.949)
 rotation = 0.545734
-progress = 100.0
+progress = 50.0
 
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]

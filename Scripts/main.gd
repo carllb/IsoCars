@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var mob_scene: PackedScene
+@export var mob_path: PathFollow2D
 var score
 
 
@@ -16,7 +17,8 @@ func _process(_delta: float) -> void:
 	
 func _on_mob_timer_timeout():
 	# Create a new instance of the Mob scene.
-	var mob = mob_scene.instantiate()
+	var mob: Car = mob_scene.instantiate()	
+	mob.path = mob_path
 
 	# Spawn the mob by adding it to the Main scene.
-	add_child(mob)
+	mob_path.add_child(mob)
