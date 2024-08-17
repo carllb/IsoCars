@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpuapajjwc632"]
+
+[ext_resource type="PackedScene" uid="uid://bc3lfejnfa42e" path="res://Scenes/car.tscn" id="1_e4bhp"]
+
+[sub_resource type="Curve2D" id="Curve2D_i2ke7"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 16, 31, 0, 0, 0, 0, 347, 232, 0, 0, 0, 0, 597, 93, 0, 0, 0, 0, 878, 266, 0, 0, 0, 0, 610, 447, 0, 0, 0, 0, 851, 591, 0, 0, 0, 0, 1231, 371)
+}
+point_count = 7
+
+[node name="MobPath" type="Path2D"]
+curve = SubResource("Curve2D_i2ke7")
+
+[node name="MobSpawnPath" type="PathFollow2D" parent="."]
+position = Vector2(16, 31)
+rotation = 0.545734
+
+[node name="Car" parent="MobSpawnPath" instance=ExtResource("1_e4bhp")]

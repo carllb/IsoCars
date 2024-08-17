@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cdabw38tq3c07" path="res://assets/background/tile_grid_test_3.png" id="1_b684o"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_tmp6v"]
 [ext_resource type="PackedScene" uid="uid://bc3lfejnfa42e" path="res://Scenes/car.tscn" id="2_olyx2"]
+[ext_resource type="PackedScene" uid="uid://dpuapajjwc632" path="res://Scenes/mob_path.tscn" id="4_b15tf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ufy20"]
 texture = ExtResource("1_b684o")
@@ -34,17 +35,11 @@ tile_shape = 1
 tile_size = Vector2i(100, 60)
 sources/9 = SubResource("TileSetAtlasSource_ufy20")
 
-[sub_resource type="Curve2D" id="Curve2D_i2ke7"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 16, 31, 0, 0, 0, 0, 347, 232, 0, 0, 0, 0, 597, 93, 0, 0, 0, 0, 878, 266, 0, 0, 0, 0, 610, 447, 0, 0, 0, 0, 851, 591, 0, 0, 0, 0, 1231, 371)
-}
-point_count = 7
-
-[node name="Main" type="Node2D" node_paths=PackedStringArray("mob_path")]
+[node name="Main" type="Node2D"]
 position = Vector2(1, 0)
 script = ExtResource("1_tmp6v")
 mob_scene = ExtResource("2_olyx2")
-mob_path = NodePath("MobPath/MobSpawnPath")
+mob_path = ExtResource("4_b15tf")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(0, -1)
@@ -52,14 +47,8 @@ tile_map_data = PackedByteArray("AAAAABQACQAAAAMAAAABABQACQAAAAMAAAACABQACQAAAAM
 tile_set = SubResource("TileSet_6a7gm")
 
 [node name="MobTimer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 2.0
 
-[node name="MobPath" type="Path2D" parent="."]
-curve = SubResource("Curve2D_i2ke7")
-
-[node name="MobSpawnPath" type="PathFollow2D" parent="MobPath"]
-position = Vector2(58.732, 56.949)
-rotation = 0.545734
-progress = 50.0
+[node name="MobPath" parent="." instance=ExtResource("4_b15tf")]
 
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
