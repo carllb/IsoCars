@@ -4,7 +4,7 @@ extends CharacterBody2D
 var Speed = 400
 var target
 var pathName = ''
-var damage
+var damage = 1
 
 
 func _physics_process(delta) -> void:
