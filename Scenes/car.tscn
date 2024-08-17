@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bc3lfejnfa42e"]
+[gd_scene load_steps=6 format=3 uid="uid://b4i8kgnsy8ysr"]
 
 [ext_resource type="Script" path="res://Scripts/car.gd" id="1_0y4b7"]
 [ext_resource type="Texture2D" uid="uid://sywwtc8sbbn1" path="res://assets/temporary/enemyFlyingAlt_1.png" id="1_tn42f"]
