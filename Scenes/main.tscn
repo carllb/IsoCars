@@ -7,4 +7,5 @@ tile_size = Vector2i(80, 46)
 [node name="Main" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(0, -1)
 tile_set = SubResource("TileSet_8r7yo")
