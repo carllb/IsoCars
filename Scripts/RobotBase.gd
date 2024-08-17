@@ -52,7 +52,6 @@ func _on_range_2d_body_entered(body: Node2D) -> void:
 		#spawns projectile toward enemy
 
 func _on_range_2d_body_exited(body: Node2D) -> void:
-	print('exit')
 	if 'car' in body.name:
 		targets = get_node('Range2D').get_overlapping_bodies()
 		activeTarget = null
