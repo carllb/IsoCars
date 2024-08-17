@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-[gd_scene load_steps=2 format=3 uid="uid://dprgst30rkin8"]
-=======
-[gd_scene load_steps=16 format=4 uid="uid://d3qdva6rk1xkp"]
->>>>>>> 32ed725f826ac52e6c95068f08f9d0078f707863
+[gd_scene load_steps=16 format=4 uid="uid://dprgst30rkin8"]
 
 [ext_resource type="Texture2D" uid="uid://dyyutalrhtmkb" path="res://assets/temporary/background_tilemap_2.png" id="1_ctnf2"]
 [ext_resource type="Texture2D" uid="uid://bf7g50i77pl61" path="res://assets/background/test_tile_2_sd.png" id="2_c01po"]
