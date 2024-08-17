@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://byg3tgtpjpihf"]
+
+[ext_resource type="PackedScene" uid="uid://divqj5txtaum1" path="res://Scenes/car.tscn" id="1_kj2jk"]
+
+[sub_resource type="Curve2D" id="Curve2D_m28r3"]
+_data = {
+"points": PackedVector2Array(130, 211, -130, -211, 602, 42, 195, 30, -195, -30, -101, -196, 0, 0, 0, 0, -393, 166, 0, 0, 0, 0, 121, 256)
+}
+point_count = 4
+
+[node name="Maintesting" type="Node2D"]
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(4, 0)
+curve = SubResource("Curve2D_m28r3")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(602, 42)
+rotation = -2.12298
+
+[node name="Car" parent="Path2D/PathFollow2D" instance=ExtResource("1_kj2jk")]
+position = Vector2(351.536, -490.5)
+rotation = 2.12298

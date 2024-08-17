@@ -1,6 +1,7 @@
 extends Node
 
-var progectile
+var projectile
+var rangeRadius
 var damage = 5
 var pathName
 var targets = []
@@ -52,7 +53,7 @@ func _EnemyInRange(range):
 		pathName = activeTarget.get_parent().name
 		
 		#spawns projectile toward enemy
-		var tempProjectile = progectile.instantiate()
+		var tempProjectile = projectile.instantiate()
 		tempProjectile.pathName = pathName
 		tempProjectile.damage = damage
 		get_node('ProjectileDisconect').add_child(tempProjectile)
