@@ -19,5 +19,5 @@ position = Vector2(602, 42)
 rotation = -2.12298
 
 [node name="Car" parent="Path2D/PathFollow2D" instance=ExtResource("1_kj2jk")]
-position = Vector2(351.536, -490.5)
+position = Vector2(-10.2852, -0.463989)
 rotation = 2.12298
