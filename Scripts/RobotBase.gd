@@ -13,11 +13,11 @@ var activeTarget
 func _process(_delta: float) -> void:
 	if is_instance_valid(activeTarget):
 		if activeTarget.rotation > PI/2:
-			$Sprite2D.texture = load("res://assets/temporary/down-right.png")
+			$Sprite2D.texture = load("res://assets/temporary/up-left.png")
 		elif activeTarget.rotation > 0:
 			$Sprite2D.texture = load("res://assets/temporary/down-left.png")
 		elif activeTarget.rotation > -PI/2:
-			$Sprite2D.texture = load("res://assets/temporary/up-left.png")
+			$Sprite2D.texture = load("res://assets/temporary/down-right.png")
 		else:
 			$Sprite2D.texture = load("res://assets/temporary/up-right.png")
 
