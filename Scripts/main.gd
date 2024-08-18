@@ -31,7 +31,6 @@ func _on_mob_timer_timeout():
 	path.get_child(0).add_child(car)
 	add_child(path)
 
-	
 #this is for debugging
 func update_pointer_position(pos: Vector2):
 	db_dot.position = pos

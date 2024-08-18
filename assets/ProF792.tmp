@@ -4,12 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://db2hhju1qpgc6" path="res://assets/temporary/projectile.png" id="1_lg75u"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2u0k1"]
-radius = 5.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_aiyfq"]
 radius = 3.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_aiyfq"]
+radius = 7.0
+
 [node name="Projectile" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 2
 collision_priority = 2.0
 script = ExtResource("1_07qwt")
 
