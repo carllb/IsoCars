@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 
 class_name RobotBase
 
@@ -65,7 +65,6 @@ func _on_range_2d_body_exited(body: Node2D) -> void:
 				if i.get_parent().get_progress() > activeTarget.get_progress():
 					activeTarget = i.get_node('../')
 
-
 func _on_timer_timeout() -> void:
 	if activeTarget != null:
 		var tempProjectile = projectile.instantiate()
@@ -75,3 +74,6 @@ func _on_timer_timeout() -> void:
 		get_node('ProjectileDisconect').add_child(tempProjectile)
 		tempProjectile.target = activeTarget
 		tempProjectile.global_position = $TowerArea.global_position
+
+func get_sprite() -> Sprite2D:
+	return get_node("Sprite2D")
