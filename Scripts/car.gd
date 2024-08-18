@@ -37,9 +37,12 @@ func initilize(health_component: HealthComponent,
 	car_death.connect(on_death_cb)
 
 func take_damage(damage: float, _damage_type: String = 'PHYSICAL') -> void:
-	if _damage_type == "ICE":
+	if (_damage_type == "ICE")&&damage>0:
 		$SlowDownTimer.start()
 		speed.apply_slow(damage)
+	elif (_damage_type == "FIRE")&&damage>0:
+		health.burn(damage)
+		$BurnTimer.start
 	else:
 		health.take_damage(damage)
 	

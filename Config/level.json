@@ -2,9 +2,9 @@
   "levels": [
 	[
 	  {
-		"health": 2,
+		"health": 5,
 		"armor": 0,
-		"speed": 100,
+		"speed": 200,
 		"reward": 1,
 		"type": "Normal",
 		"copies": 4,

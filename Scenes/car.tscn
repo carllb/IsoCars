@@ -51,4 +51,8 @@ script = ExtResource("5_6gqts")
 [node name="SlowDownTimer" type="Timer" parent="."]
 one_shot = true
 
+[node name="BurnTimer" type="Timer" parent="."]
+wait_time = 0.2
+
 [connection signal="timeout" from="SlowDownTimer" to="." method="_on_slow_down_timer_timeout"]
+[connection signal="timeout" from="BurnTimer" to="." method="_on_burn_timer_timeout"]
