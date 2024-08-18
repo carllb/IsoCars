@@ -4,13 +4,16 @@ class_name RobotBase
 
 var projectile 
 var rangeRadius
-var damage_array 
+var damage_array: Array[int] = [1,0,0] 
 var pathName
 var targets = []
 var activeTarget
+var fire_rate : float =2
+var sprites = [preload("res://assets/temporary/up-left.png"),preload("res://assets/temporary/down-left.png")
+		,preload("res://assets/temporary/down-right.png"),preload("res://assets/temporary/up-right.png")]
 
 
-func _init(_range_size:int = 200, _damage: Array[int] = [1,0,0], _projectile = preload('res://Scenes/Projectile.tscn')) -> void:
+func _init(_range_size:int = 200, _damage: Array[int] = damage_array, _projectile = preload('res://Scenes/Projectile.tscn')) -> void:
 	rangeRadius = _range_size
 	damage_array = _damage
 	projectile = _projectile
@@ -19,13 +22,13 @@ func _init(_range_size:int = 200, _damage: Array[int] = [1,0,0], _projectile = p
 func _process(_delta: float) -> void:
 	if is_instance_valid(activeTarget):
 		if activeTarget.rotation > PI/2:
-			$Sprite2D.texture = load("res://assets/temporary/up-left.png")
+			$Sprite2D.texture = sprites[0]
 		elif activeTarget.rotation > 0:
-			$Sprite2D.texture = load("res://assets/temporary/down-left.png")
+			$Sprite2D.texture = sprites[1]
 		elif activeTarget.rotation > -PI/2:
-			$Sprite2D.texture = load("res://assets/temporary/down-right.png")
+			$Sprite2D.texture = sprites[2]
 		else:
-			$Sprite2D.texture = load("res://assets/temporary/up-right.png")
+			$Sprite2D.texture = sprites[3]
 
 
 func _on_range_2d_body_entered(body: Node2D) -> void:
@@ -33,7 +36,6 @@ func _on_range_2d_body_entered(body: Node2D) -> void:
 		find_target(body)
 
 func _on_range_2d_body_exited(body: Node2D) -> void:
-	print(body)
 	find_target(body)
 
 func find_target(body: Node2D):

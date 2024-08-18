@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=4 uid="uid://d3qdva6rk1xkp"]
+[gd_scene load_steps=9 format=4 uid="uid://d3qdva6rk1xkp"]
 
 [ext_resource type="Texture2D" uid="uid://cdabw38tq3c07" path="res://assets/background/tile_grid_test_3.png" id="1_b684o"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_tmp6v"]
 [ext_resource type="PackedScene" uid="uid://bc3lfejnfa42e" path="res://Scenes/car.tscn" id="2_olyx2"]
 [ext_resource type="PackedScene" uid="uid://blcpsgxirfvtg" path="res://Scenes/mob_path.tscn" id="4_b15tf"]
 [ext_resource type="Texture2D" uid="uid://cpd8vkrmp2opn" path="res://assets/temporary/mouse.png" id="5_cpb1x"]
+[ext_resource type="PackedScene" uid="uid://2brcismv1omw" path="res://Scenes/IceTower.tscn" id="6_rp1kt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ufy20"]
 texture = ExtResource("1_b684o")
@@ -52,5 +53,8 @@ tile_set = SubResource("TileSet_6a7gm")
 
 [node name="debug_cursor" type="Sprite2D" parent="."]
 texture = ExtResource("5_cpb1x")
+
+[node name="BaseTower" parent="." instance=ExtResource("6_rp1kt")]
+position = Vector2(219, 319)
 
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
