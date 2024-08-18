@@ -11,6 +11,7 @@ var curr_tower_cost: ValueComponent = null
 
 @onready var levelLabel : Label = get_node("MainPanel/VerticalContainer/Top Bar/Level")
 @onready var moneyLabel : Label = get_node("MainPanel/VerticalContainer/Top Bar/Money")
+@onready var spentLabel : Label = get_node("MainPanel/VerticalContainer/Top Bar/MoneySpent")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -29,6 +30,7 @@ func _process(delta):
 	
 	levelLabel.text = "Level: " + str(game_scene.get_level())
 	moneyLabel.text = str(game_scene.get_money().get_value()) + " gold"
+	spentLabel.text = "Total Spent: " + str(game_scene.get_money_spent().get_value()) + " gold"
 	
 	game_scene.update_pointer_position(mpos, current_tower)
 
