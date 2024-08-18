@@ -1,7 +1,13 @@
 extends Node2D
 
+class_name TDLevel
+
 @export var mob_scene: PackedScene
 @export var mob_path: PackedScene
+
+@export_category("Debug Stuff")
+@export var db_dot: Sprite2D
+
 var score
 
 
@@ -20,3 +26,6 @@ func _on_mob_timer_timeout():
 	var path = mob_path.instantiate()
 	add_child(path)
 	
+#this is for debugging
+func update_pointer_position(pos: Vector2):
+	db_dot.position = pos
