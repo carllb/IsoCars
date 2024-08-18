@@ -49,7 +49,6 @@ shape = SubResource("CapsuleShape2D_fkpp8")
 script = ExtResource("5_6gqts")
 
 [node name="SlowDownTimer" type="Timer" parent="."]
-wait_time = 3.0
 one_shot = true
 
 [connection signal="timeout" from="SlowDownTimer" to="." method="_on_slow_down_timer_timeout"]
