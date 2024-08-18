@@ -14,6 +14,7 @@ func _init(_range_size:int = 200, _damage: Array[int] = [1,0,0], _projectile = p
 	rangeRadius = _range_size
 	damage_array = _damage
 	projectile = _projectile
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if is_instance_valid(activeTarget):
@@ -79,3 +80,6 @@ func _on_timer_timeout() -> void:
 
 func get_sprite() -> Sprite2D:
 	return get_node("Sprite2D")
+
+func get_value() -> int:
+	return 0
