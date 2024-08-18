@@ -12,6 +12,7 @@ class_name TDLevel
 
 @onready var tile_map: TileMapLayer = get_node("TileMapLayer")
 @onready var gold: ValueComponent = ValueComponent.new(starting_gold)
+@onready var gold_spent: ValueComponent = ValueComponent.new(0)
 
 var level_conf = parse_json("Config/level.json")
 
@@ -32,6 +33,9 @@ func get_level():
 
 func get_money() -> ValueComponent:
 	return gold
+
+func get_money_spent() -> ValueComponent:
+	return gold_spent
 
 var blank_texture: Texture2D = null
 
@@ -158,6 +162,7 @@ func map_clicked(pos: Vector2,
 		tower.position = tile_pos
 		add_child(tower)
 		gold.spend_value(cost)
+		gold_spent.add_value(cost)
 	else:
 		valid_tile = false
 	

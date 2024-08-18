@@ -32,13 +32,13 @@
 	  }
 	],
 	[
-			{
+	  {
 		"health": 1,
 		"armor": 0,
 		"speed": 50,
 		"reward": 1,
 		"type": "Normal",
-		"copies": 1,
+		"copies": 30,
 		"delay": 0.4
 	  },
 	  {
@@ -47,7 +47,7 @@
 		"speed": 100,
 		"reward": 4,
 		"type": "Normal",
-		"copies": 2,
+		"copies": 50,
 		"delay": 0.4
 	  }
 	]
