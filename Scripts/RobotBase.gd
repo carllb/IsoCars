@@ -13,9 +13,15 @@ var sprites = [preload("res://assets/temporary/up-left.png"),preload("res://asse
 		,preload("res://assets/temporary/down-right.png"),preload("res://assets/temporary/up-right.png")]
 
 
-func _init(_range_size:int = 200, _damage: Array[int] = damage_array, _projectile = preload('res://Scenes/Projectile.tscn')) -> void:
+func _init(_damage: Array[int] = damage_array, _projectile = preload('res://Scenes/Projectile.tscn'), _range_size:int = 200) -> void:
 	rangeRadius = _range_size
 	damage_array = _damage
+	projectile = _projectile
+	
+func initilize(_damage: Array[int] = damage_array, _sprites = sprites,_projectile = preload('res://Scenes/Projectile.tscn'), _range_size:int = 200) -> void:
+	rangeRadius = _range_size
+	damage_array = _damage
+	sprites = _sprites
 	projectile = _projectile
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
