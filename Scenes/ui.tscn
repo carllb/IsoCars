@@ -1,7 +1,11 @@
+
 [gd_scene load_steps=3 format=3 uid="uid://cpp6cshhvxn5n"]
+
 
 [ext_resource type="PackedScene" uid="uid://d3qdva6rk1xkp" path="res://Scenes/main.tscn" id="1_aven1"]
 [ext_resource type="Script" path="res://Scripts/game_ui.gd" id="1_yl6ot"]
+[ext_resource type="Script" path="res://Scripts/place_tower_button.gd" id="3_t001j"]
+[ext_resource type="PackedScene" uid="uid://dnce7iocxnxd4" path="res://assets/BaseTower.tscn" id="4_dh5rx"]
 
 [node name="UI" type="Control" node_paths=PackedStringArray("game_viewport", "game_scene")]
 layout_mode = 3
@@ -81,11 +85,16 @@ layout_mode = 2
 size_flags_horizontal = 11
 size_flags_stretch_ratio = 0.14
 
-[node name="Button" type="Button" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer"]
+[node name="add_tower" type="Button" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer"]
 layout_mode = 2
 text = "Add Tower"
+script = ExtResource("3_t001j")
+tower_scene = ExtResource("4_dh5rx")
 
 [node name="Button2" type="Button" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer"]
 layout_mode = 2
 text = "Add Tower2
 "
+
+[connection signal="gui_input" from="MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer" to="." method="_on_sub_viewport_container_gui_input"]
+[connection signal="add_tower_pressed" from="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/add_tower" to="." method="_on_add_tower_pressed"]
