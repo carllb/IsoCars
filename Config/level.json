@@ -2,12 +2,12 @@
   "levels": [
 	[
 	  {
-		"health": 1,
+		"health": 2,
 		"armor": 0,
-		"speed": 50,
+		"speed": 100,
 		"reward": 1,
 		"type": "Normal",
-		"copies": 1,
+		"copies": 4,
 		"delay": 0.4
 	  }
 	],
@@ -15,11 +15,11 @@
 	  {
 		"health": 1,
 		"armor": 0,
-		"speed": 50,
+		"speed": 200,
 		"reward": 1,
 		"type": "Normal",
-		"copies": 1,
-		"delay": 0.2
+		"copies": 3,
+		"delay": 0.1
 	  },
 	  {
 		"health": 1,
