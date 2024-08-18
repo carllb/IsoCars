@@ -1,6 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://dpuapajjwc632"]
-
-[ext_resource type="PackedScene" uid="uid://bc3lfejnfa42e" path="res://Scenes/car.tscn" id="1_e4bhp"]
+[gd_scene load_steps=2 format=3 uid="uid://blcpsgxirfvtg"]
 
 [sub_resource type="Curve2D" id="Curve2D_i2ke7"]
 _data = {
@@ -14,5 +12,3 @@ curve = SubResource("Curve2D_i2ke7")
 [node name="MobSpawnPath" type="PathFollow2D" parent="."]
 position = Vector2(16, 31)
 rotation = 0.545734
-
-[node name="Car" parent="MobSpawnPath" instance=ExtResource("1_e4bhp")]
