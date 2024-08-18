@@ -2,7 +2,6 @@ extends CharacterBody2D
 
 class_name Car
 
-
 @export var speed = 50
 
 var health: HealthComponent
@@ -21,16 +20,14 @@ func _process(delta: float) -> void:
 
 	if get_parent().get_progress_ratio() >= .95:
 		death()
-		
-func _on_body_entered(_body: Node) -> void:
-	health.take_damage()
-	if health.health == 0:
+	if health.is_dead():
 		death()
 
+func initilize(health_component):
+	health = health_component
 
-	
-	
+func take_damage(damage: float) -> void:
+	health.take_damage(damage)
+
 func death():
 	get_parent().get_parent().queue_free()
-
-	
