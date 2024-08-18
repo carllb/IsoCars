@@ -1,0 +1,82 @@
+[gd_scene load_steps=3 format=3 uid="uid://ihsyt47xy8ml"]
+
+[ext_resource type="PackedScene" uid="uid://d3qdva6rk1xkp" path="res://Scenes/main.tscn" id="1_aven1"]
+[ext_resource type="Script" path="res://Scripts/game_ui.gd" id="1_yl6ot"]
+
+[node name="UI" type="Control" node_paths=PackedStringArray("game_viewport", "game_scene")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yl6ot")
+game_viewport = NodePath("MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer/SubViewport")
+game_scene = NodePath("MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer/SubViewport/Main")
+
+[node name="MainPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VSplitContainer" type="VSplitContainer" parent="MainPanel"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HSplitContainer" type="HSplitContainer" parent="MainPanel/VSplitContainer"]
+layout_mode = 2
+
+[node name="VerticalContainer" type="BoxContainer" parent="MainPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+vertical = true
+
+[node name="Top Bar" type="ColorRect" parent="MainPanel/VerticalContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.30461, 0.115758, 0.354375, 1)
+
+[node name="HorisontalContainer" type="BoxContainer" parent="MainPanel/VerticalContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 8.0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="MainPanel/VerticalContainer/HorisontalContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer"]
+disable_3d = true
+handle_input_locally = false
+size = Vector2i(1680, 957)
+render_target_update_mode = 4
+
+[node name="Main" parent="MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer/SubViewport" instance=ExtResource("1_aven1")]
+position = Vector2(0, 0)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainPanel/VerticalContainer/HorisontalContainer"]
+layout_mode = 2
+size_flags_horizontal = 11
+size_flags_stretch_ratio = 0.14
+
+[node name="Button" type="Button" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer"]
+layout_mode = 2
+text = "Add Tower"
+
+[node name="Button2" type="Button" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer"]
+layout_mode = 2
+text = "Add Tower2
+"
