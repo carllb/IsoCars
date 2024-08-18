@@ -2,12 +2,18 @@ extends Node2D
 
 class_name RobotBase
 
-var projectile = preload('res://Scenes/Projectile.tscn')
+var projectile 
 var rangeRadius
-var damage = 5
+var damage_array 
 var pathName
 var targets = []
 var activeTarget
+
+
+func _init(_range_size:int = 200, _damage: Array[int] = [1,0,0], _projectile = preload('res://Scenes/Projectile.tscn')) -> void:
+	rangeRadius = _range_size
+	damage_array = _damage
+	projectile = _projectile
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -66,8 +72,7 @@ func _on_range_2d_body_exited(body: Node2D) -> void:
 func _on_timer_timeout() -> void:
 	if activeTarget != null:
 		var tempProjectile = projectile.instantiate()
-		tempProjectile.pathName = pathName
-		tempProjectile.damage = damage
+		tempProjectile.initilize(400, damage_array,activeTarget, pathName)
 		await get_tree().process_frame
 		get_node('ProjectileDisconect').add_child(tempProjectile)
 		tempProjectile.target = activeTarget

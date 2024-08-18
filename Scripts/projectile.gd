@@ -1,10 +1,18 @@
 extends CharacterBody2D
 
+class_name Projectile
 
-var Speed = 400
-var target
+var Speed : int
+var target : Node2D
 var pathName = ''
-var damage = 1
+var damage_array : Array[int]
+var damage_types : Array[String] = ['PHYSICAL','FIRE','ICE']
+
+func initilize(_speed: int = 400, _damage_array: Array[int] = [1,0,0], _target : Node2D = null, _pathName: String = '') -> void:
+	Speed = _speed
+	damage_array = _damage_array
+	target = _target
+	pathName = _pathName
 
 func _physics_process(delta) -> void:
 
@@ -23,7 +31,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		var car: Car = body
 		
 		#apply damage
-		car.take_damage(damage)
+		for d in range(damage_array.size()):
+			car.take_damage(damage_array[d],damage_types[d])
 
 		#remove projectile
 		queue_free()
