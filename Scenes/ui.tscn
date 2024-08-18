@@ -59,6 +59,14 @@ scale = Vector2(3, 3)
 tooltip_text = "Current Level"
 text = "Level: 0"
 
+[node name="Money" type="Label" parent="MainPanel/VerticalContainer/Top Bar"]
+layout_mode = 0
+offset_left = 1761.0
+offset_top = 49.0
+offset_right = 1832.0
+offset_bottom = 85.0
+text = "0  gold"
+
 [node name="HorisontalContainer" type="BoxContainer" parent="MainPanel/VerticalContainer"]
 layout_mode = 2
 size_flags_vertical = 3
@@ -88,6 +96,7 @@ layout_mode = 2
 text = "Add Tower"
 script = ExtResource("3_t001j")
 tower_scene = ExtResource("4_dh5rx")
+tower_cost = 100
 
 [node name="Button2" type="Button" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer"]
 layout_mode = 2

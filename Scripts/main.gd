@@ -4,20 +4,26 @@ class_name TDLevel
 
 @export var mob_scene: PackedScene
 @export var mob_path: PackedScene
+@export var starting_gold: int = 200
 
 @export_category("Debug Stuff")
 @export var db_dot: Sprite2D
 
-@onready
-var tile_map: TileMapLayer = get_node("TileMapLayer")
+@onready var tile_map: TileMapLayer = get_node("TileMapLayer")
+@onready var gold: ValueComponent = ValueComponent.new(starting_gold)
 
 var score
 var level = 0
 var current_wave = []
 
 
+
+
 func get_level():
 	return level
+
+func get_money() -> ValueComponent:
+	return gold
 
 var blank_texture: Texture2D = null
 
@@ -32,15 +38,18 @@ func wave_factory(level: int) -> Array:
 	for level_idx in range(level):
 		var health_comp = HealthComponent.new(1, 1)
 		var speed_comp = SpeedComponent.new(100)
-		var car = car_factory(health_comp,speed_comp)
+		var value_component: ValueComponent = ValueComponent.new(5)
+		var car = car_factory(health_comp, speed_comp, value_component)
 		ret.append(car)
 	return ret
 
 
 
-func car_factory(health_comp: HealthComponent, speed_comp: SpeedComponent) -> Car:
+func car_factory(health_comp: HealthComponent, 
+				 speed_comp: SpeedComponent,
+				 value_component: ValueComponent) -> Car:
 	var car: Car = mob_scene.instantiate()
-	car.initilize(health_comp,speed_comp)
+	car.initilize(health_comp, speed_comp, value_component, _on_car_death)
 
 	return car
 
@@ -62,12 +71,12 @@ func _on_mob_timer_timeout():
 	# There are cars left in the current wave
 	else:
 		# Get new car and add to scene
-		var car = current_wave.pop_front()
+		var car: Car = current_wave.pop_front()
 		path.get_child(0).add_child(car)
 		add_child(path)
 
-
-
+func _on_car_death(reward_gold: ValueComponent):
+	gold.add_value(reward_gold)
 
 
 const placable_tiles: Array[Vector2i] = [Vector2i(0,3)]
@@ -106,16 +115,22 @@ func update_pointer_position(pos: Vector2,
 	return valid_tile
 
 func map_clicked(pos: Vector2,
-				 tower: RobotBase) -> bool:
+				 tower: RobotBase,
+				 cost: ValueComponent) -> bool:
 	var tile_coord: Vector2i = tile_map.local_to_map(pos)
 	var tile_pos: Vector2 = tile_map.map_to_local(tile_coord)
 	
 	var valid_tile: bool = is_placable_tile(tile_coord)
+	var can_afford: bool = false
 	
-	if (valid_tile && null != tower):
+	if  (null != cost && null != tower):
+		can_afford = gold.can_afford(cost)
+	
+	if (valid_tile && can_afford):
 		placed_tiles.append(tile_coord)
 		tower.position = tile_pos
 		add_child(tower)
+		gold.spend_value(cost)
 	else:
 		valid_tile = false
 	
@@ -130,6 +145,8 @@ func build_normal_car(car):
 	var health = 3
 	var armor = 5
 	var speed = 50
+	var reward = 5
 	var health_component: HealthComponent = HealthComponent.new(health, armor)
 	var speed_component: SpeedComponent = SpeedComponent.new(speed)
-	car.initilize(health_component, speed_component)
+	var value_component: ValueComponent = ValueComponent.new(reward)
+	car.initilize(health_component, speed_component, value_component, _on_car_death)
