@@ -24,5 +24,5 @@ window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
 
 [layer_names]
-2d_physics/layer_2="Projectiles"
 
+2d_physics/layer_2="Projectiles"
