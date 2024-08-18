@@ -50,8 +50,6 @@ tile_set = SubResource("TileSet_6a7gm")
 
 [node name="MobTimer" type="Timer" parent="."]
 
-[node name="MobPath" parent="." instance=ExtResource("4_b15tf")]
-
 [node name="debug_cursor" type="Sprite2D" parent="."]
 texture = ExtResource("5_cpb1x")
 

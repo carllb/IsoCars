@@ -47,26 +47,30 @@ func car_factory(health_comp: HealthComponent, speed_comp: SpeedComponent) -> Ca
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
+	
+func get_mob_count() -> int:
+	var ret = 0
+	for child in get_children():
+		if child is Path2D:
+			ret += 1
+	return ret
 
 func _on_mob_timer_timeout():
-	# Create a new instance of the Mob scene.
-	var path = mob_path.instantiate()
-
 
 	# Current wave is empty
-	if current_wave == [] and path.get_child(0).get_child_count() == 0:
+	if current_wave == [] and get_mob_count() == 0:
 		level+=1
 		current_wave = wave_factory(level)
-		print(level)
 
 	# There are cars left in the current wave
 	else:
-		# Get new car and add to scene
-		var car = current_wave.pop_front()
-		path.get_child(0).add_child(car)
-		add_child(path)
-
-
+		if current_wave != []:
+			# Create a new instance of the Mob scene.
+			var path = mob_path.instantiate()
+			# Get new car and add to scene
+			var car = current_wave.pop_front()
+			path.get_child(0).add_child(car)
+			add_child(path)
 
 
 
