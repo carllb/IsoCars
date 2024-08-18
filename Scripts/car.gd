@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 class_name Car
 
-@export var speed = 400
+@export var speed = 50
 var health = 3
 
 # Called when the node enters the scene tree for the first time.
@@ -22,6 +22,7 @@ func _process(delta: float) -> void:
 	
 func _on_body_entered(_body: Node) -> void:
 	health -= 1
+	
 	
 func death():
 	get_parent().get_parent().queue_free()

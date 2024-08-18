@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://byv56p1cetw4d" path="res://assets/temporary/up-right.png" id="2_5kppx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_osixj"]
-radius = 554.09
+radius = 300.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yctm0"]
 radius = 15.0333
@@ -32,6 +32,7 @@ shape = SubResource("CircleShape2D_yctm0")
 [node name="ProjectileDisconect" type="Node" parent="."]
 
 [node name="ShotTimer" type="Timer" parent="."]
+wait_time = 0.5
 autostart = true
 
 [connection signal="area_exited" from="Range2D" to="." method="_on_range_2d_area_exited"]
