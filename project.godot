@@ -11,6 +11,18 @@ config_version=5
 [application]
 
 config/name="IsoCars"
-run/main_scene="res://Scenes/main.tscn"
+run/main_scene="res://Scenes/menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
+boot_splash/image="res://assets/temporary/splash.png"
 config/icon="res://icon.svg"
+boot_splash/minimum_display_time=2000
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="canvas_items"
+
+[layer_names]
+2d_physics/layer_2="Projectiles"
+
