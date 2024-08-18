@@ -5,7 +5,6 @@ class_name Car
 
 @export var speed = 50
 
-var health = 3
 var health: HealthComponent
 
 # Called when the node enters the scene tree for the first time.
