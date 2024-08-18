@@ -9,13 +9,21 @@ class_name TDLevel
 @export_category("Debug Stuff")
 @export var db_dot: Sprite2D
 
+
 @onready var tile_map: TileMapLayer = get_node("TileMapLayer")
 @onready var gold: ValueComponent = ValueComponent.new(starting_gold)
+
+var level_conf = parse_json("Config/level.json")
+
 
 var score
 var level = 0
 var current_wave = []
 
+func parse_json(path) -> Dictionary:
+	var json_as_text = FileAccess.get_file_as_string(path)
+	var json_as_dict = JSON.parse_string(json_as_text)
+	return json_as_dict
 
 
 
@@ -33,47 +41,62 @@ func _ready() -> void:
 
 
 func wave_factory(level: int) -> Array:
-	#TODO: figure out wave loading for actually generating waves
 	var ret = []
-	for level_idx in range(level):
-		var health_comp = HealthComponent.new(1, 1)
-		var speed_comp = SpeedComponent.new(100)
-		var value_component: ValueComponent = ValueComponent.new(5)
-		var car = car_factory(health_comp, speed_comp, value_component)
-		ret.append(car)
+	# Have parsed all the available levels
+	if len(level_conf["levels"]) <= level - 1:
+		return ret
+	
+	var cur_level = level_conf["levels"][level-1]
+	# Parse all of the available enenmies in the level
+	for enemy in cur_level:
+		# enemy may have multiple copies
+		var copies = enemy["copies"]
+		for _copy in range(copies):
+			var health_comp = HealthComponent.new(enemy["health"], enemy["armor"])
+			var speed_comp = SpeedComponent.new(enemy["speed"])
+			var value_comp = ValueComponent.new(enemy["reward"])
+			# TODO:
+			# var type
+			# var delay
+			var car = car_factory(health_comp, speed_comp, value_comp)
+			ret.append(car)
 	return ret
 
-
-
-func car_factory(health_comp: HealthComponent, 
+func car_factory(health_comp: HealthComponent,
 				 speed_comp: SpeedComponent,
-				 value_component: ValueComponent) -> Car:
+				 value_comp: ValueComponent) -> Car:
 	var car: Car = mob_scene.instantiate()
-	car.initilize(health_comp, speed_comp, value_component, _on_car_death)
+	car.initilize(health_comp, speed_comp, value_comp, _on_car_death)
 
 	return car
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
+	
+func get_mob_count() -> int:
+	var ret = 0
+	for child in get_children():
+		if child is Path2D:
+			ret += 1
+	return ret
 
 func _on_mob_timer_timeout():
-	# Create a new instance of the Mob scene.
-	var path = mob_path.instantiate()
-
 
 	# Current wave is empty
-	if current_wave == [] and path.get_child(0).get_child_count() == 0:
+	if current_wave == [] and get_mob_count() == 0:
 		level+=1
 		current_wave = wave_factory(level)
-		print(level)
 
 	# There are cars left in the current wave
 	else:
-		# Get new car and add to scene
-		var car: Car = current_wave.pop_front()
-		path.get_child(0).add_child(car)
-		add_child(path)
+		if current_wave != []:
+			# Create a new instance of the Mob scene.
+			var path = mob_path.instantiate()
+			# Get new car and add to scene
+			var car = current_wave.pop_front()
+			path.get_child(0).add_child(car)
+			add_child(path)
 
 func _on_car_death(reward_gold: ValueComponent):
 	gold.add_value(reward_gold)
@@ -103,7 +126,7 @@ func update_pointer_position(pos: Vector2,
 	if (null != tower):
 		db_dot.texture = tower.get_sprite().texture
 		db_dot.scale = tower.get_sprite().scale
-		
+
 		if valid_tile:
 			db_dot.self_modulate.a = 1.0
 		else:
@@ -119,7 +142,7 @@ func map_clicked(pos: Vector2,
 				 cost: ValueComponent) -> bool:
 	var tile_coord: Vector2i = tile_map.local_to_map(pos)
 	var tile_pos: Vector2 = tile_map.map_to_local(tile_coord)
-	
+
 	var valid_tile: bool = is_placable_tile(tile_coord)
 	var can_afford: bool = false
 	
