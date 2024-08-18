@@ -16,3 +16,6 @@ config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/image="res://assets/temporary/splash.png"
 config/icon="res://icon.svg"
 boot_splash/minimum_display_time=2000
+
+[layer_names]
+2d_physics/layer_2="Projectiles"
