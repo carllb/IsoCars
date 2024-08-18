@@ -19,8 +19,7 @@ var current_wave = []
 func get_level():
 	return level
 
-var blank_texture: Texture2D
-blank_texture = db_dot.texture
+var blank_texture: Texture2D = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -32,16 +31,16 @@ func wave_factory(level: int) -> Array:
 	var ret = []
 	for level_idx in range(level):
 		var health_comp = HealthComponent.new(1, 1)
-		var car = car_factory(health_comp)
+		var speed_comp = SpeedComponent.new(100)
+		var car = car_factory(health_comp,speed_comp)
 		ret.append(car)
 	return ret
 
 
 
-func car_factory(health_comp: HealthComponent) -> Car:
+func car_factory(health_comp: HealthComponent, speed_comp: SpeedComponent) -> Car:
 	var car: Car = mob_scene.instantiate()
-	var health_component: HealthComponent = health_comp
-	car.initilize(health_component)
+	car.initilize(health_comp,speed_comp)
 
 	return car
 
@@ -124,8 +123,8 @@ func map_clicked(pos: Vector2,
 
 
 #this is for debugging
-func update_pointer_position(pos: Vector2):
-	db_dot.position = pos
+#func update_pointer_position(pos: Vector2):
+	#db_dot.position = pos
 	
 func build_normal_car(car):
 	var health = 3
@@ -134,4 +133,3 @@ func build_normal_car(car):
 	var health_component: HealthComponent = HealthComponent.new(health, armor)
 	var speed_component: SpeedComponent = SpeedComponent.new(speed)
 	car.initilize(health_component, speed_component)
-

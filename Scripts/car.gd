@@ -29,8 +29,8 @@ func initilize(health_component, speed_component):
 	health = health_component
 	speed = speed_component
 
-func take_damage(damage: float, damage_type: String) -> void:
-	if damage_type == "ICE":
+func take_damage(damage: float, _damage_type: String = 'physical') -> void:
+	if _damage_type == "ICE":
 		$SlowDownTimer.start()
 		speed.apply_slow(damage)
 	else:

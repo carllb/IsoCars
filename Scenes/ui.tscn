@@ -1,11 +1,9 @@
-
-[gd_scene load_steps=3 format=3 uid="uid://cpp6cshhvxn5n"]
-
+[gd_scene load_steps=5 format=3 uid="uid://ihsyt47xy8ml"]
 
 [ext_resource type="PackedScene" uid="uid://d3qdva6rk1xkp" path="res://Scenes/main.tscn" id="1_aven1"]
 [ext_resource type="Script" path="res://Scripts/game_ui.gd" id="1_yl6ot"]
 [ext_resource type="Script" path="res://Scripts/place_tower_button.gd" id="3_t001j"]
-[ext_resource type="PackedScene" uid="uid://dnce7iocxnxd4" path="res://assets/BaseTower.tscn" id="4_dh5rx"]
+[ext_resource type="PackedScene" uid="uid://dnce7iocxnxd4" path="res://Scenes/BaseTower.tscn" id="4_dh5rx"]
 
 [node name="UI" type="Control" node_paths=PackedStringArray("game_viewport", "game_scene")]
 layout_mode = 3

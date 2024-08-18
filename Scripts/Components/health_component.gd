@@ -1,13 +1,15 @@
 extends Node2D
 class_name HealthComponent
 
-var health = 3
+var health = 10
 var armor = 0
 var fire_resistance = 0
+var freeze_resistance = 0
 
-func _init(start_health: float, start_armor: float):
+func _init(start_health: float, _start_armor: float):
 	health = start_health
-	armor = start_armor
+	if _start_armor:
+		armor = _start_armor
 
 func take_damage(damage: float) -> void:
 	var rem = damage - armor
