@@ -50,7 +50,6 @@ tile_map_data = PackedByteArray("AAAAABQACQAAAAMAAAABABQACQAAAAMAAAACABQACQAAAAM
 tile_set = SubResource("TileSet_6a7gm")
 
 [node name="MobTimer" type="Timer" parent="."]
-wait_time = 5.0
 
 [node name="MobPath" parent="." instance=ExtResource("4_b15tf")]
 
