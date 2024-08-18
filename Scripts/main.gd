@@ -62,6 +62,7 @@ func wave_factory(level: int) -> Array:
 			# TODO:
 			# var type
 			# var delay
+			# var size
 			var car = car_factory(health_comp, speed_comp, value_comp)
 			ret.append(car)
 	return ret
