@@ -2,7 +2,7 @@ extends Node2D
 
 class_name RobotBase
 
-var projectile = preload('res://assets/Projectile.tscn')
+var projectile = preload('res://Scenes/Projectile.tscn')
 var rangeRadius
 var damage = 5
 var pathName

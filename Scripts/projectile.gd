@@ -6,7 +6,6 @@ var target
 var pathName = ''
 var damage = 1
 
-
 func _physics_process(delta) -> void:
 
 	#Get the input direction and handle the movement
@@ -20,7 +19,7 @@ func _physics_process(delta) -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body is Car:		
+	if body is Car:
 		var car: Car = body
 		
 		#apply damage
