@@ -25,9 +25,8 @@ func _on_mob_timer_timeout():
 	# Create a new instance of the Mob scene.
 	var path = mob_path.instantiate()
 	var car: Car = mob_scene.instantiate()
-	var health_component: HealthComponent = HealthComponent.new()
-	health_component.armor = 50
-	car.health = health_component
+	var health_component: HealthComponent = HealthComponent.new(3, 5)
+	car.initilize(health_component)
 	path.get_child(0).add_child(car)
 	add_child(path)
 

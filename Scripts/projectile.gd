@@ -19,13 +19,12 @@ func _physics_process(delta) -> void:
 		queue_free()
 
 
-
-
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if 'Car' in body.name:
-		#damage effect
-		body.health-=damage
+	if body is Car:		
+		var car: Car = body
+		
+		#apply damage
+		car.take_damage(damage)
+
 		#remove projectile
 		queue_free()
-	# Replace with function body.
-	

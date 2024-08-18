@@ -5,11 +5,24 @@ var health = 3
 var armor = 0
 var fire_resistance = 0
 
-func take_damage() -> void:
+func _init(start_health: float, start_armor: float):
+	health = start_health
+	armor = start_armor
+
+func take_damage(damage: float) -> void:
+	var rem = damage - armor
+	
 	if armor > 0:
-		armor -= 1
-	else:
-		health -= 1
+		armor -= damage
+	
+	if armor < 0:
+		armor = 0
+	
+	if rem > 0:
+		health -= rem
+
+func is_dead() -> bool:
+	return (0 >= health)
 	
 func _ready() -> void:
 	pass

@@ -1,5 +1,7 @@
 extends Node
 
+class_name RobotBase
+
 var projectile = preload('res://assets/Projectile.tscn')
 var rangeRadius
 var damage = 5
@@ -66,7 +68,6 @@ func _on_range_2d_body_exited(body: Node2D) -> void:
 
 func _on_timer_timeout() -> void:
 	if activeTarget != null:
-		print(activeTarget.rotation)
 		var tempProjectile = projectile.instantiate()
 		tempProjectile.pathName = pathName
 		tempProjectile.damage = damage
