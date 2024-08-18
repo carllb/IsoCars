@@ -31,10 +31,4 @@ shape = SubResource("CircleShape2D_yctm0")
 
 [node name="ProjectileDisconect" type="Node" parent="."]
 
-[node name="ShotTimer" type="Timer" parent="."]
-autostart = true
-
-[connection signal="area_exited" from="Range2D" to="." method="_on_range_2d_area_exited"]
 [connection signal="body_entered" from="Range2D" to="." method="_on_range_2d_body_entered"]
-[connection signal="body_exited" from="Range2D" to="." method="_on_range_2d_body_exited"]
-[connection signal="timeout" from="ShotTimer" to="." method="_on_timer_timeout"]
