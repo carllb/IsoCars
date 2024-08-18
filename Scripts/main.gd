@@ -70,12 +70,16 @@ func get_mob_count() -> int:
 			ret += 1
 	return ret
 
-func _on_mob_timer_timeout():
+func _on_mob_timer_timeout() -> void:
 
 	# Current wave is empty
 	if current_wave == [] and get_mob_count() == 0:
 		level+=1
 		current_wave = wave_factory(level)
+		if current_wave == []:
+			# No more levels defined :(
+			# Win here?
+			level -= 1
 
 	# There are cars left in the current wave
 	else:
