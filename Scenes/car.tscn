@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bc3lfejnfa42e"]
+[gd_scene load_steps=8 format=3 uid="uid://bc3lfejnfa42e"]
 
 [ext_resource type="Script" path="res://Scripts/car.gd" id="1_0y4b7"]
 [ext_resource type="Texture2D" uid="uid://sywwtc8sbbn1" path="res://assets/temporary/enemyFlyingAlt_1.png" id="1_tn42f"]
 [ext_resource type="Texture2D" uid="uid://b7rc26u6hddkk" path="res://assets/temporary/enemyFlyingAlt_2.png" id="2_3psc4"]
-[ext_resource type="Texture2D" uid="uid://bxf6arpien1x2" path="res://assets/temporary/explosion00.png" id="2_goiy1"]
+[ext_resource type="Texture2D" uid="uid://dog3htgogb4fn" path="res://assets/temporary/explosion00.png" id="2_goiy1"]
+[ext_resource type="Script" path="res://Scripts/Components/speed_component.gd" id="5_6gqts"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ynjxy"]
 animations = [{
@@ -43,3 +44,12 @@ animation = &"death"
 shape = SubResource("CapsuleShape2D_fkpp8")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="SpeedComponent" type="Node2D" parent="."]
+script = ExtResource("5_6gqts")
+
+[node name="SlowDownTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="SlowDownTimer" to="." method="_on_slow_down_timer_timeout"]
