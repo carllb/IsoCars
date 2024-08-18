@@ -10,11 +10,16 @@ class_name TDLevel
 
 @onready
 var tile_map: TileMapLayer = get_node("TileMapLayer")
+var level_conf = parse_json("Config/level.json")
 
 var score
 var level = 0
 var current_wave = []
 
+func parse_json(path) -> Dictionary:
+	var json_as_text = FileAccess.get_file_as_string(path)
+	var json_as_dict = JSON.parse_string(json_as_text)
+	return json_as_dict
 
 func get_level():
 	return level
@@ -27,16 +32,26 @@ func _ready() -> void:
 
 
 func wave_factory(level: int) -> Array:
-	#TODO: figure out wave loading for actually generating waves
 	var ret = []
-	for level_idx in range(level):
-		var health_comp = HealthComponent.new(1, 1)
-		var speed_comp = SpeedComponent.new(100)
-		var car = car_factory(health_comp,speed_comp)
-		ret.append(car)
+	# Have parsed all the available levels
+	if len(level_conf["levels"]) <= level - 1:
+		return ret
+	
+	var cur_level = level_conf["levels"][level-1]
+	# Parse all of the available enenmies in the level
+	for enemy in cur_level:
+		# enemy may have multiple copies
+		var copies = enemy["copies"]
+		for _copy in range(copies):
+			var health_comp = HealthComponent.new(enemy["health"], enemy["copies"])
+			var speed_comp = SpeedComponent.new(enemy["speed"])
+			# TODO:
+			# var value
+			# var type
+			# var delay
+			var car = car_factory(health_comp,speed_comp)
+			ret.append(car)
 	return ret
-
-
 
 func car_factory(health_comp: HealthComponent, speed_comp: SpeedComponent) -> Car:
 	var car: Car = mob_scene.instantiate()
@@ -98,7 +113,7 @@ func update_pointer_position(pos: Vector2,
 	if (null != tower):
 		db_dot.texture = tower.get_sprite().texture
 		db_dot.scale = tower.get_sprite().scale
-		
+
 		if valid_tile:
 			db_dot.self_modulate.a = 1.0
 		else:
@@ -113,9 +128,9 @@ func map_clicked(pos: Vector2,
 				 tower: RobotBase) -> bool:
 	var tile_coord: Vector2i = tile_map.local_to_map(pos)
 	var tile_pos: Vector2 = tile_map.map_to_local(tile_coord)
-	
+
 	var valid_tile: bool = is_placable_tile(tile_coord)
-	
+
 	if (valid_tile && null != tower):
 		placed_tiles.append(tile_coord)
 		tower.position = tile_pos
@@ -137,3 +152,4 @@ func build_normal_car(car):
 	var health_component: HealthComponent = HealthComponent.new(health, armor)
 	var speed_component: SpeedComponent = SpeedComponent.new(speed)
 	car.initilize(health_component, speed_component)
+	
