@@ -55,7 +55,7 @@ wait_time = 5.0
 [node name="MobPath" parent="." instance=ExtResource("4_b15tf")]
 
 [node name="BaseTower" parent="." instance=ExtResource("5_6qrq2")]
-position = Vector2(566, 242)
+position = Vector2(342, 76)
 
 [node name="debug_cursor" type="Sprite2D" parent="."]
 texture = ExtResource("5_cpb1x")
