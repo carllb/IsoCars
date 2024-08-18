@@ -25,11 +25,21 @@ func _on_mob_timer_timeout():
 	# Create a new instance of the Mob scene.
 	var path = mob_path.instantiate()
 	var car: Car = mob_scene.instantiate()
-	var health_component: HealthComponent = HealthComponent.new(3, 5)
-	car.initilize(health_component)
+	build_normal_car(car)
 	path.get_child(0).add_child(car)
 	add_child(path)
+	car.take_damage(75, "ICE")
+
 
 #this is for debugging
 func update_pointer_position(pos: Vector2):
 	db_dot.position = pos
+	
+func build_normal_car(car):
+	var health = 3
+	var armor = 5
+	var speed = 50
+	var health_component: HealthComponent = HealthComponent.new(health, armor)
+	var speed_component: SpeedComponent = SpeedComponent.new(speed)
+	car.initilize(health_component, speed_component)
+	
