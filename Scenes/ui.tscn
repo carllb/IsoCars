@@ -1,4 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://ihsyt47xy8ml"]
+
+[gd_scene load_steps=3 format=3 uid="uid://cpp6cshhvxn5n"]
+
 
 [ext_resource type="PackedScene" uid="uid://d3qdva6rk1xkp" path="res://Scenes/main.tscn" id="1_aven1"]
 [ext_resource type="Script" path="res://Scripts/game_ui.gd" id="1_yl6ot"]
@@ -49,6 +51,15 @@ vertical = true
 layout_mode = 2
 size_flags_vertical = 3
 color = Color(0.30461, 0.115758, 0.354375, 1)
+
+[node name="Level" type="Label" parent="MainPanel/VerticalContainer/Top Bar"]
+layout_mode = 2
+offset_top = 27.0
+offset_right = 1920.0
+offset_bottom = 50.0
+scale = Vector2(3, 3)
+tooltip_text = "Current Level"
+text = "Level: 0"
 
 [node name="HorisontalContainer" type="BoxContainer" parent="MainPanel/VerticalContainer"]
 layout_mode = 2
