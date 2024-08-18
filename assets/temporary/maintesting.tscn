@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://byg3tgtpjpihf"]
 
 [ext_resource type="PackedScene" uid="uid://rh3c3i56aeyu" path="res://assets/temporary/carTemp.tscn" id="1_vq60v"]
-[ext_resource type="PackedScene" uid="uid://dnce7iocxnxd4" path="res://assets/BaseTower.tscn" id="1_yb2jh"]
+[ext_resource type="PackedScene" uid="uid://dnce7iocxnxd4" path="res://Scenes/BaseTower.tscn" id="1_yb2jh"]
 
 [sub_resource type="Curve2D" id="Curve2D_m28r3"]
 _data = {
