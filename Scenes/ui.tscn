@@ -90,7 +90,7 @@ stretch = true
 [node name="SubViewport" type="SubViewport" parent="MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer"]
 disable_3d = true
 handle_input_locally = false
-size = Vector2i(1119, 637)
+size = Vector2i(1073, 637)
 render_target_update_mode = 4
 
 [node name="Main" parent="MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer/SubViewport" instance=ExtResource("1_aven1")]
@@ -110,8 +110,15 @@ tower_cost = 100
 
 [node name="add_fire_tower" type="Button" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer"]
 layout_mode = 2
-text = "Add Fire Tower
+text = "Add Fire Tower (100 gold)
 "
+script = ExtResource("3_t001j")
+tower_scene = ExtResource("4_dh5rx")
+tower_cost = 100
+
+[node name="add_ice_tower" type="Button" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer"]
+layout_mode = 2
+text = "Add Fire Tower (100 gold)"
 script = ExtResource("3_t001j")
 tower_scene = ExtResource("4_dh5rx")
 tower_cost = 100
@@ -119,3 +126,4 @@ tower_cost = 100
 [connection signal="gui_input" from="MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer" to="." method="_on_sub_viewport_container_gui_input"]
 [connection signal="add_tower_pressed" from="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/add_tower" to="." method="_on_add_tower_pressed"]
 [connection signal="add_tower_pressed" from="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/add_fire_tower" to="." method="_on_add_fire_tower_add_tower_pressed"]
+[connection signal="add_tower_pressed" from="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/add_ice_tower" to="." method="_on_add_ice_tower_add_tower_pressed"]
