@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://251ebfog18ei"]
 
 [ext_resource type="Script" path="res://Scripts/fire_tower.gd" id="1_838qw"]
-[ext_resource type="Texture2D" uid="uid://byv56p1cetw4d" path="res://assets/temporary/up-right.png" id="2_t1gwj"]
+[ext_resource type="Texture2D" uid="uid://byv56p1cetw4d" path="res://assets/sprites/up-right.png" id="2_t1gwj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_osixj"]
 radius = 300.0
