@@ -1,14 +1,14 @@
 [gd_scene load_steps=2 format=3 uid="uid://blcpsgxirfvtg"]
 
-[sub_resource type="Curve2D" id="Curve2D_i2ke7"]
+[sub_resource type="Curve2D" id="Curve2D_5fber"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 16, 31, 0, 0, 0, 0, 347, 232, 0, 0, 0, 0, 597, 93, 0, 0, 0, 0, 878, 266, 0, 0, 0, 0, 610, 447, 0, 0, 0, 0, 851, 591, 0, 0, 0, 0, 1231, 371)
+"points": PackedVector2Array(0, 0, 0, 0, -170, -78, 0, 0, 0, 0, 343, 237, 0, 0, 0, 0, 107, 390, 0, 0, 0, 0, 300, 504, 0, 0, 0, 0, 751, 243, 0, 0, 0, 0, 995, 387, 0, 0, 0, 0, 808, 509, 0, 0, 0, 0, 1249, 778)
 }
-point_count = 7
+point_count = 8
 
-[node name="MobPath" type="Path2D"]
-curve = SubResource("Curve2D_i2ke7")
+[node name="MobPath2D" type="Path2D"]
+curve = SubResource("Curve2D_5fber")
 
 [node name="MobSpawnPath" type="PathFollow2D" parent="."]
-position = Vector2(16, 31)
-rotation = 0.545734
+position = Vector2(-170, -78)
+rotation = 0.550676
