@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://2brcismv1omw"]
 
 [ext_resource type="Script" path="res://Scripts/ice_tower.gd" id="1_78et6"]
-[ext_resource type="Texture2D" uid="uid://byv56p1cetw4d" path="res://assets/sprites/up-right.png" id="2_la5rx"]
+[ext_resource type="Texture2D" uid="uid://byv56p1cetw4d" path="res://assets/sprites/blue_right.png" id="2_la5rx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_osixj"]
 radius = 300.0
