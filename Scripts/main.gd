@@ -4,18 +4,12 @@ class_name TDLevel
 
 @export var mob_scene: PackedScene
 @export var mob_path: PackedScene
+@export var db_dot: Sprite2D
 
 @export_category("Gold Settings")
 @export var starting_gold: int = 200
-@export var starting_wave_reward: int = 100
-@export var percent_wave_reward_increase: int = 10
-
-@export_category("Gold Settings")
 @export var starting_level_reward: int = 100
 @export var level_reward_percent_increase: int = 10
-
-@export_category("Debug Stuff")
-@export var db_dot: Sprite2D
 
 
 @onready var tile_map: TileMapLayer = get_node("TileMapLayer")
@@ -124,7 +118,7 @@ func _on_car_death(reward_gold: ValueComponent):
 	gold.add_value(reward_gold)
 
 
-const placable_tiles: Array[Vector2i] = [Vector2i(0,3)]
+const placable_tiles: Array[Vector2i] = [Vector2i(0,4)]
 var placed_tiles = {}
 
 func is_placable_tile(tile_coord: Vector2i) -> bool:
