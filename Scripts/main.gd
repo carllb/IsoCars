@@ -47,7 +47,7 @@ func _ready() -> void:
 	$MobTimer.start()
 
 
-func wave_factory(level: int) -> Array:
+func wave_factory(_level: int) -> Array:
 	var ret = []
 	# Have parsed all the available levels
 	if len(level_conf["levels"]) <= level - 1:
@@ -187,9 +187,7 @@ func select_tower(tower: RobotBase):
 		for button in $"../../../VBoxContainer/GridContainer".get_children():
 			if button.get_class() == "Button":
 				button.set_link(tower)
-#this is for debugging
-#func update_pointer_position(pos: Vector2):
-	#db_dot.position = pos
+
 	
 func build_normal_car(car):
 	var health = 3

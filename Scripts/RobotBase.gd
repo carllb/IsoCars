@@ -2,8 +2,6 @@ extends Node2D
 
 class_name RobotBase
 
-signal clicked(node)
-
 var projectile 
 var rangeRadius
 var damage_array: Array[int] = [1,0,0] 
@@ -45,7 +43,7 @@ func _on_range_2d_body_entered(body: Node2D) -> void:
 	if "Car" in body.name:
 		find_target()
 
-func _on_range_2d_body_exited(body: Node2D) -> void:
+func _on_range_2d_body_exited(_body: Node2D) -> void:
 	find_target()
 
 func find_target():
@@ -76,7 +74,6 @@ func find_target():
 
 
 func _on_timer_timeout() -> void:
-	print(self.name)
 	if activeTarget != null:
 		var tempProjectile = projectile.instantiate()
 		tempProjectile.initilize( damage_array,activeTarget, pathName)
@@ -92,20 +89,22 @@ func _on_timer_timeout() -> void:
 
 func get_fire_rate() -> float:
 	return fire_rate
-	
+
 func get_range() -> float:
 	return rangeRadius
 
 func get_damage() -> Array[int]:
 	return damage_array
+
 func get_upgrades() -> int:
 	return upgrade_count
+
 func set_fire_rate(new_rate, _is_upgrade: bool = false) -> void:
 	fire_rate = new_rate
 	$ShotTimer.set_wait_time(1/fire_rate)
 	if _is_upgrade:
 		upgrade_count+=1
-	
+
 func set_range(new_range, _is_upgrade: bool = false) -> void:
 	rangeRadius = new_range
 	$Range2D/range_circle.shape.set_radius(rangeRadius) 
@@ -116,11 +115,9 @@ func set_damage(new_damage:Array[int], _is_upgrade: bool = false) -> void:
 	damage_array = new_damage
 	if _is_upgrade:
 		upgrade_count+=1
-	
+
 func get_sprite() -> Sprite2D:
 	return get_node("Sprite2D")
 
 func get_value() -> int:
 	return 0
-
-var mouse_in = false

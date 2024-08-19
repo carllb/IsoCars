@@ -6,8 +6,8 @@ var speed = 0
 var slowed = false
 var slowed_speed = 0
 
-func _init(speed_val: float):
-	speed = speed_val
+func _init(_speed_val: float = speed):
+	speed = _speed_val
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,7 +15,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 	
 func apply_slow(slowdown_percent: float):
