@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://ihsyt47xy8ml"]
+[gd_scene load_steps=16 format=3 uid="uid://ihsyt47xy8ml"]
 
 [ext_resource type="PackedScene" uid="uid://d3qdva6rk1xkp" path="res://Scenes/main.tscn" id="1_aven1"]
 [ext_resource type="Script" path="res://Scripts/game_ui.gd" id="1_yl6ot"]
@@ -8,8 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://dnce7iocxnxd4" path="res://Scenes/BaseTower.tscn" id="4_dh5rx"]
 [ext_resource type="PackedScene" uid="uid://c6rnmm5g4stfg" path="res://Scenes/chris3.tscn" id="5_h7fsh"]
 [ext_resource type="Script" path="res://Scripts/range_upgrade.gd" id="5_v3ilj"]
+[ext_resource type="PackedScene" uid="uid://bc0nftc157djp" path="res://Scenes/game_over.tscn" id="6_37pde"]
 [ext_resource type="Script" path="res://Scripts/fire_rate_upgrade.gd" id="6_u56bo"]
 [ext_resource type="Script" path="res://Scripts/damage_phys_upgrade.gd" id="7_8c5av"]
+[ext_resource type="PackedScene" uid="uid://bdtneuck1hqpc" path="res://Scenes/game_win.tscn" id="7_p8lim"]
 [ext_resource type="Script" path="res://Scripts/damage_fire_upgrade.gd" id="8_f7qdi"]
 [ext_resource type="Script" path="res://Scripts/damage_ice_upgrade.gd" id="9_fot1l"]
 [ext_resource type="Script" path="res://Scenes/upgrade_cost.gd" id="13_yh4jb"]
@@ -121,6 +123,12 @@ visible = false
 visible = false
 
 [node name="Chris3" parent="MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer/SubViewport" instance=ExtResource("5_h7fsh")]
+visible = false
+
+[node name="GameOver" parent="MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer/SubViewport" instance=ExtResource("6_37pde")]
+visible = false
+
+[node name="GameWin" parent="MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer/SubViewport" instance=ExtResource("7_p8lim")]
 visible = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MainPanel/VerticalContainer/HorisontalContainer"]

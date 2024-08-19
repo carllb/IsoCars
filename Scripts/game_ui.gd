@@ -13,6 +13,8 @@ var curr_tower_cost: ValueComponent = null
 @onready var moneyLabel : Label = get_node("MainPanel/VerticalContainer/Top Bar/Money")
 @onready var spentLabel : Label = get_node("MainPanel/VerticalContainer/Top Bar/MoneySpent")
 @onready var livesLabel : Label = get_node("MainPanel/VerticalContainer/Top Bar/Lives")
+@onready var gameOver: GameOverScreen = get_node("MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer/SubViewport/GameOver")
+@onready var gameWin: GameOverScreen = get_node("MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer/SubViewport/GameWin")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -35,7 +37,14 @@ func _process(_delta):
 	
 	game_scene.update_pointer_position(mpos, current_tower)
 	if game_scene.get_lives()<1:
-		get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
+		#get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
+		gameOver.initilize(game_scene.get_money_spent().get_value(),
+						   game_scene.get_cars_killed())
+		gameOver.visible = true
+	elif game_scene.is_game_won():
+		gameWin.initilize(game_scene.get_money_spent().get_value(),
+						   game_scene.get_cars_killed())
+		gameWin.visible = true
 
 func _on_add_tower_pressed(tower: PackedScene, cost: ValueComponent):
 	var can_afford: bool = game_scene.get_money().can_afford(cost)
