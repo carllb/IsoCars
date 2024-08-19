@@ -11,7 +11,7 @@ var pathName
 var targets = []
 var upgrade_count :int = 0
 var activeTarget
-var fire_rate : float =1
+var fire_rate : float =2
 var sprites = [preload("res://assets/sprites/up-left.png"),preload("res://assets/sprites/up-right.png")]
 func _init(_damage: Array[int] = damage_array, _projectile = preload('res://Scenes/Projectile.tscn'), _range_size:int = 200) -> void:
 	rangeRadius = _range_size
