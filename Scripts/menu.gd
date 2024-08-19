@@ -15,7 +15,7 @@ func _on_slider_value_changed(value: float) -> void:
 
 
 func _on_github_pressed() -> void:
-	OS.shell_open("https://github.com/carllb/IsoCars/") 
+	OS.shell_open("https://github.com/carllb/IsoCars/")
 
 func _on_artist_pressed() -> void:
 	#TODO: fill in artist URL

@@ -24,13 +24,14 @@ var level_conf = parse_json("Config/level.json")
 var score
 var level = 0
 var current_wave = []
+var cars_killed: int = 0
+var game_stop = false
+var game_won: bool = false
 
 func parse_json(path) -> Dictionary:
 	var json_as_text = FileAccess.get_file_as_string(path)
 	var json_as_dict = JSON.parse_string(json_as_text)
 	return json_as_dict
-
-
 
 func get_level():
 	return level
@@ -44,12 +45,17 @@ func get_money() -> ValueComponent:
 func get_money_spent() -> ValueComponent:
 	return gold_spent
 
+func get_cars_killed() -> int:
+	return cars_killed
+
+func is_game_won() -> bool:
+	return game_won
+
 var blank_texture: Texture2D = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$MobTimer.start()
-
 
 func wave_factory(_level: int) -> Array:
 	var ret = []
@@ -89,7 +95,9 @@ func car_factory(health_comp: HealthComponent,
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	pass
+	if get_lives() < 1:
+		game_stop = true
+		$MobTimer.stop()
 	
 func get_mob_count() -> int:
 	var ret = 0
@@ -98,20 +106,26 @@ func get_mob_count() -> int:
 			ret += 1
 	return ret
 
-var last_wave: bool = false
+
 func _on_mob_timer_timeout() -> void:
+	
+	if game_stop:
+		# if game is not running don't spawn things
+		return
+	
 	# Current wave is empty
 	if current_wave == [] and get_mob_count() == 0:
-		if 0 < level && !last_wave:
+		if 0 < level && !game_won:
 			gold.add_value(curr_level_reward)
 			curr_level_reward.change_by_percent(level_reward_percent_increase)
 		level+=1
 		current_wave = wave_factory(level)
 		if current_wave == []:
-			last_wave = true
-			
-			get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
-			# Win here?
+
+			game_won = true
+			game_stop = true
+			# No more levels defined :(
+
 			level -= 1
 
 	# There are cars left in the current wave
@@ -126,6 +140,7 @@ func _on_mob_timer_timeout() -> void:
 
 func _on_car_death(reward_gold: ValueComponent):
 	gold.add_value(reward_gold)
+	cars_killed += 1
 
 func _on_car_pass():
 	lives-=1
@@ -178,7 +193,7 @@ func map_clicked(pos: Vector2,
 	if  (null != cost && null != tower):
 		can_afford = gold.can_afford(cost)
 		
-	if (valid_tile && can_afford):		
+	if (valid_tile && can_afford && !game_stop):
 		tower.position = tile_pos
 		add_child(tower)
 		placed_tiles[tile_coord]=tower
@@ -187,7 +202,7 @@ func map_clicked(pos: Vector2,
 	else:
 		valid_tile = false
 	
-	if (placed_tiles.has(tile_coord)):
+	if (placed_tiles.has(tile_coord) && !game_stop):
 		select_tower(null)
 		var selected_tower = placed_tiles[tile_coord]
 		if(selected_tower.get_upgrades()<3):
