@@ -6,6 +6,10 @@ class_name TDLevel
 @export var mob_path: PackedScene
 @export var starting_gold: int = 200
 
+@export_category("Gold Settings")
+@export var starting_level_reward: int = 100
+@export var level_reward_percent_increase: int = 10
+
 @export_category("Debug Stuff")
 @export var db_dot: Sprite2D
 
@@ -13,6 +17,7 @@ class_name TDLevel
 @onready var tile_map: TileMapLayer = get_node("TileMapLayer")
 @onready var gold: ValueComponent = ValueComponent.new(starting_gold)
 @onready var gold_spent: ValueComponent = ValueComponent.new(0)
+@onready var curr_level_reward: ValueComponent = ValueComponent.new(starting_level_reward)
 
 var level_conf = parse_json("Config/level.json")
 
@@ -86,13 +91,17 @@ func get_mob_count() -> int:
 			ret += 1
 	return ret
 
+var last_wave: bool = false
 func _on_mob_timer_timeout() -> void:
-
 	# Current wave is empty
 	if current_wave == [] and get_mob_count() == 0:
+		if 0 < level && !last_wave:
+			gold.add_value(curr_level_reward)
+			curr_level_reward.change_by_percent(level_reward_percent_increase)
 		level+=1
 		current_wave = wave_factory(level)
 		if current_wave == []:
+			last_wave = true
 			# No more levels defined :(
 			# Win here?
 			level -= 1

@@ -15,5 +15,8 @@ func can_afford(cost_value: ValueComponent) -> bool:
 func add_value(additional_value: ValueComponent):
 	value += additional_value.get_value()
 
+func change_by_percent(percent: float):
+	value = value + value * (percent/100.0)
+
 func spend_value(cost: ValueComponent):
 	value -= cost.get_value()
