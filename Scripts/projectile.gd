@@ -15,7 +15,7 @@ func initilize(_damage_array: Array[int] = [1,0,0], _target : Node2D = null,
 	target = _target
 	pathName = _pathName
 
-func _physics_process(delta) -> void:
+func _physics_process(_delta) -> void:
 
 	#Get the input direction and handle the movement
 	if is_instance_valid(target):

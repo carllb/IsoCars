@@ -24,7 +24,7 @@ func clear_selected_tower():
 	curr_tower_cost = null
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	var mpos: Vector2 = game_viewport.get_mouse_position()
 	game_scene.update_pointer_position(mpos, current_tower)
 	
@@ -70,7 +70,6 @@ func _on_sub_viewport_container_gui_input(event: InputEvent):
 	var alt_pressed: bool = false
 	if event is InputEventMouseButton:
 		if event.pressed == true:
-			print(event.button_index)
 			if event.button_index == 1:
 				pressed = true
 			elif event.button_index == 2:
@@ -82,7 +81,6 @@ func _on_sub_viewport_container_gui_input(event: InputEvent):
 												  current_tower,
 												  curr_tower_cost)
 		if placed:
-			print("placed")
 			current_tower = null
 	elif alt_pressed:
 		clear_selected_tower()

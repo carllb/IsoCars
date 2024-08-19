@@ -14,14 +14,11 @@ script = ExtResource("1_aemv3")
 
 [node name="range_circle" type="CollisionShape2D" parent="Range2D"]
 unique_name_in_owner = true
-position = Vector2(27, -30)
 rotation = 0.392699
 skew = 0.785398
 shape = SubResource("CircleShape2D_osixj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(27, -34)
-scale = Vector2(0.96, 1)
 texture = ExtResource("2_5kppx")
 
 [node name="ProjectileDisconect" type="Node" parent="."]

@@ -99,7 +99,7 @@ stretch = true
 [node name="SubViewport" type="SubViewport" parent="MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer"]
 disable_3d = true
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(1073, 637)
 render_target_update_mode = 4
 
 [node name="Main" parent="MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer/SubViewport" instance=ExtResource("1_aven1")]
