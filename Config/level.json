@@ -1,574 +1,4714 @@
 {
- "levels": [
-  [
-   {
-	"health": 1,
-	"armor": 1,
-	"speed": 50,
-	"reward": 6,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 0
+	"levels": [
+	 [
+	  {
+	   "health": 2,
+	   "armor": 0,
+	   "speed": 51,
+	   "reward": 5,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 0
+	  }
+	 ],
+	 [
+	  {
+	   "health": 0,
+	   "armor": 1,
+	   "speed": 80,
+	   "reward": 18,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 0
+	  },
+	  {
+	   "health": 4,
+	   "armor": 4,
+	   "speed": 79,
+	   "reward": 24,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 1
+	  }
+	 ],
+	 [
+	  {
+	   "health": 6,
+	   "armor": 5,
+	   "speed": 111,
+	   "reward": 50,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 1
+	  },
+	  {
+	   "health": 6,
+	   "armor": 2,
+	   "speed": 113,
+	   "reward": 41,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 1
+	  },
+	  {
+	   "health": 6,
+	   "armor": 2,
+	   "speed": 112,
+	   "reward": 41,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 1
+	  }
+	 ],
+	 [
+	  {
+	   "health": 7,
+	   "armor": 7,
+	   "speed": 137,
+	   "reward": 85,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 2
+	  },
+	  {
+	   "health": 5,
+	   "armor": 2,
+	   "speed": 137,
+	   "reward": 64,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 1
+	  },
+	  {
+	   "health": 0,
+	   "armor": 6,
+	   "speed": 138,
+	   "reward": 79,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 1
+	  },
+	  {
+	   "health": 0,
+	   "armor": 7,
+	   "speed": 139,
+	   "reward": 83,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 2
+	  }
+	 ],
+	 [
+	  {
+	   "health": 3,
+	   "armor": 3,
+	   "speed": 167,
+	   "reward": 100,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 2
+	  },
+	  {
+	   "health": 4,
+	   "armor": 5,
+	   "speed": 175,
+	   "reward": 114,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 2
+	  },
+	  {
+	   "health": 7,
+	   "armor": 7,
+	   "speed": 172,
+	   "reward": 124,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 2
+	  },
+	  {
+	   "health": 3,
+	   "armor": 6,
+	   "speed": 174,
+	   "reward": 118,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 2
+	  },
+	  {
+	   "health": 8,
+	   "armor": 6,
+	   "speed": 175,
+	   "reward": 121,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 2
+	  }
+	 ],
+	 [
+	  {
+	   "health": 11,
+	   "armor": 7,
+	   "speed": 202,
+	   "reward": 169,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 2
+	  },
+	  {
+	   "health": 4,
+	   "armor": 14,
+	   "speed": 205,
+	   "reward": 209,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 3
+	  },
+	  {
+	   "health": 8,
+	   "armor": 8,
+	   "speed": 196,
+	   "reward": 170,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 2
+	  },
+	  {
+	   "health": 8,
+	   "armor": 5,
+	   "speed": 203,
+	   "reward": 156,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 2
+	  },
+	  {
+	   "health": 6,
+	   "armor": 5,
+	   "speed": 196,
+	   "reward": 151,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 2
+	  },
+	  {
+	   "health": 4,
+	   "armor": 9,
+	   "speed": 198,
+	   "reward": 175,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 2
+	  }
+	 ],
+	 [
+	  {
+	   "health": 5,
+	   "armor": 5,
+	   "speed": 228,
+	   "reward": 198,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 2
+	  },
+	  {
+	   "health": 3,
+	   "armor": 12,
+	   "speed": 229,
+	   "reward": 246,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 3
+	  },
+	  {
+	   "health": 9,
+	   "armor": 10,
+	   "speed": 225,
+	   "reward": 233,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 3
+	  },
+	  {
+	   "health": 14,
+	   "armor": 15,
+	   "speed": 232,
+	   "reward": 277,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 3
+	  },
+	  {
+	   "health": 2,
+	   "armor": 18,
+	   "speed": 232,
+	   "reward": 289,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 4
+	  },
+	  {
+	   "health": 5,
+	   "armor": 5,
+	   "speed": 224,
+	   "reward": 195,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 2
+	  },
+	  {
+	   "health": 7,
+	   "armor": 10,
+	   "speed": 227,
+	   "reward": 233,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 3
+	  }
+	 ],
+	 [
+	  {
+	   "health": 11,
+	   "armor": 20,
+	   "speed": 259,
+	   "reward": 376,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 4
+	  },
+	  {
+	   "health": 4,
+	   "armor": 15,
+	   "speed": 260,
+	   "reward": 331,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 4
+	  },
+	  {
+	   "health": 2,
+	   "armor": 7,
+	   "speed": 255,
+	   "reward": 261,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 3
+	  },
+	  {
+	   "health": 0,
+	   "armor": 9,
+	   "speed": 260,
+	   "reward": 280,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 3
+	  },
+	  {
+	   "health": 5,
+	   "armor": 8,
+	   "speed": 256,
+	   "reward": 272,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 3
+	  },
+	  {
+	   "health": 7,
+	   "armor": 12,
+	   "speed": 256,
+	   "reward": 306,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 3
+	  },
+	  {
+	   "health": 0,
+	   "armor": 14,
+	   "speed": 260,
+	   "reward": 320,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 4
+	  },
+	  {
+	   "health": 3,
+	   "armor": 22,
+	   "speed": 261,
+	   "reward": 387,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 4
+	  }
+	 ],
+	 [
+	  {
+	   "health": 18,
+	   "armor": 12,
+	   "speed": 290,
+	   "reward": 385,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 4
+	  },
+	  {
+	   "health": 0,
+	   "armor": 12,
+	   "speed": 299,
+	   "reward": 377,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 4
+	  },
+	  {
+	   "health": 16,
+	   "armor": 16,
+	   "speed": 282,
+	   "reward": 412,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 4
+	  },
+	  {
+	   "health": 9,
+	   "armor": 21,
+	   "speed": 284,
+	   "reward": 452,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 5
+	  },
+	  {
+	   "health": 9,
+	   "armor": 22,
+	   "speed": 293,
+	   "reward": 469,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 5
+	  },
+	  {
+	   "health": 3,
+	   "armor": 17,
+	   "speed": 283,
+	   "reward": 410,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 4
+	  },
+	  {
+	   "health": 7,
+	   "armor": 15,
+	   "speed": 297,
+	   "reward": 408,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 4
+	  },
+	  {
+	   "health": 7,
+	   "armor": 25,
+	   "speed": 281,
+	   "reward": 484,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 5
+	  },
+	  {
+	   "health": 7,
+	   "armor": 18,
+	   "speed": 291,
+	   "reward": 430,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 4
+	  }
+	 ],
+	 [
+	  {
+	   "health": 12,
+	   "armor": 11,
+	   "speed": 323,
+	   "reward": 445,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 4
+	  },
+	  {
+	   "health": 14,
+	   "armor": 25,
+	   "speed": 314,
+	   "reward": 578,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 5
+	  },
+	  {
+	   "health": 11,
+	   "armor": 28,
+	   "speed": 323,
+	   "reward": 614,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 6
+	  },
+	  {
+	   "health": 0,
+	   "armor": 20,
+	   "speed": 311,
+	   "reward": 511,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 5
+	  },
+	  {
+	   "health": 2,
+	   "armor": 16,
+	   "speed": 323,
+	   "reward": 485,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 4
+	  },
+	  {
+	   "health": 1,
+	   "armor": 12,
+	   "speed": 310,
+	   "reward": 431,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 4
+	  },
+	  {
+	   "health": 17,
+	   "armor": 28,
+	   "speed": 310,
+	   "reward": 607,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 6
+	  },
+	  {
+	   "health": 18,
+	   "armor": 24,
+	   "speed": 312,
+	   "reward": 570,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 5
+	  },
+	  {
+	   "health": 17,
+	   "armor": 18,
+	   "speed": 317,
+	   "reward": 514,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 5
+	  },
+	  {
+	   "health": 7,
+	   "armor": 17,
+	   "speed": 320,
+	   "reward": 497,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 4
+	  }
+	 ],
+	 [
+	  {
+	   "health": 1,
+	   "armor": 19,
+	   "speed": 354,
+	   "reward": 599,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 5
+	  },
+	  {
+	   "health": 21,
+	   "armor": 25,
+	   "speed": 349,
+	   "reward": 682,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 6
+	  },
+	  {
+	   "health": 3,
+	   "armor": 19,
+	   "speed": 350,
+	   "reward": 597,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 5
+	  },
+	  {
+	   "health": 22,
+	   "armor": 13,
+	   "speed": 339,
+	   "reward": 540,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 4
+	  },
+	  {
+	   "health": 5,
+	   "armor": 21,
+	   "speed": 350,
+	   "reward": 621,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 5
+	  },
+	  {
+	   "health": 6,
+	   "armor": 19,
+	   "speed": 361,
+	   "reward": 612,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 5
+	  },
+	  {
+	   "health": 4,
+	   "armor": 23,
+	   "speed": 360,
+	   "reward": 653,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 5
+	  },
+	  {
+	   "health": 5,
+	   "armor": 15,
+	   "speed": 359,
+	   "reward": 565,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 5
+	  },
+	  {
+	   "health": 0,
+	   "armor": 13,
+	   "speed": 352,
+	   "reward": 530,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 4
+	  },
+	  {
+	   "health": 18,
+	   "armor": 25,
+	   "speed": 339,
+	   "reward": 667,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 6
+	  },
+	  {
+	   "health": 16,
+	   "armor": 14,
+	   "speed": 348,
+	   "reward": 554,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 5
+	  }
+	 ],
+	 [
+	  {
+	   "health": 11,
+	   "armor": 25,
+	   "speed": 380,
+	   "reward": 769,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 6
+	  },
+	  {
+	   "health": 0,
+	   "armor": 12,
+	   "speed": 372,
+	   "reward": 590,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 4
+	  },
+	  {
+	   "health": 0,
+	   "armor": 27,
+	   "speed": 382,
+	   "reward": 782,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 6
+	  },
+	  {
+	   "health": 7,
+	   "armor": 16,
+	   "speed": 376,
+	   "reward": 651,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 5
+	  },
+	  {
+	   "health": 1,
+	   "armor": 24,
+	   "speed": 392,
+	   "reward": 759,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 6
+	  },
+	  {
+	   "health": 0,
+	   "armor": 33,
+	   "speed": 379,
+	   "reward": 850,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 7
+	  },
+	  {
+	   "health": 15,
+	   "armor": 24,
+	   "speed": 392,
+	   "reward": 776,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 6
+	  },
+	  {
+	   "health": 22,
+	   "armor": 19,
+	   "speed": 376,
+	   "reward": 705,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 5
+	  },
+	  {
+	   "health": 13,
+	   "armor": 14,
+	   "speed": 392,
+	   "reward": 654,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 5
+	  },
+	  {
+	   "health": 23,
+	   "armor": 13,
+	   "speed": 377,
+	   "reward": 636,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 5
+	  },
+	  {
+	   "health": 5,
+	   "armor": 29,
+	   "speed": 387,
+	   "reward": 818,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 6
+	  },
+	  {
+	   "health": 11,
+	   "armor": 20,
+	   "speed": 381,
+	   "reward": 710,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 5
+	  }
+	 ],
+	 [
+	  {
+	   "health": 22,
+	   "armor": 22,
+	   "speed": 415,
+	   "reward": 854,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 6
+	  },
+	  {
+	   "health": 15,
+	   "armor": 21,
+	   "speed": 406,
+	   "reward": 820,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 6
+	  },
+	  {
+	   "health": 0,
+	   "armor": 18,
+	   "speed": 422,
+	   "reward": 782,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 6
+	  },
+	  {
+	   "health": 2,
+	   "armor": 19,
+	   "speed": 416,
+	   "reward": 790,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 6
+	  },
+	  {
+	   "health": 18,
+	   "armor": 30,
+	   "speed": 420,
+	   "reward": 959,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 7
+	  },
+	  {
+	   "health": 20,
+	   "armor": 30,
+	   "speed": 403,
+	   "reward": 939,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 7
+	  },
+	  {
+	   "health": 20,
+	   "armor": 35,
+	   "speed": 408,
+	   "reward": 1011,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 7
+	  },
+	  {
+	   "health": 24,
+	   "armor": 13,
+	   "speed": 423,
+	   "reward": 750,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 5
+	  },
+	  {
+	   "health": 19,
+	   "armor": 18,
+	   "speed": 412,
+	   "reward": 794,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 6
+	  },
+	  {
+	   "health": 23,
+	   "armor": 33,
+	   "speed": 419,
+	   "reward": 1003,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 7
+	  },
+	  {
+	   "health": 1,
+	   "armor": 20,
+	   "speed": 416,
+	   "reward": 802,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 6
+	  },
+	  {
+	   "health": 11,
+	   "armor": 21,
+	   "speed": 406,
+	   "reward": 815,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 6
+	  },
+	  {
+	   "health": 18,
+	   "armor": 12,
+	   "speed": 401,
+	   "reward": 700,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 5
+	  }
+	 ],
+	 [
+	  {
+	   "health": 5,
+	   "armor": 34,
+	   "speed": 429,
+	   "reward": 1083,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 7
+	  },
+	  {
+	   "health": 5,
+	   "armor": 27,
+	   "speed": 453,
+	   "reward": 1019,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 7
+	  },
+	  {
+	   "health": 17,
+	   "armor": 29,
+	   "speed": 451,
+	   "reward": 1061,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 7
+	  },
+	  {
+	   "health": 25,
+	   "armor": 23,
+	   "speed": 428,
+	   "reward": 956,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 6
+	  },
+	  {
+	   "health": 18,
+	   "armor": 16,
+	   "speed": 442,
+	   "reward": 868,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 6
+	  },
+	  {
+	   "health": 25,
+	   "armor": 34,
+	   "speed": 448,
+	   "reward": 1138,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 14,
+	   "armor": 36,
+	   "speed": 438,
+	   "reward": 1136,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 9,
+	   "armor": 31,
+	   "speed": 435,
+	   "reward": 1055,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 7
+	  },
+	  {
+	   "health": 9,
+	   "armor": 14,
+	   "speed": 449,
+	   "reward": 837,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 5
+	  },
+	  {
+	   "health": 26,
+	   "armor": 21,
+	   "speed": 444,
+	   "reward": 952,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 6
+	  },
+	  {
+	   "health": 25,
+	   "armor": 36,
+	   "speed": 426,
+	   "reward": 1135,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 11,
+	   "armor": 34,
+	   "speed": 433,
+	   "reward": 1097,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 7
+	  },
+	  {
+	   "health": 19,
+	   "armor": 31,
+	   "speed": 430,
+	   "reward": 1062,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 7
+	  },
+	  {
+	   "health": 24,
+	   "armor": 13,
+	   "speed": 443,
+	   "reward": 835,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 5
+	  }
+	 ],
+	 [
+	  {
+	   "health": 12,
+	   "armor": 27,
+	   "speed": 457,
+	   "reward": 1108,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 7
+	  },
+	  {
+	   "health": 23,
+	   "armor": 42,
+	   "speed": 479,
+	   "reward": 1382,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 12,
+	   "armor": 36,
+	   "speed": 479,
+	   "reward": 1276,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 23,
+	   "armor": 41,
+	   "speed": 459,
+	   "reward": 1337,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 3,
+	   "armor": 40,
+	   "speed": 484,
+	   "reward": 1330,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 4,
+	   "armor": 39,
+	   "speed": 465,
+	   "reward": 1288,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 11,
+	   "armor": 38,
+	   "speed": 481,
+	   "reward": 1308,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 13,
+	   "armor": 15,
+	   "speed": 473,
+	   "reward": 953,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 6
+	  },
+	  {
+	   "health": 15,
+	   "armor": 31,
+	   "speed": 467,
+	   "reward": 1188,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 7
+	  },
+	  {
+	   "health": 29,
+	   "armor": 15,
+	   "speed": 467,
+	   "reward": 968,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 6
+	  },
+	  {
+	   "health": 2,
+	   "armor": 41,
+	   "speed": 466,
+	   "reward": 1317,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 11,
+	   "armor": 36,
+	   "speed": 459,
+	   "reward": 1245,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 11,
+	   "armor": 15,
+	   "speed": 471,
+	   "reward": 948,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 6
+	  },
+	  {
+	   "health": 28,
+	   "armor": 42,
+	   "speed": 473,
+	   "reward": 1381,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 25,
+	   "armor": 36,
+	   "speed": 475,
+	   "reward": 1290,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  }
+	 ],
+	 [
+	  {
+	   "health": 9,
+	   "armor": 38,
+	   "speed": 490,
+	   "reward": 1406,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 11,
+	   "armor": 36,
+	   "speed": 484,
+	   "reward": 1368,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 9,
+	   "armor": 24,
+	   "speed": 506,
+	   "reward": 1208,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 7
+	  },
+	  {
+	   "health": 29,
+	   "armor": 27,
+	   "speed": 507,
+	   "reward": 1289,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 29,
+	   "armor": 17,
+	   "speed": 511,
+	   "reward": 1136,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 7
+	  },
+	  {
+	   "health": 27,
+	   "armor": 20,
+	   "speed": 492,
+	   "reward": 1150,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 7
+	  },
+	  {
+	   "health": 12,
+	   "armor": 42,
+	   "speed": 493,
+	   "reward": 1480,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 28,
+	   "armor": 46,
+	   "speed": 513,
+	   "reward": 1601,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 7,
+	   "armor": 45,
+	   "speed": 500,
+	   "reward": 1531,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 30,
+	   "armor": 28,
+	   "speed": 490,
+	   "reward": 1280,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 26,
+	   "armor": 33,
+	   "speed": 487,
+	   "reward": 1348,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 25,
+	   "armor": 27,
+	   "speed": 508,
+	   "reward": 1284,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 31,
+	   "armor": 14,
+	   "speed": 515,
+	   "reward": 1097,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 6
+	  },
+	  {
+	   "health": 6,
+	   "armor": 35,
+	   "speed": 512,
+	   "reward": 1388,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 7,
+	   "armor": 38,
+	   "speed": 487,
+	   "reward": 1398,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 5,
+	   "armor": 39,
+	   "speed": 484,
+	   "reward": 1406,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  }
+	 ],
+	 [
+	  {
+	   "health": 34,
+	   "armor": 44,
+	   "speed": 527,
+	   "reward": 1701,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 34,
+	   "armor": 36,
+	   "speed": 516,
+	   "reward": 1547,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 17,
+	   "armor": 20,
+	   "speed": 536,
+	   "reward": 1280,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 7
+	  },
+	  {
+	   "health": 17,
+	   "armor": 41,
+	   "speed": 516,
+	   "reward": 1603,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 6,
+	   "armor": 24,
+	   "speed": 542,
+	   "reward": 1339,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 7
+	  },
+	  {
+	   "health": 26,
+	   "armor": 21,
+	   "speed": 525,
+	   "reward": 1293,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 7
+	  },
+	  {
+	   "health": 12,
+	   "armor": 33,
+	   "speed": 526,
+	   "reward": 1475,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 24,
+	   "armor": 49,
+	   "speed": 520,
+	   "reward": 1757,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 15,
+	   "armor": 17,
+	   "speed": 537,
+	   "reward": 1227,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 7
+	  },
+	  {
+	   "health": 18,
+	   "armor": 43,
+	   "speed": 543,
+	   "reward": 1684,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 28,
+	   "armor": 27,
+	   "speed": 517,
+	   "reward": 1385,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 11,
+	   "armor": 31,
+	   "speed": 529,
+	   "reward": 1445,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 11,
+	   "armor": 29,
+	   "speed": 536,
+	   "reward": 1422,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 17,
+	   "armor": 40,
+	   "speed": 544,
+	   "reward": 1633,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 13,
+	   "armor": 16,
+	   "speed": 528,
+	   "reward": 1191,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 7
+	  },
+	  {
+	   "health": 31,
+	   "armor": 21,
+	   "speed": 529,
+	   "reward": 1309,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 7
+	  },
+	  {
+	   "health": 25,
+	   "armor": 15,
+	   "speed": 547,
+	   "reward": 1227,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 7
+	  }
+	 ],
+	 [
+	  {
+	   "health": 11,
+	   "armor": 32,
+	   "speed": 573,
+	   "reward": 1627,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 0,
+	   "armor": 31,
+	   "speed": 552,
+	   "reward": 1551,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 19,
+	   "armor": 45,
+	   "speed": 578,
+	   "reward": 1884,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 17,
+	   "armor": 52,
+	   "speed": 575,
+	   "reward": 2001,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 17,
+	   "armor": 43,
+	   "speed": 577,
+	   "reward": 1843,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 4,
+	   "armor": 47,
+	   "speed": 573,
+	   "reward": 1884,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 5,
+	   "armor": 43,
+	   "speed": 546,
+	   "reward": 1765,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 8,
+	   "armor": 45,
+	   "speed": 545,
+	   "reward": 1805,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 2,
+	   "armor": 42,
+	   "speed": 575,
+	   "reward": 1794,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 27,
+	   "armor": 30,
+	   "speed": 552,
+	   "reward": 1582,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 26,
+	   "armor": 20,
+	   "speed": 544,
+	   "reward": 1386,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 7
+	  },
+	  {
+	   "health": 10,
+	   "armor": 47,
+	   "speed": 572,
+	   "reward": 1893,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 12,
+	   "armor": 20,
+	   "speed": 572,
+	   "reward": 1411,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 7
+	  },
+	  {
+	   "health": 10,
+	   "armor": 35,
+	   "speed": 569,
+	   "reward": 1672,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 4,
+	   "armor": 25,
+	   "speed": 561,
+	   "reward": 1467,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 17,
+	   "armor": 43,
+	   "speed": 547,
+	   "reward": 1789,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 24,
+	   "armor": 23,
+	   "speed": 567,
+	   "reward": 1477,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 17,
+	   "armor": 49,
+	   "speed": 553,
+	   "reward": 1908,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  }
+	 ],
+	 [
+	  {
+	   "health": 10,
+	   "armor": 32,
+	   "speed": 578,
+	   "reward": 1725,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 16,
+	   "armor": 37,
+	   "speed": 596,
+	   "reward": 1865,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 8,
+	   "armor": 26,
+	   "speed": 604,
+	   "reward": 1656,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 2,
+	   "armor": 31,
+	   "speed": 608,
+	   "reward": 1748,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 1,
+	   "armor": 29,
+	   "speed": 595,
+	   "reward": 1683,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 22,
+	   "armor": 17,
+	   "speed": 604,
+	   "reward": 1512,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 7
+	  },
+	  {
+	   "health": 5,
+	   "armor": 36,
+	   "speed": 581,
+	   "reward": 1797,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 18,
+	   "armor": 43,
+	   "speed": 595,
+	   "reward": 1981,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 30,
+	   "armor": 50,
+	   "speed": 591,
+	   "reward": 2129,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 5,
+	   "armor": 22,
+	   "speed": 592,
+	   "reward": 1552,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 15,
+	   "armor": 39,
+	   "speed": 602,
+	   "reward": 1913,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 27,
+	   "armor": 31,
+	   "speed": 579,
+	   "reward": 1740,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 12,
+	   "armor": 32,
+	   "speed": 574,
+	   "reward": 1721,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 31,
+	   "armor": 36,
+	   "speed": 589,
+	   "reward": 1862,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 29,
+	   "armor": 32,
+	   "speed": 590,
+	   "reward": 1784,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 31,
+	   "armor": 33,
+	   "speed": 577,
+	   "reward": 1782,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 30,
+	   "armor": 48,
+	   "speed": 601,
+	   "reward": 2110,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 6,
+	   "armor": 50,
+	   "speed": 594,
+	   "reward": 2090,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 35,
+	   "armor": 55,
+	   "speed": 581,
+	   "reward": 2215,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  }
+	 ],
+	 [
+	  {
+	   "health": 14,
+	   "armor": 50,
+	   "speed": 610,
+	   "reward": 2248,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 7,
+	   "armor": 45,
+	   "speed": 637,
+	   "reward": 2188,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 25,
+	   "armor": 35,
+	   "speed": 624,
+	   "reward": 1998,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 12,
+	   "armor": 41,
+	   "speed": 626,
+	   "reward": 2096,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 13,
+	   "armor": 35,
+	   "speed": 614,
+	   "reward": 1953,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 13,
+	   "armor": 27,
+	   "speed": 629,
+	   "reward": 1824,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 3,
+	   "armor": 34,
+	   "speed": 635,
+	   "reward": 1956,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 15,
+	   "armor": 52,
+	   "speed": 602,
+	   "reward": 2274,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 7,
+	   "armor": 47,
+	   "speed": 602,
+	   "reward": 2158,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 2,
+	   "armor": 41,
+	   "speed": 611,
+	   "reward": 2046,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 27,
+	   "armor": 22,
+	   "speed": 619,
+	   "reward": 1732,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 15,
+	   "armor": 34,
+	   "speed": 620,
+	   "reward": 1950,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 21,
+	   "armor": 47,
+	   "speed": 619,
+	   "reward": 2220,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 1,
+	   "armor": 40,
+	   "speed": 602,
+	   "reward": 2006,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 17,
+	   "armor": 38,
+	   "speed": 609,
+	   "reward": 2012,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 28,
+	   "armor": 52,
+	   "speed": 605,
+	   "reward": 2306,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 2,
+	   "armor": 21,
+	   "speed": 609,
+	   "reward": 1642,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 15,
+	   "armor": 21,
+	   "speed": 607,
+	   "reward": 1664,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 36,
+	   "armor": 47,
+	   "speed": 619,
+	   "reward": 2250,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 3,
+	   "armor": 45,
+	   "speed": 600,
+	   "reward": 2106,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  }
+	 ],
+	 [
+	  {
+	   "health": 27,
+	   "armor": 59,
+	   "speed": 667,
+	   "reward": 2696,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 12,
+	   "armor": 25,
+	   "speed": 637,
+	   "reward": 1887,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 8
+	  },
+	  {
+	   "health": 42,
+	   "armor": 36,
+	   "speed": 664,
+	   "reward": 2238,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 30,
+	   "armor": 58,
+	   "speed": 634,
+	   "reward": 2612,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 1,
+	   "armor": 51,
+	   "speed": 662,
+	   "reward": 2463,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 35,
+	   "armor": 39,
+	   "speed": 660,
+	   "reward": 2278,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 32,
+	   "armor": 26,
+	   "speed": 667,
+	   "reward": 2013,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 0,
+	   "armor": 43,
+	   "speed": 654,
+	   "reward": 2276,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 24,
+	   "armor": 52,
+	   "speed": 637,
+	   "reward": 2480,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 16,
+	   "armor": 48,
+	   "speed": 653,
+	   "reward": 2412,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 7,
+	   "armor": 44,
+	   "speed": 657,
+	   "reward": 2318,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 32,
+	   "armor": 29,
+	   "speed": 662,
+	   "reward": 2066,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 36,
+	   "armor": 48,
+	   "speed": 661,
+	   "reward": 2471,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 10,
+	   "armor": 24,
+	   "speed": 650,
+	   "reward": 1890,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 5,
+	   "armor": 43,
+	   "speed": 654,
+	   "reward": 2286,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 31,
+	   "armor": 30,
+	   "speed": 636,
+	   "reward": 2030,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 29,
+	   "armor": 59,
+	   "speed": 652,
+	   "reward": 2669,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 12,
+	   "armor": 53,
+	   "speed": 666,
+	   "reward": 2536,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 35,
+	   "armor": 59,
+	   "speed": 671,
+	   "reward": 2721,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 33,
+	   "armor": 51,
+	   "speed": 640,
+	   "reward": 2484,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 13,
+	   "armor": 22,
+	   "speed": 668,
+	   "reward": 1892,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  }
+	 ],
+	 [
+	  {
+	   "health": 33,
+	   "armor": 26,
+	   "speed": 667,
+	   "reward": 2112,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 40,
+	   "armor": 27,
+	   "speed": 699,
+	   "reward": 2219,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 38,
+	   "armor": 40,
+	   "speed": 695,
+	   "reward": 2492,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 37,
+	   "armor": 56,
+	   "speed": 669,
+	   "reward": 2785,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 44,
+	   "armor": 41,
+	   "speed": 699,
+	   "reward": 2536,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 19,
+	   "armor": 27,
+	   "speed": 702,
+	   "reward": 2180,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 1,
+	   "armor": 42,
+	   "speed": 663,
+	   "reward": 2384,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 40,
+	   "armor": 44,
+	   "speed": 687,
+	   "reward": 2567,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 4,
+	   "armor": 49,
+	   "speed": 693,
+	   "reward": 2611,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 42,
+	   "armor": 48,
+	   "speed": 698,
+	   "reward": 2684,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 38,
+	   "armor": 51,
+	   "speed": 693,
+	   "reward": 2730,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 38,
+	   "armor": 29,
+	   "speed": 688,
+	   "reward": 2235,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 42,
+	   "armor": 37,
+	   "speed": 674,
+	   "reward": 2389,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 27,
+	   "armor": 23,
+	   "speed": 674,
+	   "reward": 2048,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 36,
+	   "armor": 41,
+	   "speed": 672,
+	   "reward": 2459,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 24,
+	   "armor": 61,
+	   "speed": 673,
+	   "reward": 2875,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 29,
+	   "armor": 24,
+	   "speed": 661,
+	   "reward": 2046,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 11,
+	   "armor": 53,
+	   "speed": 699,
+	   "reward": 2728,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 27,
+	   "armor": 41,
+	   "speed": 684,
+	   "reward": 2466,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 30,
+	   "armor": 39,
+	   "speed": 675,
+	   "reward": 2409,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 3,
+	   "armor": 52,
+	   "speed": 684,
+	   "reward": 2655,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 39,
+	   "armor": 60,
+	   "speed": 677,
+	   "reward": 2895,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  }
+	 ],
+	 [
+	  {
+	   "health": 21,
+	   "armor": 27,
+	   "speed": 704,
+	   "reward": 2288,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 3,
+	   "armor": 52,
+	   "speed": 727,
+	   "reward": 2875,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 41,
+	   "armor": 60,
+	   "speed": 724,
+	   "reward": 3139,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 31,
+	   "armor": 27,
+	   "speed": 727,
+	   "reward": 2364,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 18,
+	   "armor": 67,
+	   "speed": 730,
+	   "reward": 3261,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 17,
+	   "armor": 56,
+	   "speed": 696,
+	   "reward": 2927,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 44,
+	   "armor": 57,
+	   "speed": 697,
+	   "reward": 3015,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 25,
+	   "armor": 28,
+	   "speed": 705,
+	   "reward": 2323,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 9,
+	   "armor": 62,
+	   "speed": 703,
+	   "reward": 3063,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 17,
+	   "armor": 59,
+	   "speed": 710,
+	   "reward": 3029,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 46,
+	   "armor": 42,
+	   "speed": 719,
+	   "reward": 2725,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 15,
+	   "armor": 50,
+	   "speed": 689,
+	   "reward": 2769,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 27,
+	   "armor": 47,
+	   "speed": 722,
+	   "reward": 2803,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 41,
+	   "armor": 22,
+	   "speed": 706,
+	   "reward": 2224,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 46,
+	   "armor": 35,
+	   "speed": 710,
+	   "reward": 2543,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 20,
+	   "armor": 64,
+	   "speed": 695,
+	   "reward": 3116,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 18,
+	   "armor": 56,
+	   "speed": 717,
+	   "reward": 2978,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 1,
+	   "armor": 61,
+	   "speed": 716,
+	   "reward": 3052,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 7,
+	   "armor": 48,
+	   "speed": 714,
+	   "reward": 2762,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 14,
+	   "armor": 66,
+	   "speed": 731,
+	   "reward": 3231,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 45,
+	   "armor": 56,
+	   "speed": 703,
+	   "reward": 3008,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 22,
+	   "armor": 40,
+	   "speed": 712,
+	   "reward": 2608,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 42,
+	   "armor": 61,
+	   "speed": 725,
+	   "reward": 3167,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  }
+	 ],
+	 [
+	  {
+	   "health": 9,
+	   "armor": 56,
+	   "speed": 760,
+	   "reward": 3189,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 38,
+	   "armor": 58,
+	   "speed": 758,
+	   "reward": 3302,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 48,
+	   "armor": 46,
+	   "speed": 726,
+	   "reward": 2961,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 27,
+	   "armor": 24,
+	   "speed": 720,
+	   "reward": 2368,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 40,
+	   "armor": 26,
+	   "speed": 724,
+	   "reward": 2457,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 35,
+	   "armor": 44,
+	   "speed": 759,
+	   "reward": 2961,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 16,
+	   "armor": 45,
+	   "speed": 761,
+	   "reward": 2944,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 29,
+	   "armor": 49,
+	   "speed": 764,
+	   "reward": 3079,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 13,
+	   "armor": 32,
+	   "speed": 743,
+	   "reward": 2582,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 37,
+	   "armor": 57,
+	   "speed": 741,
+	   "reward": 3235,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 15,
+	   "armor": 64,
+	   "speed": 723,
+	   "reward": 3307,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 11,
+	   "armor": 26,
+	   "speed": 730,
+	   "reward": 2402,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 44,
+	   "armor": 43,
+	   "speed": 720,
+	   "reward": 2865,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 15,
+	   "armor": 37,
+	   "speed": 718,
+	   "reward": 2647,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 16,
+	   "armor": 46,
+	   "speed": 729,
+	   "reward": 2892,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 21,
+	   "armor": 23,
+	   "speed": 723,
+	   "reward": 2337,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 27,
+	   "armor": 35,
+	   "speed": 737,
+	   "reward": 2673,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 23,
+	   "armor": 34,
+	   "speed": 752,
+	   "reward": 2676,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 35,
+	   "armor": 63,
+	   "speed": 723,
+	   "reward": 3331,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 8,
+	   "armor": 67,
+	   "speed": 723,
+	   "reward": 3362,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 19,
+	   "armor": 23,
+	   "speed": 719,
+	   "reward": 2323,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 9
+	  },
+	  {
+	   "health": 32,
+	   "armor": 45,
+	   "speed": 730,
+	   "reward": 2908,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 1,
+	   "armor": 59,
+	   "speed": 753,
+	   "reward": 3225,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 34,
+	   "armor": 69,
+	   "speed": 742,
+	   "reward": 3518,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  }
+	 ],
+	 [
+	  {
+	   "health": 19,
+	   "armor": 62,
+	   "speed": 771,
+	   "reward": 3525,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 32,
+	   "armor": 29,
+	   "speed": 753,
+	   "reward": 2687,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 15,
+	   "armor": 68,
+	   "speed": 763,
+	   "reward": 3645,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 27,
+	   "armor": 61,
+	   "speed": 772,
+	   "reward": 3522,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 41,
+	   "armor": 30,
+	   "speed": 746,
+	   "reward": 2717,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 39,
+	   "armor": 25,
+	   "speed": 779,
+	   "reward": 2670,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 23,
+	   "armor": 65,
+	   "speed": 793,
+	   "reward": 3665,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 6,
+	   "armor": 55,
+	   "speed": 782,
+	   "reward": 3345,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 29,
+	   "armor": 46,
+	   "speed": 792,
+	   "reward": 3202,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 44,
+	   "armor": 72,
+	   "speed": 778,
+	   "reward": 3854,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 2,
+	   "armor": 70,
+	   "speed": 769,
+	   "reward": 3677,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 2,
+	   "armor": 26,
+	   "speed": 793,
+	   "reward": 2637,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 15,
+	   "armor": 71,
+	   "speed": 770,
+	   "reward": 3737,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 42,
+	   "armor": 30,
+	   "speed": 778,
+	   "reward": 2800,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 5,
+	   "armor": 40,
+	   "speed": 757,
+	   "reward": 2905,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 26,
+	   "armor": 24,
+	   "speed": 784,
+	   "reward": 2625,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 26,
+	   "armor": 31,
+	   "speed": 768,
+	   "reward": 2760,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 5,
+	   "armor": 33,
+	   "speed": 773,
+	   "reward": 2770,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 36,
+	   "armor": 23,
+	   "speed": 771,
+	   "reward": 2592,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 14,
+	   "armor": 23,
+	   "speed": 791,
+	   "reward": 2587,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 19,
+	   "armor": 69,
+	   "speed": 777,
+	   "reward": 3715,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 42,
+	   "armor": 54,
+	   "speed": 774,
+	   "reward": 3390,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 47,
+	   "armor": 41,
+	   "speed": 748,
+	   "reward": 3012,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 28,
+	   "armor": 63,
+	   "speed": 765,
+	   "reward": 3557,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 44,
+	   "armor": 35,
+	   "speed": 747,
+	   "reward": 2852,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  }
+	 ],
+	 [
+	  {
+	   "health": 17,
+	   "armor": 26,
+	   "speed": 791,
+	   "reward": 2776,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 25,
+	   "armor": 71,
+	   "speed": 807,
+	   "reward": 4009,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 35,
+	   "armor": 56,
+	   "speed": 778,
+	   "reward": 3569,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 12,
+	   "armor": 60,
+	   "speed": 810,
+	   "reward": 3697,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 45,
+	   "armor": 66,
+	   "speed": 790,
+	   "reward": 3887,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 2,
+	   "armor": 26,
+	   "speed": 810,
+	   "reward": 2787,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 37,
+	   "armor": 60,
+	   "speed": 808,
+	   "reward": 3757,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 42,
+	   "armor": 25,
+	   "speed": 825,
+	   "reward": 2904,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 25,
+	   "armor": 38,
+	   "speed": 800,
+	   "reward": 3133,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 37,
+	   "armor": 24,
+	   "speed": 811,
+	   "reward": 2828,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 6,
+	   "armor": 75,
+	   "speed": 779,
+	   "reward": 3991,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 18,
+	   "armor": 26,
+	   "speed": 808,
+	   "reward": 2823,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 31,
+	   "armor": 31,
+	   "speed": 790,
+	   "reward": 2940,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 6,
+	   "armor": 73,
+	   "speed": 795,
+	   "reward": 3980,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 9,
+	   "armor": 29,
+	   "speed": 824,
+	   "reward": 2919,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 8,
+	   "armor": 63,
+	   "speed": 793,
+	   "reward": 3720,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 6,
+	   "armor": 64,
+	   "speed": 782,
+	   "reward": 3712,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 26,
+	   "armor": 75,
+	   "speed": 813,
+	   "reward": 4131,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 14,
+	   "armor": 72,
+	   "speed": 800,
+	   "reward": 3988,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 49,
+	   "armor": 58,
+	   "speed": 811,
+	   "reward": 3744,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 45,
+	   "armor": 35,
+	   "speed": 779,
+	   "reward": 3052,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 14,
+	   "armor": 68,
+	   "speed": 809,
+	   "reward": 3907,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 15,
+	   "armor": 75,
+	   "speed": 792,
+	   "reward": 4048,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 7,
+	   "armor": 45,
+	   "speed": 800,
+	   "reward": 3268,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 32,
+	   "armor": 60,
+	   "speed": 792,
+	   "reward": 3702,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 38,
+	   "armor": 59,
+	   "speed": 802,
+	   "reward": 3718,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  }
+	 ],
+	 [
+	  {
+	   "health": 12,
+	   "armor": 71,
+	   "speed": 807,
+	   "reward": 4128,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 46,
+	   "armor": 40,
+	   "speed": 854,
+	   "reward": 3510,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 32,
+	   "armor": 51,
+	   "speed": 840,
+	   "reward": 3731,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 35,
+	   "armor": 75,
+	   "speed": 810,
+	   "reward": 4306,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 39,
+	   "armor": 72,
+	   "speed": 804,
+	   "reward": 4220,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 4,
+	   "armor": 39,
+	   "speed": 825,
+	   "reward": 3291,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 28,
+	   "armor": 51,
+	   "speed": 851,
+	   "reward": 3750,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 51,
+	   "armor": 48,
+	   "speed": 817,
+	   "reward": 3639,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 14,
+	   "armor": 41,
+	   "speed": 811,
+	   "reward": 3334,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 21,
+	   "armor": 57,
+	   "speed": 831,
+	   "reward": 3839,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 24,
+	   "armor": 27,
+	   "speed": 828,
+	   "reward": 3029,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 0,
+	   "armor": 70,
+	   "speed": 818,
+	   "reward": 4098,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 47,
+	   "armor": 48,
+	   "speed": 851,
+	   "reward": 3720,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 19,
+	   "armor": 36,
+	   "speed": 840,
+	   "reward": 3291,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 34,
+	   "armor": 34,
+	   "speed": 806,
+	   "reward": 3186,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 28,
+	   "armor": 25,
+	   "speed": 808,
+	   "reward": 2932,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 10
+	  },
+	  {
+	   "health": 41,
+	   "armor": 67,
+	   "speed": 856,
+	   "reward": 4230,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 35,
+	   "armor": 39,
+	   "speed": 842,
+	   "reward": 3420,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 14,
+	   "armor": 76,
+	   "speed": 831,
+	   "reward": 4333,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 16
+	  },
+	  {
+	   "health": 20,
+	   "armor": 53,
+	   "speed": 819,
+	   "reward": 3696,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 28,
+	   "armor": 33,
+	   "speed": 842,
+	   "reward": 3240,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 25,
+	   "armor": 73,
+	   "speed": 803,
+	   "reward": 4206,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 40,
+	   "armor": 64,
+	   "speed": 812,
+	   "reward": 4028,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 47,
+	   "armor": 50,
+	   "speed": 850,
+	   "reward": 3771,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 25,
+	   "armor": 63,
+	   "speed": 807,
+	   "reward": 3947,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 42,
+	   "armor": 56,
+	   "speed": 803,
+	   "reward": 3793,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 16,
+	   "armor": 32,
+	   "speed": 851,
+	   "reward": 3204,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  }
+	 ],
+	 [
+	  {
+	   "health": 46,
+	   "armor": 34,
+	   "speed": 845,
+	   "reward": 3446,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 2,
+	   "armor": 70,
+	   "speed": 866,
+	   "reward": 4390,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 54,
+	   "armor": 60,
+	   "speed": 836,
+	   "reward": 4172,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 28,
+	   "armor": 76,
+	   "speed": 845,
+	   "reward": 4572,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 16
+	  },
+	  {
+	   "health": 19,
+	   "armor": 46,
+	   "speed": 838,
+	   "reward": 3687,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 50,
+	   "armor": 63,
+	   "speed": 835,
+	   "reward": 4242,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 34,
+	   "armor": 72,
+	   "speed": 842,
+	   "reward": 4468,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 3,
+	   "armor": 28,
+	   "speed": 836,
+	   "reward": 3133,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 10,
+	   "armor": 70,
+	   "speed": 851,
+	   "reward": 4370,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 33,
+	   "armor": 75,
+	   "speed": 842,
+	   "reward": 4550,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 16
+	  },
+	  {
+	   "health": 38,
+	   "armor": 46,
+	   "speed": 876,
+	   "reward": 3847,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 36,
+	   "armor": 71,
+	   "speed": 847,
+	   "reward": 4460,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 30,
+	   "armor": 67,
+	   "speed": 857,
+	   "reward": 4359,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 55,
+	   "armor": 72,
+	   "speed": 846,
+	   "reward": 4538,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 16
+	  },
+	  {
+	   "health": 11,
+	   "armor": 64,
+	   "speed": 871,
+	   "reward": 4261,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 9,
+	   "armor": 37,
+	   "speed": 888,
+	   "reward": 3547,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 30,
+	   "armor": 53,
+	   "speed": 866,
+	   "reward": 3992,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 53,
+	   "armor": 68,
+	   "speed": 883,
+	   "reward": 4524,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 16
+	  },
+	  {
+	   "health": 48,
+	   "armor": 42,
+	   "speed": 865,
+	   "reward": 3732,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 44,
+	   "armor": 44,
+	   "speed": 875,
+	   "reward": 3805,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 45,
+	   "armor": 75,
+	   "speed": 835,
+	   "reward": 4564,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 16
+	  },
+	  {
+	   "health": 13,
+	   "armor": 40,
+	   "speed": 853,
+	   "reward": 3544,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 54,
+	   "armor": 32,
+	   "speed": 855,
+	   "reward": 3441,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 2,
+	   "armor": 65,
+	   "speed": 846,
+	   "reward": 4194,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 50,
+	   "armor": 66,
+	   "speed": 860,
+	   "reward": 4396,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 46,
+	   "armor": 32,
+	   "speed": 855,
+	   "reward": 3418,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 28,
+	   "armor": 69,
+	   "speed": 836,
+	   "reward": 4351,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 40,
+	   "armor": 72,
+	   "speed": 845,
+	   "reward": 4494,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 16
+	  }
+	 ],
+	 [
+	  {
+	   "health": 57,
+	   "armor": 83,
+	   "speed": 915,
+	   "reward": 5225,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 18
+	  },
+	  {
+	   "health": 39,
+	   "armor": 44,
+	   "speed": 902,
+	   "reward": 4004,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 26,
+	   "armor": 55,
+	   "speed": 889,
+	   "reward": 4248,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 56,
+	   "armor": 84,
+	   "speed": 887,
+	   "reward": 5170,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 17
+	  },
+	  {
+	   "health": 41,
+	   "armor": 73,
+	   "speed": 915,
+	   "reward": 4889,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 16
+	  },
+	  {
+	   "health": 11,
+	   "armor": 27,
+	   "speed": 870,
+	   "reward": 3337,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 58,
+	   "armor": 30,
+	   "speed": 896,
+	   "reward": 3636,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 6,
+	   "armor": 27,
+	   "speed": 900,
+	   "reward": 3410,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 33,
+	   "armor": 53,
+	   "speed": 903,
+	   "reward": 4251,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 44,
+	   "armor": 40,
+	   "speed": 895,
+	   "reward": 3883,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 58,
+	   "armor": 78,
+	   "speed": 869,
+	   "reward": 4950,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 17
+	  },
+	  {
+	   "health": 47,
+	   "armor": 80,
+	   "speed": 910,
+	   "reward": 5095,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 17
+	  },
+	  {
+	   "health": 34,
+	   "armor": 46,
+	   "speed": 891,
+	   "reward": 4016,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 57,
+	   "armor": 69,
+	   "speed": 867,
+	   "reward": 4680,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 16
+	  },
+	  {
+	   "health": 21,
+	   "armor": 66,
+	   "speed": 897,
+	   "reward": 4576,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 10,
+	   "armor": 43,
+	   "speed": 897,
+	   "reward": 3877,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 21,
+	   "armor": 53,
+	   "speed": 902,
+	   "reward": 4213,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 34,
+	   "armor": 60,
+	   "speed": 883,
+	   "reward": 4399,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 2,
+	   "armor": 28,
+	   "speed": 911,
+	   "reward": 3459,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  },
+	  {
+	   "health": 57,
+	   "armor": 27,
+	   "speed": 918,
+	   "reward": 3610,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 2,
+	   "armor": 38,
+	   "speed": 893,
+	   "reward": 3697,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 14,
+	   "armor": 39,
+	   "speed": 899,
+	   "reward": 3778,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 8,
+	   "armor": 53,
+	   "speed": 895,
+	   "reward": 4155,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 33,
+	   "armor": 32,
+	   "speed": 868,
+	   "reward": 3540,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 39,
+	   "armor": 35,
+	   "speed": 901,
+	   "reward": 3741,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 14,
+	   "armor": 62,
+	   "speed": 872,
+	   "reward": 4367,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 44,
+	   "armor": 37,
+	   "speed": 880,
+	   "reward": 3752,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 2,
+	   "armor": 64,
+	   "speed": 880,
+	   "reward": 4413,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 3,
+	   "armor": 32,
+	   "speed": 873,
+	   "reward": 3468,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 11
+	  }
+	 ],
+	 [
+	  {
+	   "health": 16,
+	   "armor": 42,
+	   "speed": 911,
+	   "reward": 4040,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 11,
+	   "armor": 45,
+	   "speed": 935,
+	   "reward": 4188,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 15,
+	   "armor": 76,
+	   "speed": 892,
+	   "reward": 5001,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 16
+	  },
+	  {
+	   "health": 30,
+	   "armor": 35,
+	   "speed": 935,
+	   "reward": 3945,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 38,
+	   "armor": 78,
+	   "speed": 920,
+	   "reward": 5214,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 17
+	  },
+	  {
+	   "health": 19,
+	   "armor": 63,
+	   "speed": 908,
+	   "reward": 4671,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 8,
+	   "armor": 61,
+	   "speed": 898,
+	   "reward": 4548,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 28,
+	   "armor": 60,
+	   "speed": 898,
+	   "reward": 4578,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 40,
+	   "armor": 84,
+	   "speed": 895,
+	   "reward": 5325,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 17
+	  },
+	  {
+	   "health": 4,
+	   "armor": 58,
+	   "speed": 904,
+	   "reward": 4464,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 32,
+	   "armor": 29,
+	   "speed": 931,
+	   "reward": 3759,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 4,
+	   "armor": 49,
+	   "speed": 918,
+	   "reward": 4236,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 23,
+	   "armor": 50,
+	   "speed": 919,
+	   "reward": 4326,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 50,
+	   "armor": 33,
+	   "speed": 891,
+	   "reward": 3813,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 23,
+	   "armor": 80,
+	   "speed": 911,
+	   "reward": 5201,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 17
+	  },
+	  {
+	   "health": 42,
+	   "armor": 63,
+	   "speed": 898,
+	   "reward": 4710,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 13,
+	   "armor": 54,
+	   "speed": 932,
+	   "reward": 4455,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 48,
+	   "armor": 30,
+	   "speed": 919,
+	   "reward": 3801,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 60,
+	   "armor": 34,
+	   "speed": 927,
+	   "reward": 3980,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 27,
+	   "armor": 39,
+	   "speed": 899,
+	   "reward": 3948,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 5,
+	   "armor": 59,
+	   "speed": 908,
+	   "reward": 4509,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 15
+	  },
+	  {
+	   "health": 23,
+	   "armor": 45,
+	   "speed": 939,
+	   "reward": 4236,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 43,
+	   "armor": 66,
+	   "speed": 931,
+	   "reward": 4901,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 16
+	  },
+	  {
+	   "health": 60,
+	   "armor": 83,
+	   "speed": 911,
+	   "reward": 5403,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 18
+	  },
+	  {
+	   "health": 37,
+	   "armor": 74,
+	   "speed": 909,
+	   "reward": 5058,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 16
+	  },
+	  {
+	   "health": 17,
+	   "armor": 40,
+	   "speed": 947,
+	   "reward": 4092,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 13
+	  },
+	  {
+	   "health": 14,
+	   "armor": 54,
+	   "speed": 910,
+	   "reward": 4392,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 44,
+	   "armor": 29,
+	   "speed": 895,
+	   "reward": 3687,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 12
+	  },
+	  {
+	   "health": 53,
+	   "armor": 48,
+	   "speed": 942,
+	   "reward": 4425,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 14
+	  },
+	  {
+	   "health": 3,
+	   "armor": 78,
+	   "speed": 903,
+	   "reward": 5058,
+	   "type": "Normal",
+	   "copies": 1,
+	   "delay": 0.4,
+	   "size": 16
+	  }
+	 ]
+	]
    }
-  ],
-  [
-   {
-	"health": 4,
-	"armor": 3,
-	"speed": 78,
-	"reward": 11,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 1
-   },
-   {
-	"health": 1,
-	"armor": 0,
-	"speed": 79,
-	"reward": 8,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 0
-   }
-  ],
-  [
-   {
-	"health": 2,
-	"armor": 2,
-	"speed": 111,
-	"reward": 13,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 1
-   },
-   {
-	"health": 6,
-	"armor": 7,
-	"speed": 113,
-	"reward": 18,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 1
-   },
-   {
-	"health": 2,
-	"armor": 6,
-	"speed": 113,
-	"reward": 17,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 1
-   }
-  ],
-  [
-   {
-	"health": 4,
-	"armor": 5,
-	"speed": 142,
-	"reward": 19,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 1
-   },
-   {
-	"health": 7,
-	"armor": 6,
-	"speed": 140,
-	"reward": 20,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 2
-   },
-   {
-	"health": 5,
-	"armor": 5,
-	"speed": 144,
-	"reward": 19,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 1
-   },
-   {
-	"health": 3,
-	"armor": 8,
-	"speed": 142,
-	"reward": 22,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 2
-   }
-  ],
-  [
-   {
-	"health": 2,
-	"armor": 3,
-	"speed": 174,
-	"reward": 20,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 2
-   },
-   {
-	"health": 2,
-	"armor": 13,
-	"speed": 168,
-	"reward": 30,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 3
-   },
-   {
-	"health": 9,
-	"armor": 12,
-	"speed": 165,
-	"reward": 29,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 2
-   },
-   {
-	"health": 5,
-	"armor": 12,
-	"speed": 172,
-	"reward": 29,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 2
-   },
-   {
-	"health": 1,
-	"armor": 3,
-	"speed": 167,
-	"reward": 19,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 1
-   }
-  ],
-  [
-   {
-	"health": 8,
-	"armor": 4,
-	"speed": 198,
-	"reward": 24,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 2
-   },
-   {
-	"health": 9,
-	"armor": 6,
-	"speed": 201,
-	"reward": 27,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 2
-   },
-   {
-	"health": 8,
-	"armor": 9,
-	"speed": 206,
-	"reward": 30,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 3
-   },
-   {
-	"health": 3,
-	"armor": 16,
-	"speed": 204,
-	"reward": 36,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 3
-   },
-   {
-	"health": 2,
-	"armor": 16,
-	"speed": 198,
-	"reward": 36,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 3
-   },
-   {
-	"health": 2,
-	"armor": 5,
-	"speed": 198,
-	"reward": 25,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 2
-   }
-  ],
-  [
-   {
-	"health": 8,
-	"armor": 9,
-	"speed": 232,
-	"reward": 33,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 3
-   },
-   {
-	"health": 13,
-	"armor": 5,
-	"speed": 229,
-	"reward": 29,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 2
-   },
-   {
-	"health": 1,
-	"armor": 16,
-	"speed": 236,
-	"reward": 39,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 3
-   },
-   {
-	"health": 14,
-	"armor": 9,
-	"speed": 230,
-	"reward": 33,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 3
-   },
-   {
-	"health": 13,
-	"armor": 6,
-	"speed": 231,
-	"reward": 30,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 3
-   },
-   {
-	"health": 12,
-	"armor": 17,
-	"speed": 229,
-	"reward": 41,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 4
-   },
-   {
-	"health": 5,
-	"armor": 9,
-	"speed": 229,
-	"reward": 32,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 3
-   }
-  ],
-  [
-   {
-	"health": 8,
-	"armor": 9,
-	"speed": 262,
-	"reward": 36,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 3
-   },
-   {
-	"health": 2,
-	"armor": 9,
-	"speed": 267,
-	"reward": 35,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 3
-   },
-   {
-	"health": 7,
-	"armor": 15,
-	"speed": 267,
-	"reward": 42,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 4
-   },
-   {
-	"health": 15,
-	"armor": 11,
-	"speed": 259,
-	"reward": 38,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 3
-   },
-   {
-	"health": 13,
-	"armor": 21,
-	"speed": 258,
-	"reward": 48,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 4
-   },
-   {
-	"health": 14,
-	"armor": 21,
-	"speed": 260,
-	"reward": 48,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 4
-   },
-   {
-	"health": 10,
-	"armor": 21,
-	"speed": 254,
-	"reward": 47,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 4
-   },
-   {
-	"health": 7,
-	"armor": 17,
-	"speed": 255,
-	"reward": 43,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 4
-   }
-  ],
-  [
-   {
-	"health": 16,
-	"armor": 16,
-	"speed": 286,
-	"reward": 46,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 4
-   },
-   {
-	"health": 13,
-	"armor": 13,
-	"speed": 298,
-	"reward": 44,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 4
-   },
-   {
-	"health": 2,
-	"armor": 14,
-	"speed": 287,
-	"reward": 42,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 4
-   },
-   {
-	"health": 13,
-	"armor": 25,
-	"speed": 284,
-	"reward": 54,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 5
-   },
-   {
-	"health": 4,
-	"armor": 23,
-	"speed": 291,
-	"reward": 52,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 5
-   },
-   {
-	"health": 4,
-	"armor": 17,
-	"speed": 299,
-	"reward": 47,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 4
-   },
-   {
-	"health": 6,
-	"armor": 18,
-	"speed": 290,
-	"reward": 47,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 4
-   },
-   {
-	"health": 13,
-	"armor": 10,
-	"speed": 286,
-	"reward": 39,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 3
-   },
-   {
-	"health": 10,
-	"armor": 9,
-	"speed": 284,
-	"reward": 38,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 3
-   }
-  ],
-  [
-   {
-	"health": 11,
-	"armor": 27,
-	"speed": 314,
-	"reward": 59,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 5
-   },
-   {
-	"health": 5,
-	"armor": 27,
-	"speed": 323,
-	"reward": 59,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 5
-   },
-   {
-	"health": 5,
-	"armor": 25,
-	"speed": 326,
-	"reward": 58,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 5
-   },
-   {
-	"health": 13,
-	"armor": 20,
-	"speed": 316,
-	"reward": 52,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 5
-   },
-   {
-	"health": 19,
-	"armor": 27,
-	"speed": 327,
-	"reward": 61,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 6
-   },
-   {
-	"health": 19,
-	"armor": 11,
-	"speed": 322,
-	"reward": 45,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 4
-   },
-   {
-	"health": 0,
-	"armor": 12,
-	"speed": 314,
-	"reward": 43,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 4
-   },
-   {
-	"health": 15,
-	"armor": 18,
-	"speed": 313,
-	"reward": 50,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 5
-   },
-   {
-	"health": 19,
-	"armor": 25,
-	"speed": 323,
-	"reward": 59,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 5
-   },
-   {
-	"health": 8,
-	"armor": 21,
-	"speed": 314,
-	"reward": 53,
-	"type": "Normal",
-	"copies": 1,
-	"delay": 0.4,
-	"size": 5
-   }
-  ]
- ]
-}

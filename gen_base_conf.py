@@ -2,7 +2,7 @@ import json
 import pyperclip
 import random
 
-NUM_LEVELS = 10
+NUM_LEVELS = 30
 
 SPEED_SCALE = 30
 HEALTH_SCALE = 1
@@ -30,9 +30,9 @@ for level_num in range(1, NUM_LEVELS+1):
         new_enemy["speed"]+=(level_num-1)*SPEED_SCALE + random.randint(-level_num, level_num)
         
         # basic value function
-        value = new_enemy["health"]/10 + new_enemy["armor"] + new_enemy["speed"]/10
+        value = (new_enemy["health"]/10 + new_enemy["armor"] + new_enemy["speed"]/10)
         
-        new_enemy["reward"] = int(value)
+        new_enemy["reward"] = int(value*level_num)
         new_enemy["size"] = int(value/10)
         
         level.append(new_enemy)
