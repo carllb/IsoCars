@@ -168,7 +168,6 @@ func map_clicked(pos: Vector2,
 	
 	return valid_tile
 
-
 #this is for debugging
 #func update_pointer_position(pos: Vector2):
 	#db_dot.position = pos

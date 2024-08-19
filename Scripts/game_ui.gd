@@ -55,6 +55,16 @@ func _on_add_fire_tower_add_tower_pressed(tower: PackedScene, cost: ValueCompone
 		current_tower.initilize([0,3,0])
 		curr_tower_cost = cost
 
+func _on_add_ice_tower_add_tower_pressed(tower: PackedScene, cost: ValueComponent) -> void:
+	var can_afford: bool = game_scene.get_money().can_afford(cost)
+	
+	clear_selected_tower()
+
+	if (can_afford):
+		current_tower = tower.instantiate()
+		current_tower.initilize([1,0,50])
+		curr_tower_cost = cost
+
 func _on_sub_viewport_container_gui_input(event: InputEvent):
 	var pressed: bool = false
 	var alt_pressed: bool = false
