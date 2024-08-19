@@ -1,10 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://bc3lfejnfa42e"]
+[gd_scene load_steps=12 format=3 uid="uid://bc3lfejnfa42e"]
 
 [ext_resource type="Script" path="res://Scripts/car.gd" id="1_0y4b7"]
 [ext_resource type="Texture2D" uid="uid://sywwtc8sbbn1" path="res://assets/temporary/enemyFlyingAlt_1.png" id="1_tn42f"]
 [ext_resource type="Texture2D" uid="uid://b7rc26u6hddkk" path="res://assets/temporary/enemyFlyingAlt_2.png" id="2_3psc4"]
 [ext_resource type="Texture2D" uid="uid://cupobdo6gl0p1" path="res://assets/temporary/explosion00.png" id="2_goiy1"]
+[ext_resource type="Texture2D" uid="uid://ccjvfqyn82i3j" path="res://assets/temporary/explosion01.png" id="3_m3txq"]
+[ext_resource type="Texture2D" uid="uid://xmy1r7dblena" path="res://assets/temporary/explosion02.png" id="4_2yxx5"]
 [ext_resource type="Script" path="res://Scripts/Components/speed_component.gd" id="5_6gqts"]
+[ext_resource type="Texture2D" uid="uid://dd76dapgfufqw" path="res://assets/temporary/explosion03.png" id="5_pjtgt"]
+[ext_resource type="Texture2D" uid="uid://blupispf6dn8y" path="res://assets/temporary/explosion04.png" id="6_2cg8g"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ynjxy"]
 animations = [{
@@ -15,6 +19,23 @@ animations = [{
 "loop": true,
 "name": &"death",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_m3txq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2yxx5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pjtgt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2cg8g")
+}],
+"loop": false,
+"name": &"death2",
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -38,7 +59,7 @@ script = ExtResource("1_0y4b7")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_ynjxy")
-animation = &"death"
+animation = &"death2"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_fkpp8")
