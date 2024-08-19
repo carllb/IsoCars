@@ -10,6 +10,7 @@ class_name TDLevel
 @export var starting_gold: int = 200
 @export var starting_level_reward: int = 100
 @export var level_reward_percent_increase: int = 10
+@export var lives: int = 3
 
 
 @onready var tile_map: TileMapLayer = get_node("TileMapLayer")
@@ -34,6 +35,9 @@ func parse_json(path) -> Dictionary:
 func get_level():
 	return level
 
+func get_lives():
+	return lives
+	
 func get_money() -> ValueComponent:
 	return gold
 
@@ -74,7 +78,7 @@ func car_factory(health_comp: HealthComponent,
 				 speed_comp: SpeedComponent,
 				 value_comp: ValueComponent) -> Car:
 	var car: Car = mob_scene.instantiate()
-	car.initilize(health_comp, speed_comp, value_comp, _on_car_death)
+	car.initilize(health_comp, speed_comp, value_comp, _on_car_death, _on_car_pass)
 
 	return car
 
@@ -117,6 +121,9 @@ func _on_mob_timer_timeout() -> void:
 func _on_car_death(reward_gold: ValueComponent):
 	gold.add_value(reward_gold)
 
+func _on_car_pass():
+	lives-=1
+	print(lives)
 
 const placable_tiles: Array[Vector2i] = [Vector2i(0,4)]
 var placed_tiles = {}
@@ -185,7 +192,6 @@ func map_clicked(pos: Vector2,
 
 func select_tower(tower: RobotBase):
 		for button in $"../../../VBoxContainer/GridContainer".get_children():
-			print(button.get_class())
 			if (button.get_class() == "Button") ||(button.get_class() == "Label"):
 				button.set_link(tower)
 
@@ -198,4 +204,5 @@ func build_normal_car(car):
 	var health_component: HealthComponent = HealthComponent.new(health, armor)
 	var speed_component: SpeedComponent = SpeedComponent.new(speed)
 	var value_component: ValueComponent = ValueComponent.new(reward)
-	car.initilize(health_component, speed_component, value_component, _on_car_death)
+	car.initilize(health_component, speed_component, value_component, 
+					_on_car_death, _on_car_pass)
