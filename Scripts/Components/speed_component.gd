@@ -8,6 +8,7 @@ var slowed_speed = 0
 
 func _init(_speed_val: float = speed):
 	speed = _speed_val
+	slowed_speed = speed
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -20,7 +21,8 @@ func _process(_delta: float) -> void:
 	
 func apply_slow(slowdown_percent: float):
 	slowed = true
-	slowed_speed = speed * (1 - (slowdown_percent / 100))
+	slowed_speed = slowed_speed * (1 - (slowdown_percent / 100))
+	print(slowdown_percent)
 
 	
 func get_speed():

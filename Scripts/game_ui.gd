@@ -12,7 +12,7 @@ var curr_tower_cost: ValueComponent = null
 @onready var levelLabel : Label = get_node("MainPanel/VerticalContainer/Top Bar/Level")
 @onready var moneyLabel : Label = get_node("MainPanel/VerticalContainer/Top Bar/Money")
 @onready var spentLabel : Label = get_node("MainPanel/VerticalContainer/Top Bar/MoneySpent")
-
+@onready var livesLabel : Label = get_node("MainPanel/VerticalContainer/Top Bar/Lives")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -29,8 +29,9 @@ func _process(_delta):
 	game_scene.update_pointer_position(mpos, current_tower)
 	
 	levelLabel.text = "Level: " + str(game_scene.get_level())
-	moneyLabel.text = str(game_scene.get_money().get_value()) + " gold"
+	moneyLabel.text = "Gold: "+str(game_scene.get_money().get_value()) 
 	spentLabel.text = "Total Spent: " + str(game_scene.get_money_spent().get_value()) + " gold"
+	livesLabel.text = "Lives: " + str(game_scene.get_lives())
 	
 	game_scene.update_pointer_position(mpos, current_tower)
 
@@ -62,7 +63,7 @@ func _on_add_ice_tower_add_tower_pressed(tower: PackedScene, cost: ValueComponen
 
 	if (can_afford):
 		current_tower = tower.instantiate()
-		current_tower.initilize([1,0,50],[preload("res://assets/sprites/purple_left.png"),preload("res://assets/sprites/purple_right.png")])
+		current_tower.initilize([1,0,15],[preload("res://assets/sprites/purple_left.png"),preload("res://assets/sprites/purple_right.png")])
 		curr_tower_cost = cost
 
 func _on_sub_viewport_container_gui_input(event: InputEvent):
