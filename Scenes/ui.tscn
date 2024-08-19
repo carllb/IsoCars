@@ -61,10 +61,17 @@ text = "Level: 0"
 
 [node name="Money" type="Label" parent="MainPanel/VerticalContainer/Top Bar"]
 layout_mode = 0
+<<<<<<< HEAD
 offset_left = 1154.0
 offset_top = 37.0
 offset_right = 1225.0
 offset_bottom = 73.0
+=======
+offset_left = 1151.0
+offset_top = 35.0
+offset_right = 1222.0
+offset_bottom = 71.0
+>>>>>>> temp
 text = "0  gold"
 
 [node name="MoneySpent" type="Label" parent="MainPanel/VerticalContainer/Top Bar"]
@@ -114,10 +121,12 @@ tower_cost = 100
 
 [node name="add_fire_tower" type="Button" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer"]
 layout_mode = 2
-text = "Add Tower2
+text = "Add Fire Tower
 "
 script = ExtResource("3_t001j")
+tower_scene = ExtResource("4_dh5rx")
+tower_cost = 100
 
 [connection signal="gui_input" from="MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer" to="." method="_on_sub_viewport_container_gui_input"]
 [connection signal="add_tower_pressed" from="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/add_tower" to="." method="_on_add_tower_pressed"]
-[connection signal="pressed" from="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/add_fire_tower" to="." method="_on_add_fire_tower_pressed"]
+[connection signal="add_tower_pressed" from="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/add_fire_tower" to="." method="_on_add_fire_tower_add_tower_pressed"]

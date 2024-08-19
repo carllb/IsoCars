@@ -8,7 +8,8 @@
 		"reward": 1,
 		"type": "Normal",
 		"copies": 4,
-		"delay": 0.4
+		"delay": 0.4,
+		"size": 1
 	  }
 	],
 	[
@@ -19,7 +20,8 @@
 		"reward": 1,
 		"type": "Normal",
 		"copies": 3,
-		"delay": 0.1
+		"delay": 0.1,
+		"size": 1
 	  },
 	  {
 		"health": 1,
@@ -28,7 +30,8 @@
 		"reward": 1,
 		"type": "Normal",
 		"copies": 1,
-		"delay": 0.4
+		"delay": 0.4,
+		"size": 1
 	  }
 	],
 	[
@@ -39,7 +42,8 @@
 		"reward": 1,
 		"type": "Normal",
 		"copies": 30,
-		"delay": 0.4
+		"delay": 0.4,
+		"size": 1
 	  },
 	  {
 		"health": 1,
@@ -48,7 +52,8 @@
 		"reward": 4,
 		"type": "Normal",
 		"copies": 50,
-		"delay": 0.4
+		"delay": 0.4,
+		"size": 1
 	  }
 	]
   ]
