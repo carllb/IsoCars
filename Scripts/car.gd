@@ -14,6 +14,10 @@ var dead: bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$AnimatedSprite2D.animation = "drive_right"
+	$AnimatedSprite2D.get_sprite_frames().clear('drive_left')
+	$AnimatedSprite2D.get_sprite_frames().add_frame('drive_left',load('res://assets/sprites/red_car_50_left.png'),1,0)
+	$AnimatedSprite2D.get_sprite_frames().clear('drive_right')
+	$AnimatedSprite2D.get_sprite_frames().add_frame('drive_right',load('res://assets/sprites/red_car_50_right.png'),1,0)
 	pos.append(global_position) 
 	pos.append(global_position) 
 	add_child(health)
@@ -68,9 +72,16 @@ func take_damage(damage: float, _damage_type: String = 'PHYSICAL') -> void:
 func _on_death_animation_done():
 	get_parent().get_parent().queue_free()
 
+func sprite_override(new_sprites: Array[Resource]):
+	$AnimatedSprite2D.get_sprite_frames().clear('drive_left')
+	$AnimatedSprite2D.get_sprite_frames().add_frame('drive_left',new_sprites[1],1,0)
+	$AnimatedSprite2D.get_sprite_frames().clear('drive_right')
+	$AnimatedSprite2D.get_sprite_frames().add_frame('drive_right',new_sprites[0],1,0)
+
 func death(_killed:bool =false):
 	dead = true
 	$AnimatedSprite2D.animation_finished.connect(_on_death_animation_done)
+	get_node("CollisionShape2D").queue_free()
 	if _killed:
 		car_death.emit(value)
 		

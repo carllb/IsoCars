@@ -69,6 +69,7 @@ func _on_add_ice_tower_add_tower_pressed(tower: PackedScene, cost: ValueComponen
 		current_tower = tower.instantiate()
 		current_tower.initilize([1,0,15],[preload("res://assets/sprites/purple_left.png"),preload("res://assets/sprites/purple_right.png")],
 						'ICE')
+		current_tower.set_fire_rate(4)
 		curr_tower_cost = cost
 
 func _on_sub_viewport_container_gui_input(event: InputEvent):
