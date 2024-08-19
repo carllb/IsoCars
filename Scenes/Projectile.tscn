@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ben7n1h2kcyuh"]
 
 [ext_resource type="Script" path="res://Scripts/projectile.gd" id="1_07qwt"]
-[ext_resource type="Texture2D" uid="uid://db2hhju1qpgc6" path="res://assets/temporary/projectile.png" id="1_lg75u"]
+[ext_resource type="Texture2D" uid="uid://lxgtwum5j7fn" path="res://assets/sprites/bullet.png" id="2_m7ipt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2u0k1"]
 radius = 5.0
@@ -14,8 +14,7 @@ collision_priority = 2.0
 script = ExtResource("1_07qwt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("1_lg75u")
+texture = ExtResource("2_m7ipt")
 
 [node name="Area2D" type="Area2D" parent="."]
 monitorable = false

@@ -72,20 +72,25 @@ func wave_factory(_level: int) -> Array:
 			var health_comp = HealthComponent.new(enemy["health"], enemy["armor"])
 			var speed_comp = SpeedComponent.new(enemy["speed"])
 			var value_comp = ValueComponent.new(enemy["reward"])
-			# TODO:
-			# var type
-			# var delay
-			# var size
-			var car = car_factory(health_comp, speed_comp, value_comp)
+			var size = enemy['size']
+			var type = enemy['type']
+			var delay = enemy['delay']
+			var car = car_factory(health_comp, speed_comp, value_comp, size, type)
+			$MobTimer.start(delay)
+			
 			ret.append(car)
 	return ret
 
 func car_factory(health_comp: HealthComponent,
 				 speed_comp: SpeedComponent,
-				 value_comp: ValueComponent) -> Car:
+				 value_comp: ValueComponent,
+				size:float,
+				type:String) -> Car:
 	var car: Car = mob_scene.instantiate()
-	car.initilize(health_comp, speed_comp, value_comp, _on_car_death, _on_car_pass)
-
+	car.initilize(health_comp, speed_comp, value_comp, _on_car_death, _on_car_pass, size)
+	print(type)
+	if type == 'Blue':
+		car.sprite_override([load("res://assets/sprites/blue_car_50_right.png"),load("res://assets/sprites/blue_car_50_left.png")])
 	return car
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -116,10 +121,11 @@ func _on_mob_timer_timeout() -> void:
 		level+=1
 		current_wave = wave_factory(level)
 		if current_wave == []:
+
 			game_won = true
 			game_stop = true
 			# No more levels defined :(
-			# Win here?
+
 			level -= 1
 
 	# There are cars left in the current wave
@@ -216,8 +222,9 @@ func build_normal_car(car):
 	var armor = 5
 	var speed = 50
 	var reward = 5
+	var size = 1
 	var health_component: HealthComponent = HealthComponent.new(health, armor)
 	var speed_component: SpeedComponent = SpeedComponent.new(speed)
 	var value_component: ValueComponent = ValueComponent.new(reward)
 	car.initilize(health_component, speed_component, value_component, 
-					_on_car_death, _on_car_pass)
+					_on_car_death, _on_car_pass, size)

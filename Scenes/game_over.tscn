@@ -1,3 +1,4 @@
+
 [gd_scene load_steps=4 format=3 uid="uid://bc0nftc157djp"]
 
 [ext_resource type="Script" path="res://Scripts/game_over.gd" id="1_1stpt"]
@@ -49,3 +50,4 @@ text = "Cars Killed: 0"
 label_settings = SubResource("LabelSettings_ie7px")
 
 [connection signal="pressed" from="MainMenuButton" to="." method="_on_main_menu_button_pressed"]
+

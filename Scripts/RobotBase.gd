@@ -2,14 +2,15 @@ extends Node2D
 
 class_name RobotBase
 
-var projectile 
+var projectile = preload('res://Scenes/Projectile.tscn')
+var projectile_type
 var rangeRadius: float = 200
 var damage_array: Array[int] = [1,0,0] 
 var pathName
 var targets = []
 var upgrade_count :int = 0
 var activeTarget
-var fire_rate : float =4
+var fire_rate : float =2
 var upgrade_cost : ValueComponent = ValueComponent.new(25)
 
 var sprites = [preload("res://assets/sprites/blue_left.png"),preload("res://assets/sprites/blue_right.png")]
@@ -18,12 +19,12 @@ func _ready() -> void:
 	pass
 	
 func initilize(_damage: Array[int] = damage_array, _sprites = sprites,
-		_projectile = preload('res://Scenes/Projectile.tscn')) -> void:
+		_projectile_type = 'PHYSICAL') -> void:
 	set_range(rangeRadius) 
 	damage_array = _damage
 	sprites = _sprites
 	$Sprite2D.texture = sprites[0]
-	projectile = _projectile
+	projectile_type = _projectile_type
 	$ShotTimer.set_wait_time(1/fire_rate)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -76,7 +77,7 @@ func find_target():
 func _on_timer_timeout() -> void:
 	if activeTarget != null:
 		var tempProjectile = projectile.instantiate()
-		tempProjectile.initilize( damage_array,activeTarget, pathName)
+		tempProjectile.initilize(damage_array,activeTarget, pathName, projectile_type)
 		await get_tree().process_frame
 		get_node('ProjectileDisconect').add_child(tempProjectile)
 		tempProjectile.global_position = $Range2D/range_circle.global_position
