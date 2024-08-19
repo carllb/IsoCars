@@ -8,6 +8,8 @@ var health: HealthComponent
 var speed: SpeedComponent
 var value: ValueComponent
 
+var dead: bool = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$AnimatedSprite2D.animation = "drive"
@@ -17,15 +19,16 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	$AnimatedSprite2D.play()
-	#print(speed.get_speed())
-	
-	get_parent().set_progress(get_parent().get_progress() + speed.get_speed()*delta)
+	if !dead:
+		$AnimatedSprite2D.play()
+		#print(speed.get_speed())
+		
+		get_parent().set_progress(get_parent().get_progress() + speed.get_speed()*delta)
 
-	if get_parent().get_progress_ratio() >= .95:
-		death()
-	if health.is_dead():
-		death()
+		if get_parent().get_progress_ratio() >= .95:
+			death()
+		if health.is_dead():
+			death()
 
 func initilize(health_component: HealthComponent,
 			   speed_component: SpeedComponent,
@@ -45,10 +48,16 @@ func take_damage(damage: float, _damage_type: String = 'PHYSICAL') -> void:
 		$BurnTimer.start
 	else:
 		health.take_damage(damage)
-	
-func death():
-	car_death.emit(value)
+
+func _on_death_animation_done():
 	get_parent().get_parent().queue_free()
+
+func death():
+	dead = true
+	car_death.emit(value)
+	#get_parent().get_parent().queue_free()
+	$AnimatedSprite2D.animation_finished.connect(_on_death_animation_done)
+	$AnimatedSprite2D.play("death2")
 
 func _on_slow_down_timer_timeout() -> void:
 	speed.restore_original_speed()

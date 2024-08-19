@@ -4,7 +4,11 @@ class_name TDLevel
 
 @export var mob_scene: PackedScene
 @export var mob_path: PackedScene
+
+@export_category("Gold Settings")
 @export var starting_gold: int = 200
+@export var starting_wave_reward: int = 100
+@export var percent_wave_reward_increase: int = 10
 
 @export_category("Debug Stuff")
 @export var db_dot: Sprite2D
@@ -89,6 +93,7 @@ func _on_mob_timer_timeout() -> void:
 
 	# Current wave is empty
 	if current_wave == [] and get_mob_count() == 0:
+		#gold.add_value(starting_wave_reward + pow(percent_wave_reward_increase/100.0, level - 1)
 		level+=1
 		current_wave = wave_factory(level)
 		if current_wave == []:
