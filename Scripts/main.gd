@@ -66,19 +66,21 @@ func wave_factory(_level: int) -> Array:
 			var health_comp = HealthComponent.new(enemy["health"], enemy["armor"])
 			var speed_comp = SpeedComponent.new(enemy["speed"])
 			var value_comp = ValueComponent.new(enemy["reward"])
+			var size = enemy['size']
 			# TODO:
 			# var type
 			# var delay
 			# var size
-			var car = car_factory(health_comp, speed_comp, value_comp)
+			var car = car_factory(health_comp, speed_comp, value_comp, size)
 			ret.append(car)
 	return ret
 
 func car_factory(health_comp: HealthComponent,
 				 speed_comp: SpeedComponent,
-				 value_comp: ValueComponent) -> Car:
+				 value_comp: ValueComponent,
+				size:float) -> Car:
 	var car: Car = mob_scene.instantiate()
-	car.initilize(health_comp, speed_comp, value_comp, _on_car_death, _on_car_pass)
+	car.initilize(health_comp, speed_comp, value_comp, _on_car_death, _on_car_pass, size)
 
 	return car
 
@@ -104,7 +106,7 @@ func _on_mob_timer_timeout() -> void:
 		current_wave = wave_factory(level)
 		if current_wave == []:
 			last_wave = true
-			# No more levels defined :(
+			get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
 			# Win here?
 			level -= 1
 
@@ -201,8 +203,9 @@ func build_normal_car(car):
 	var armor = 5
 	var speed = 50
 	var reward = 5
+	var size = 1
 	var health_component: HealthComponent = HealthComponent.new(health, armor)
 	var speed_component: SpeedComponent = SpeedComponent.new(speed)
 	var value_component: ValueComponent = ValueComponent.new(reward)
 	car.initilize(health_component, speed_component, value_component, 
-					_on_car_death, _on_car_pass)
+					_on_car_death, _on_car_pass, size)

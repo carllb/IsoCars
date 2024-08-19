@@ -30,12 +30,50 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Top Bar" type="ColorRect" parent="Panel/VContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.30461, 0.115758, 0.354375, 1)
+
+[node name="Level" type="Label" parent="Panel/VContainer/Top Bar"]
+layout_mode = 2
+offset_top = 27.0
+offset_right = 71.0
+offset_bottom = 50.0
+scale = Vector2(3, 3)
+tooltip_text = "Current Level"
+text = "Level: 0"
+
+[node name="Money" type="Label" parent="Panel/VContainer/Top Bar"]
+layout_mode = 0
+offset_left = 1151.0
+offset_top = 35.0
+offset_right = 1222.0
+offset_bottom = 71.0
+text = "gold: 0"
+
+[node name="MoneySpent" type="Label" parent="Panel/VContainer/Top Bar"]
+visible = false
+layout_mode = 0
+offset_left = 390.0
+offset_top = 25.0
+offset_right = 535.0
+offset_bottom = 48.0
+scale = Vector2(3, 3)
+tooltip_text = "Current Level"
+text = "Total Money Spent: 0"
+
+[node name="Lives" type="Label" parent="Panel/VContainer/Top Bar"]
+layout_mode = 0
+offset_left = 1150.0
+offset_top = 1.0
+offset_right = 1278.0
+offset_bottom = 44.0
+text = "Lives: 3"
+
 [node name="HContainer" type="BoxContainer" parent="Panel/VContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-
-[node name="MenuBar" type="MenuBar" parent="Panel/VContainer/HContainer"]
-layout_mode = 2
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="Panel/VContainer/HContainer"]
 layout_mode = 2

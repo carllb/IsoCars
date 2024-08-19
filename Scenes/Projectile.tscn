@@ -14,7 +14,6 @@ collision_priority = 2.0
 script = ExtResource("1_07qwt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.05, 0.05)
 texture = ExtResource("1_lg75u")
 
 [node name="Area2D" type="Area2D" parent="."]

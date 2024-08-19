@@ -28,8 +28,10 @@ func _process(delta: float) -> void:
 		pos[1] = global_position
 		if pos[1].x - pos[0].x >0:
 			$AnimatedSprite2D.play("drive_right")
+			$AnimatedSprite2D.rotation_degrees = -11
 		else:
 			$AnimatedSprite2D.play("drive_left")
+			$AnimatedSprite2D.rotation_degrees = -11
 		pos[0] = pos[1]
 		
 		get_parent().set_progress(get_parent().get_progress() + speed.get_speed()*delta)
@@ -43,12 +45,14 @@ func _process(delta: float) -> void:
 func initilize(health_component: HealthComponent,
 			   speed_component: SpeedComponent,
 			   value_component: ValueComponent,
-			   on_death_cb: Callable, on_pass_cb: Callable):
+			   on_death_cb: Callable, on_pass_cb: Callable,
+			_size: float =1):
 	health = health_component
 	speed = speed_component
 	value = value_component
 	car_death.connect(on_death_cb)
 	car_pass.connect(on_pass_cb)
+	scale = scale*_size
 
 func take_damage(damage: float, _damage_type: String = 'PHYSICAL') -> void:
 	if (_damage_type == "ICE")&&damage>0:
