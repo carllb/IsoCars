@@ -12,10 +12,7 @@ var targets = []
 var upgrade_count :int = 0
 var activeTarget
 var fire_rate : float =2
-var sprites = [preload("res://assets/temporary/up-left.png"),preload("res://assets/temporary/down-left.png")
-		,preload("res://assets/temporary/down-right.png"),preload("res://assets/temporary/up-right.png")]
-
-
+var sprites = [preload("res://assets/sprites/up-left.png"),preload("res://assets/sprites/up-right.png")]
 func _init(_damage: Array[int] = damage_array, _projectile = preload('res://Scenes/Projectile.tscn'), _range_size:int = 200) -> void:
 	rangeRadius = _range_size
 	damage_array = _damage
@@ -26,22 +23,19 @@ func initilize(_damage: Array[int] = damage_array, _sprites = sprites,
 	rangeRadius = _range_size
 	damage_array = _damage
 	sprites = _sprites
+	$Sprite2D.texture = sprites[0]
 	projectile = _projectile
 	$ShotTimer.set_wait_time(1/fire_rate)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if is_instance_valid(activeTarget):
-		if activeTarget.rotation > PI/2:
+		if activeTarget.rotation > 0:
 			$Sprite2D.texture = sprites[0]
-		elif activeTarget.rotation > 0:
-			$Sprite2D.texture = sprites[1]
-		elif activeTarget.rotation > -PI/2:
-			$Sprite2D.texture = sprites[2]
 		else:
-			$Sprite2D.texture = sprites[3]
-	$Sprite2D.scale = Vector2(0.1+0.04*upgrade_count,0.1+0.04*upgrade_count)
-	$TowerArea/CollisionShape2D.shape.radius = 14+2*upgrade_count
+			$Sprite2D.texture = sprites[1]
+	$Sprite2D.scale = Vector2(0.8+0.2*upgrade_count,0.8+0.2*upgrade_count)
+	$TowerArea.scale = Vector2(4+1*upgrade_count,4+1*upgrade_count)
 	
 
 

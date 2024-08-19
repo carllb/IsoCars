@@ -112,7 +112,7 @@ func _on_car_death(reward_gold: ValueComponent):
 
 
 const placable_tiles: Array[Vector2i] = [Vector2i(0,3)]
-var placed_tiles: Array[Vector2i] = []
+var placed_tiles = {}
 
 func is_placable_tile(tile_coord: Vector2i) -> bool:
 	var atlast_coord: Vector2i = tile_map.get_cell_atlas_coords(tile_coord)
@@ -157,11 +157,13 @@ func map_clicked(pos: Vector2,
 	
 	if  (null != cost && null != tower):
 		can_afford = gold.can_afford(cost)
-	
-	if (valid_tile && can_afford):
-		placed_tiles.append(tile_coord)
+	if (placed_tiles.has(tile_coord)):
+		placed_tiles[tile_coord].set_fire_rate(50)
+		
+	if (valid_tile && can_afford):		
 		tower.position = tile_pos
 		add_child(tower)
+		placed_tiles[tile_coord]=tower
 		gold.spend_value(cost)
 		gold_spent.add_value(cost)
 	else:
