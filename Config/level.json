@@ -2,53 +2,162 @@
   "levels": [
 	[
 	  {
-		"health": 5,
+		"health": 10,
 		"armor": 0,
 		"speed": 200,
-		"reward": 1,
+		"reward": 10,
 		"type": "Normal",
-		"copies": 4,
-		"delay": 0.4
-	  }
-	],
-	[
-	  {
-		"health": 1,
-		"armor": 0,
-		"speed": 200,
-		"reward": 1,
-		"type": "Normal",
-		"copies": 3,
-		"delay": 0.1
+		"copies": 9,
+		"delay": 0.4,
+		"size": 2
 	  },
 	  {
-		"health": 1,
+		"health": 10,
 		"armor": 0,
-		"speed": 50,
-		"reward": 1,
+		"speed": 200,
+		"reward": 10,
 		"type": "Normal",
 		"copies": 1,
-		"delay": 0.4
+		"delay": 2,
+		"size": 2
+	  }
+	],
+	[
+	  {
+		"health": 10,
+		"armor": 0,
+		"speed": 200,
+		"reward": 1,
+		"type": "Normal",
+		"copies": 14,
+		"delay": 0.3,
+		"size": 2
+	  },
+	  {
+		"health": 10,
+		"armor": 0,
+		"speed": 200,
+		"reward": 10,
+		"type": "Normal",
+		"copies": 1,
+		"delay": 2,
+		"size": 2
 	  }
 	],
 	[
 	  {
 		"health": 1,
 		"armor": 0,
-		"speed": 50,
-		"reward": 1,
+		"speed": 200,
+		"reward": 2,
 		"type": "Normal",
-		"copies": 30,
-		"delay": 0.4
+		"copies": 40,
+		"delay": 0.05,
+		"size": 1
 	  },
 	  {
 		"health": 1,
 		"armor": 0,
-		"speed": 100,
-		"reward": 4,
+		"speed": 200,
+		"reward": 2,
 		"type": "Normal",
-		"copies": 50,
-		"delay": 0.4
+		"copies": 1,
+		"delay": 2,
+		"size": 1
+	  }
+	],
+	[
+	  {
+		"health": 30,
+		"armor": 0,
+		"speed": 100,
+		"reward": 30,
+		"type": "Normal",
+		"copies": 4,
+		"delay": 2,
+		"size": 3
+	  },
+	  {
+		"health": 30,
+		"armor": 0,
+		"speed": 100,
+		"reward": 30,
+		"type": "Normal",
+		"copies": 1,
+		"delay": 2,
+		"size": 3
+	  }
+	],
+	[
+	  {
+		"health": 1,
+		"armor": 0,
+		"speed": 200,
+		"reward": 2,
+		"type": "Normal",
+		"copies": 10,
+		"delay": 0.2,
+		"size": 1
+	  },
+	  {
+		"health": 10,
+		"armor": 0,
+		"speed": 200,
+		"reward": 15,
+		"type": "Normal",
+		"copies": 3,
+		"delay": 0.2,
+		"size": 2
+	  },
+	  {
+		"health": 1,
+		"armor": 0,
+		"speed": 300,
+		"reward": 2,
+		"type": "Normal",
+		"copies": 20,
+		"delay": 0.05,
+		"size": 1
+	  },
+	  {
+		"health": 10,
+		"armor": 0,
+		"speed": 300,
+		"reward": 10,
+		"type": "Normal",
+		"copies": 2,
+		"delay": 0.2,
+		"size": 2
+	  },
+	  {
+		"health": 1,
+		"armor": 0,
+		"speed": 400,
+		"reward": 2,
+		"type": "Normal",
+		"copies": 20,
+		"delay": 0.2,
+		"size": 1
+	  },
+	  {
+		"health": 30,
+		"armor": 0,
+		"speed": 100,
+		"reward": 30,
+		"type": "Normal",
+		"copies": 4,
+		"delay": 2,
+		"size": 3
+	  },
+	  {
+		"health": 200,
+		"armor": 0,
+		"speed": 50,
+		"reward": 30,
+		"type": "Normal",
+		"copies": 1,
+		"delay": 2,
+		"size": 4
 	  }
 	]
   ]

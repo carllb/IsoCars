@@ -21,7 +21,6 @@ func _process(_delta: float) -> void:
 		self.disabled = true
 	elif  (can_afford==false):
 		self.disabled = true
-		print(upgrade_cost)
 	else:
 		upgrade_cost= linked_tower.upgrade_cost
 		self.disabled = false

@@ -3,13 +3,13 @@ extends Node2D
 class_name RobotBase
 
 var projectile 
-var rangeRadius: float = 150
+var rangeRadius: float = 200
 var damage_array: Array[int] = [1,0,0] 
 var pathName
 var targets = []
 var upgrade_count :int = 0
 var activeTarget
-var fire_rate : float =2
+var fire_rate : float =4
 var upgrade_cost : ValueComponent = ValueComponent.new(25)
 
 var sprites = [preload("res://assets/sprites/blue_left.png"),preload("res://assets/sprites/blue_right.png")]
