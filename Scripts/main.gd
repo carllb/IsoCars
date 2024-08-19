@@ -164,8 +164,6 @@ func map_clicked(pos: Vector2,
 	
 	if  (null != cost && null != tower):
 		can_afford = gold.can_afford(cost)
-	if (placed_tiles.has(tile_coord)):
-		placed_tiles[tile_coord].set_fire_rate(50)
 		
 	if (valid_tile && can_afford):		
 		tower.position = tile_pos
@@ -176,8 +174,18 @@ func map_clicked(pos: Vector2,
 	else:
 		valid_tile = false
 	
+	if (placed_tiles.has(tile_coord)):
+		select_tower(null)
+		var selected_tower = placed_tiles[tile_coord]
+		select_tower(selected_tower)
+	else:
+		select_tower(null)
 	return valid_tile
 
+func select_tower(tower: RobotBase):
+		for button in $"../../../VBoxContainer/GridContainer".get_children():
+			if button.get_class() == "Button":
+				button.set_link(tower)
 #this is for debugging
 #func update_pointer_position(pos: Vector2):
 	#db_dot.position = pos

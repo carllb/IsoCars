@@ -11,7 +11,7 @@ var pathName
 var targets = []
 var upgrade_count :int = 0
 var activeTarget
-var fire_rate : float =2
+var fire_rate : float =1
 var sprites = [preload("res://assets/sprites/up-left.png"),preload("res://assets/sprites/up-right.png")]
 func _init(_damage: Array[int] = damage_array, _projectile = preload('res://Scenes/Projectile.tscn'), _range_size:int = 200) -> void:
 	rangeRadius = _range_size
@@ -19,8 +19,8 @@ func _init(_damage: Array[int] = damage_array, _projectile = preload('res://Scen
 	projectile = _projectile
 	
 func initilize(_damage: Array[int] = damage_array, _sprites = sprites,
-		_projectile = preload('res://Scenes/Projectile.tscn'), _range_size:int = 200) -> void:
-	rangeRadius = _range_size
+		_projectile = preload('res://Scenes/Projectile.tscn')) -> void:
+	set_range(rangeRadius) 
 	damage_array = _damage
 	sprites = _sprites
 	$Sprite2D.texture = sprites[0]
@@ -35,7 +35,6 @@ func _process(_delta: float) -> void:
 		else:
 			$Sprite2D.texture = sprites[1]
 	$Sprite2D.scale = Vector2(0.8+0.2*upgrade_count,0.8+0.2*upgrade_count)
-	$TowerArea.scale = Vector2(4+1*upgrade_count,4+1*upgrade_count)
 	
 
 
@@ -43,7 +42,7 @@ func _on_range_2d_body_entered(body: Node2D) -> void:
 	if "Car" in body.name:
 		find_target()
 
-func _on_range_2d_body_exited() -> void:
+func _on_range_2d_body_exited(body: Node2D) -> void:
 	find_target()
 
 func find_target():
@@ -74,12 +73,13 @@ func find_target():
 
 
 func _on_timer_timeout() -> void:
+	print(self.name)
 	if activeTarget != null:
 		var tempProjectile = projectile.instantiate()
 		tempProjectile.initilize(250, damage_array,activeTarget, pathName)
 		await get_tree().process_frame
 		get_node('ProjectileDisconect').add_child(tempProjectile)
-		tempProjectile.global_position = $TowerArea.global_position
+		tempProjectile.global_position = $Range2D/range_circle.global_position
 	else:
 		find_target()
 		if activeTarget == null:
@@ -99,13 +99,16 @@ func get_damage() -> Array[int]:
 func set_fire_rate(new_rate) -> void:
 	fire_rate = new_rate
 	$ShotTimer.set_wait_time(1/fire_rate)
+	print(fire_rate)
 	upgrade_count+=1
 	
 func set_range(new_range) -> void:
 	rangeRadius = new_range
+	$Range2D/range_circle.shape.set_radius(rangeRadius) 
+	print(rangeRadius)
 	upgrade_count+=1
 
-func set_damage(new_damage) -> void:
+func set_damage(new_damage:Array[int]) -> void:
 	damage_array = new_damage
 	upgrade_count+=1
 	
