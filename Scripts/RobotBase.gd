@@ -3,20 +3,19 @@ extends Node2D
 class_name RobotBase
 
 var projectile 
-var rangeRadius
+var rangeRadius: float = 150
 var damage_array: Array[int] = [1,0,0] 
 var pathName
 var targets = []
 var upgrade_count :int = 0
 var activeTarget
 var fire_rate : float =2
+var upgrade_cost : ValueComponent = ValueComponent.new(25)
 
 var sprites = [preload("res://assets/sprites/blue_left.png"),preload("res://assets/sprites/blue_right.png")]
 
-func _init(_damage: Array[int] = damage_array, _projectile = preload('res://Scenes/Projectile.tscn'), _range_size:int = 200) -> void:
-	rangeRadius = _range_size
-	damage_array = _damage
-	projectile = _projectile
+func _ready() -> void:
+	pass
 	
 func initilize(_damage: Array[int] = damage_array, _sprites = sprites,
 		_projectile = preload('res://Scenes/Projectile.tscn')) -> void:
@@ -36,6 +35,7 @@ func _process(_delta: float) -> void:
 		else:
 			$Sprite2D.texture = sprites[1]
 	$Sprite2D.scale = Vector2(0.8+0.2*upgrade_count,0.8+0.2*upgrade_count)
+	upgrade_cost.set_value(25+25*upgrade_count)
 	
 
 

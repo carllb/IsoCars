@@ -12,3 +12,4 @@ curve = SubResource("Curve2D_5fber")
 [node name="MobSpawnPath" type="PathFollow2D" parent="."]
 position = Vector2(-170, -78)
 rotation = 0.550676
+rotates = false
