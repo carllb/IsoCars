@@ -8,7 +8,8 @@ var pathName = ''
 var damage_array : Array[int]
 var damage_types : Array[String] = ['PHYSICAL','FIRE','ICE']
 
-func initilize(_speed: int = 600, _damage_array: Array[int] = [1,0,0], _target : Node2D = null, _pathName: String = '') -> void:
+func initilize(_damage_array: Array[int] = [1,0,0], _target : Node2D = null,
+ 					_pathName: String = '',_speed: int = 600) -> void:
 	Speed = _speed
 	damage_array = _damage_array
 	target = _target

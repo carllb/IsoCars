@@ -41,7 +41,7 @@ func _on_add_tower_pressed(tower: PackedScene, cost: ValueComponent):
 
 	if (can_afford):
 		current_tower = tower.instantiate()
-		current_tower.initilize([5,0,0])
+		current_tower.initilize([5,0,0],[preload("res://assets/sprites/blue_left.png"),preload("res://assets/sprites/blue_right.png")])
 		curr_tower_cost = cost
 		
 		

@@ -177,7 +177,8 @@ func map_clicked(pos: Vector2,
 	if (placed_tiles.has(tile_coord)):
 		select_tower(null)
 		var selected_tower = placed_tiles[tile_coord]
-		select_tower(selected_tower)
+		if(selected_tower.get_upgrades()<3):
+			select_tower(selected_tower)
 	else:
 		select_tower(null)
 	return valid_tile

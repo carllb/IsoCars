@@ -12,7 +12,9 @@ var targets = []
 var upgrade_count :int = 0
 var activeTarget
 var fire_rate : float =2
-var sprites = [preload("res://assets/sprites/up-left.png"),preload("res://assets/sprites/up-right.png")]
+
+var sprites = [preload("res://assets/sprites/blue_left.png"),preload("res://assets/sprites/blue_right.png")]
+
 func _init(_damage: Array[int] = damage_array, _projectile = preload('res://Scenes/Projectile.tscn'), _range_size:int = 200) -> void:
 	rangeRadius = _range_size
 	damage_array = _damage
@@ -30,7 +32,8 @@ func initilize(_damage: Array[int] = damage_array, _sprites = sprites,
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if is_instance_valid(activeTarget):
-		if activeTarget.rotation > 0:
+		var direction = self.global_position.x - activeTarget.global_position.x
+		if direction > 0:
 			$Sprite2D.texture = sprites[0]
 		else:
 			$Sprite2D.texture = sprites[1]
@@ -76,7 +79,7 @@ func _on_timer_timeout() -> void:
 	print(self.name)
 	if activeTarget != null:
 		var tempProjectile = projectile.instantiate()
-		tempProjectile.initilize(250, damage_array,activeTarget, pathName)
+		tempProjectile.initilize( damage_array,activeTarget, pathName)
 		await get_tree().process_frame
 		get_node('ProjectileDisconect').add_child(tempProjectile)
 		tempProjectile.global_position = $Range2D/range_circle.global_position
@@ -95,22 +98,24 @@ func get_range() -> float:
 
 func get_damage() -> Array[int]:
 	return damage_array
-
-func set_fire_rate(new_rate) -> void:
+func get_upgrades() -> int:
+	return upgrade_count
+func set_fire_rate(new_rate, _is_upgrade: bool = false) -> void:
 	fire_rate = new_rate
 	$ShotTimer.set_wait_time(1/fire_rate)
-	print(fire_rate)
-	upgrade_count+=1
+	if _is_upgrade:
+		upgrade_count+=1
 	
-func set_range(new_range) -> void:
+func set_range(new_range, _is_upgrade: bool = false) -> void:
 	rangeRadius = new_range
 	$Range2D/range_circle.shape.set_radius(rangeRadius) 
-	print(rangeRadius)
-	upgrade_count+=1
+	if _is_upgrade:
+		upgrade_count+=1
 
-func set_damage(new_damage:Array[int]) -> void:
+func set_damage(new_damage:Array[int], _is_upgrade: bool = false) -> void:
 	damage_array = new_damage
-	upgrade_count+=1
+	if _is_upgrade:
+		upgrade_count+=1
 	
 func get_sprite() -> Sprite2D:
 	return get_node("Sprite2D")

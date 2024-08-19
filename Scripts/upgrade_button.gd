@@ -11,7 +11,7 @@ func set_link(tower: RobotBase) -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if linked_tower == null:
+	if (linked_tower == null)||linked_tower.upgrade_count>2:
 		self.disabled = true
 	else:
 		self.disabled = false

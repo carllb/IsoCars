@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://Scripts/place_tower_button.gd" id="3_t001j"]
 [ext_resource type="PackedScene" path="res://Scenes/chris2.tscn" id="4_5276c"]
 [ext_resource type="PackedScene" uid="uid://dnce7iocxnxd4" path="res://Scenes/BaseTower.tscn" id="4_dh5rx"]
-[ext_resource type="PackedScene" path="res://Scenes/chris3.tscn" id="5_h7fsh"]
+[ext_resource type="PackedScene" uid="uid://c6rnmm5g4stfg" path="res://Scenes/chris3.tscn" id="5_h7fsh"]
 [ext_resource type="Script" path="res://Scripts/range_upgrade.gd" id="5_v3ilj"]
 [ext_resource type="Script" path="res://Scripts/fire_rate_upgrade.gd" id="6_u56bo"]
 [ext_resource type="Script" path="res://Scripts/damage_phys_upgrade.gd" id="7_8c5av"]
@@ -135,7 +135,7 @@ tower_cost = 100
 
 [node name="add_ice_tower" type="Button" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer"]
 layout_mode = 2
-text = "Add Fire Tower (100 gold)"
+text = "Add Ice Tower (100 gold)"
 script = ExtResource("3_t001j")
 tower_scene = ExtResource("4_dh5rx")
 tower_cost = 100
@@ -182,7 +182,7 @@ Damage
 (ice)"
 script = ExtResource("9_fot1l")
 
-[node name="Label" type="Label" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/GridContainer"]
+[node name="upgrade_cost" type="Label" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 text = "Upgrades cost
 0 gold"
