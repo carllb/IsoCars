@@ -34,6 +34,8 @@ func _process(_delta):
 	livesLabel.text = "Lives: " + str(game_scene.get_lives())
 	
 	game_scene.update_pointer_position(mpos, current_tower)
+	if game_scene.get_lives()<1:
+		get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
 
 func _on_add_tower_pressed(tower: PackedScene, cost: ValueComponent):
 	var can_afford: bool = game_scene.get_money().can_afford(cost)

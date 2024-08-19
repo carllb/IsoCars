@@ -1,4 +1,10 @@
-[gd_scene format=3 uid="uid://bc0nftc157djp"]
+[gd_scene load_steps=5 format=3 uid="uid://bc0nftc157djp"]
+
+[ext_resource type="PackedScene" uid="uid://b82qquit5h0at" path="res://Scenes/chris1.tscn" id="2_652p7"]
+[ext_resource type="PackedScene" uid="uid://b1vytrs547nhh" path="res://Scenes/chris2.tscn" id="3_2axj1"]
+[ext_resource type="PackedScene" uid="uid://c6rnmm5g4stfg" path="res://Scenes/chris3.tscn" id="4_0833u"]
+
+[sub_resource type="PackedScene" id="PackedScene_fcna7"]
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
@@ -7,3 +13,49 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VContainer" type="BoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HContainer" type="BoxContainer" parent="Panel/VContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MenuBar" type="MenuBar" parent="Panel/VContainer/HContainer"]
+layout_mode = 2
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Panel/VContainer/HContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="Panel/VContainer/HContainer/SubViewportContainer"]
+disable_3d = true
+handle_input_locally = false
+size = Vector2i(1276, 720)
+render_target_update_mode = 4
+
+[node name="Chris1" parent="Panel/VContainer/HContainer/SubViewportContainer/SubViewport" instance=ExtResource("2_652p7")]
+position = Vector2(0, 0)
+mob_scene = SubResource("PackedScene_fcna7")
+
+[node name="Chris2" parent="Panel/VContainer/HContainer/SubViewportContainer/SubViewport" instance=ExtResource("3_2axj1")]
+visible = false
+position = Vector2(0, 0)
+
+[node name="Chris3" parent="Panel/VContainer/HContainer/SubViewportContainer/SubViewport" instance=ExtResource("4_0833u")]
+visible = false
+position = Vector2(0, 0)
