@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cn4ubjikqysig"
-path="res://.godot/imported/down-right.png-9ed4d0cd344dc754c5ce47b085e2455e.ctex"
+uid="uid://c8aiyeqc4qm2a"
+path="res://.godot/imported/red_car_50_left.png-dbc24908257d77524649ed5d0b84d030.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/temporary/down-right.png"
-dest_files=["res://.godot/imported/down-right.png-9ed4d0cd344dc754c5ce47b085e2455e.ctex"]
+source_file="res://assets/sprites/red_car_50_left.png"
+dest_files=["res://.godot/imported/red_car_50_left.png-dbc24908257d77524649ed5d0b84d030.ctex"]
 
 [params]
 

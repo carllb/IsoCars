@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sywwtc8sbbn1"
-path="res://.godot/imported/enemyFlyingAlt_1.png-8aaf8d1246ed52cfff545b7755135108.ctex"
+uid="uid://cmdld8x7hfsrw"
+path="res://.godot/imported/blue_car_50_right.png-57b53997ea9a3269b96f4aff4da825ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/temporary/enemyFlyingAlt_1.png"
-dest_files=["res://.godot/imported/enemyFlyingAlt_1.png-8aaf8d1246ed52cfff545b7755135108.ctex"]
+source_file="res://assets/sprites/blue_car_50_right.png"
+dest_files=["res://.godot/imported/blue_car_50_right.png-57b53997ea9a3269b96f4aff4da825ee.ctex"]
 
 [params]
 

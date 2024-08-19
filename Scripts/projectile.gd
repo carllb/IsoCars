@@ -7,9 +7,11 @@ var target : Node2D
 var pathName = ''
 var damage_array : Array[int]
 var damage_types : Array[String] = ['PHYSICAL','FIRE','ICE']
+var sprite = preload("res://assets/temporary/fire.png")
 
 func initilize(_damage_array: Array[int] = [1,0,0], _target : Node2D = null,
  					_pathName: String = '',_speed: int = 600) -> void:
+	$Sprite2D.texture = sprite
 	Speed = _speed
 	damage_array = _damage_array
 	target = _target

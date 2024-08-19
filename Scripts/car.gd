@@ -12,7 +12,7 @@ var dead: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$AnimatedSprite2D.animation = "drive"
+	$AnimatedSprite2D.animation = "drive_right"
 	add_child(health)
 	pass
 
