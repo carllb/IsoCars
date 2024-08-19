@@ -7,28 +7,36 @@ signal car_death
 var health: HealthComponent
 var speed: SpeedComponent
 var value: ValueComponent
-
+var pos :Array[Vector2] 
 var dead: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$AnimatedSprite2D.animation = "drive_right"
+	pos.append(global_position) 
+	pos.append(global_position) 
 	add_child(health)
 	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	
+	
 	if !dead:
-		$AnimatedSprite2D.play()
-		#print(speed.get_speed())
+		pos[1] = global_position
+		if pos[1].x - pos[0].x >0:
+			$AnimatedSprite2D.play("drive_right")
+		else:
+			$AnimatedSprite2D.play("drive_left")
+		pos[0] = pos[1]
 		
 		get_parent().set_progress(get_parent().get_progress() + speed.get_speed()*delta)
 
 		if get_parent().get_progress_ratio() >= .95:
 			death()
 		if health.is_dead():
-			death()
+			death(true)
 
 func initilize(health_component: HealthComponent,
 			   speed_component: SpeedComponent,
@@ -52,9 +60,10 @@ func take_damage(damage: float, _damage_type: String = 'PHYSICAL') -> void:
 func _on_death_animation_done():
 	get_parent().get_parent().queue_free()
 
-func death():
+func death(_killed:bool =false):
 	dead = true
-	car_death.emit(value)
+	if _killed:
+		car_death.emit(value)
 	#get_parent().get_parent().queue_free()
 	$AnimatedSprite2D.animation_finished.connect(_on_death_animation_done)
 	$AnimatedSprite2D.play("death2")

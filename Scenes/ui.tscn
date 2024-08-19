@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ihsyt47xy8ml"]
+[gd_scene load_steps=14 format=3 uid="uid://ihsyt47xy8ml"]
 
 [ext_resource type="PackedScene" uid="uid://d3qdva6rk1xkp" path="res://Scenes/main.tscn" id="1_aven1"]
 [ext_resource type="Script" path="res://Scripts/game_ui.gd" id="1_yl6ot"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://Scripts/damage_phys_upgrade.gd" id="7_8c5av"]
 [ext_resource type="Script" path="res://Scripts/damage_fire_upgrade.gd" id="8_f7qdi"]
 [ext_resource type="Script" path="res://Scripts/damage_ice_upgrade.gd" id="9_fot1l"]
+[ext_resource type="Script" path="res://Scenes/upgrade_cost.gd" id="13_yh4jb"]
 
 [node name="UI" type="Control" node_paths=PackedStringArray("game_viewport", "game_scene")]
 layout_mode = 3
@@ -186,6 +187,7 @@ script = ExtResource("9_fot1l")
 layout_mode = 2
 text = "Upgrades cost
 0 gold"
+script = ExtResource("13_yh4jb")
 
 [connection signal="gui_input" from="MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer" to="." method="_on_sub_viewport_container_gui_input"]
 [connection signal="add_tower_pressed" from="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/add_tower" to="." method="_on_add_tower_pressed"]

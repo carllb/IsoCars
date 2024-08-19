@@ -185,7 +185,8 @@ func map_clicked(pos: Vector2,
 
 func select_tower(tower: RobotBase):
 		for button in $"../../../VBoxContainer/GridContainer".get_children():
-			if button.get_class() == "Button":
+			print(button.get_class())
+			if (button.get_class() == "Button") ||(button.get_class() == "Label"):
 				button.set_link(tower)
 
 	
