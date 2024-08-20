@@ -104,3 +104,6 @@ func _on_sub_viewport_container_gui_input(event: InputEvent):
 
 
 	
+func _on_wave_start_pressed() -> void:
+	game_scene.get_node("MobTimer").start(1)
+	$"MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/GridContainer3/Wave Start".queue_free() # Replace with function body.

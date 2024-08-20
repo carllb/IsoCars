@@ -10,7 +10,7 @@ var speed: SpeedComponent
 var value: ValueComponent
 var pos :Array[Vector2] 
 var dead: bool = false
-
+var type: String = 'Normal'
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$AnimatedSprite2D.animation = "drive_right"
@@ -50,12 +50,13 @@ func initilize(health_component: HealthComponent,
 			   speed_component: SpeedComponent,
 			   value_component: ValueComponent,
 			   on_death_cb: Callable, on_pass_cb: Callable,
-			_size: float =1):
+			_size: float =1, _type:String ='Normal'):
 	health = health_component
 	speed = speed_component
 	value = value_component
 	car_death.connect(on_death_cb)
 	car_pass.connect(on_pass_cb)
+	type = _type
 	scale = scale*_size
 
 func take_damage(damage: float, _damage_type: String = 'PHYSICAL') -> void:

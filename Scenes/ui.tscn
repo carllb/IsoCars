@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://ihsyt47xy8ml"]
+[gd_scene load_steps=17 format=3 uid="uid://ihsyt47xy8ml"]
 
 [ext_resource type="PackedScene" uid="uid://d3qdva6rk1xkp" path="res://Scenes/main.tscn" id="1_aven1"]
 [ext_resource type="Script" path="res://Scripts/game_ui.gd" id="1_yl6ot"]
@@ -15,6 +15,7 @@
 [ext_resource type="Script" path="res://Scripts/damage_fire_upgrade.gd" id="8_f7qdi"]
 [ext_resource type="Script" path="res://Scripts/damage_ice_upgrade.gd" id="9_fot1l"]
 [ext_resource type="Script" path="res://Scenes/upgrade_cost.gd" id="13_yh4jb"]
+[ext_resource type="Script" path="res://Scenes/wave_start.gd" id="16_nfvck"]
 
 [node name="UI" type="Control" node_paths=PackedStringArray("game_viewport", "game_scene")]
 layout_mode = 3
@@ -212,7 +213,16 @@ text = "Upgrades cost
 0 gold"
 script = ExtResource("13_yh4jb")
 
+[node name="GridContainer3" type="GridContainer" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Wave Start" type="Button" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/GridContainer3"]
+layout_mode = 2
+text = "Start Game"
+script = ExtResource("16_nfvck")
+
 [connection signal="gui_input" from="MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer" to="." method="_on_sub_viewport_container_gui_input"]
 [connection signal="add_tower_pressed" from="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/GridContainer2/add_tower" to="." method="_on_add_tower_pressed"]
 [connection signal="add_tower_pressed" from="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/GridContainer2/add_fire_tower" to="." method="_on_add_fire_tower_add_tower_pressed"]
 [connection signal="add_tower_pressed" from="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/GridContainer2/add_ice_tower" to="." method="_on_add_ice_tower_add_tower_pressed"]
+[connection signal="pressed" from="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/GridContainer3/Wave Start" to="." method="_on_wave_start_pressed"]

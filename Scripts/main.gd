@@ -55,7 +55,7 @@ var blank_texture: Texture2D = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$MobTimer.start()
+	pass
 
 func wave_factory(_level: int) -> Array:
 	var ret = []
@@ -76,7 +76,6 @@ func wave_factory(_level: int) -> Array:
 			var type = enemy['type']
 			var delay = enemy['delay']
 			var car = car_factory(health_comp, speed_comp, value_comp, size, type)
-			$MobTimer.start(delay)
 			
 			ret.append(car)
 	return ret
@@ -87,10 +86,9 @@ func car_factory(health_comp: HealthComponent,
 				size:float,
 				type:String) -> Car:
 	var car: Car = mob_scene.instantiate()
-	car.initilize(health_comp, speed_comp, value_comp, _on_car_death, _on_car_pass, size)
-	print(type)
-	if type == 'Blue':
-		car.sprite_override([load("res://assets/sprites/blue_car_50_right.png"),load("res://assets/sprites/blue_car_50_left.png")])
+	car.initilize(health_comp, speed_comp, value_comp, _on_car_death, _on_car_pass, size, type)
+
+	
 	return car
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -135,6 +133,7 @@ func _on_mob_timer_timeout() -> void:
 			var path = mob_path.instantiate()
 			# Get new car and add to scene
 			var car = current_wave.pop_front()
+			$MobTimer.start(log((car.health.health/200)+1)+1)
 			path.get_child(0).add_child(car)
 			add_child(path)
 
