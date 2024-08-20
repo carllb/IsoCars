@@ -14,8 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://bdtneuck1hqpc" path="res://Scenes/game_win.tscn" id="7_p8lim"]
 [ext_resource type="Script" path="res://Scripts/damage_fire_upgrade.gd" id="8_f7qdi"]
 [ext_resource type="Script" path="res://Scripts/damage_ice_upgrade.gd" id="9_fot1l"]
-[ext_resource type="Script" path="res://Scenes/upgrade_cost.gd" id="13_yh4jb"]
-[ext_resource type="Script" path="res://Scenes/wave_start.gd" id="16_nfvck"]
+[ext_resource type="Script" path="res://Scripts/upgrade_cost.gd" id="13_yh4jb"]
+[ext_resource type="Script" path="res://Scripts/wave_start.gd" id="16_nfvck"]
 
 [node name="UI" type="Control" node_paths=PackedStringArray("game_viewport", "game_scene")]
 layout_mode = 3
@@ -111,11 +111,10 @@ stretch = true
 [node name="SubViewport" type="SubViewport" parent="MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer"]
 disable_3d = true
 handle_input_locally = false
-size = Vector2i(1031, 637)
+size = Vector2i(2, 2)
 render_target_update_mode = 4
 
 [node name="Main" parent="MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer/SubViewport" instance=ExtResource("1_aven1")]
-visible = false
 position = Vector2(0, 0)
 
 [node name="Main2" parent="MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer/SubViewport" instance=ExtResource("3_gw57n")]
@@ -125,6 +124,7 @@ visible = false
 visible = false
 
 [node name="Chris3" parent="MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer/SubViewport" instance=ExtResource("5_h7fsh")]
+visible = false
 
 [node name="GameOver" parent="MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer/SubViewport" instance=ExtResource("6_37pde")]
 visible = false
