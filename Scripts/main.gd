@@ -18,7 +18,7 @@ class_name TDLevel
 @onready var gold_spent: ValueComponent = ValueComponent.new(0)
 @onready var curr_level_reward: ValueComponent = ValueComponent.new(starting_level_reward)
 
-var level_conf = parse_json("Config/level.json")
+var level_conf = parse_json("res://assets/level_properties/level.json")
 
 var score
 var level = 0
