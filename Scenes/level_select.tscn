@@ -19,7 +19,7 @@ mouse_force_pass_scroll_events = false
 script = ExtResource("1_88wvu")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-modulate = Color(0.473976, 0.473976, 0.473976, 1)
+modulate = Color(0.791999, 0.791999, 0.791999, 1)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -27,38 +27,38 @@ texture = ExtResource("2_j168o")
 
 [node name="map_1_button" type="TextureButton" parent="."]
 layout_mode = 2
-offset_left = 299.001
-offset_top = 204.999
-offset_right = 554.001
-offset_bottom = 463.999
-scale = Vector2(0.837056, 0.784385)
+offset_left = 273.001
+offset_top = 210.999
+offset_right = 758.001
+offset_bottom = 510.999
+scale = Vector2(0.75, 0.75)
 texture_normal = ExtResource("3_msug1")
 
 [node name="map_2_button" type="TextureButton" parent="."]
 layout_mode = 2
-offset_left = 671.001
-offset_top = 201.997
-offset_right = 1210.0
-offset_bottom = 709.997
-scale = Vector2(0.484789, 0.449534)
+offset_left = 660.001
+offset_top = 210.997
+offset_right = 1145.0
+offset_bottom = 510.997
+scale = Vector2(0.75, 0.75)
 texture_normal = ExtResource("4_ekf0y")
 
 [node name="map_3_button" type="TextureButton" parent="."]
 layout_mode = 2
-offset_left = 248.002
-offset_top = 452.999
-offset_right = 871.002
-offset_bottom = 960.999
-scale = Vector2(0.484789, 0.449534)
+offset_left = 271.002
+offset_top = 448.999
+offset_right = 756.002
+offset_bottom = 748.999
+scale = Vector2(0.75, 0.75)
 texture_normal = ExtResource("5_3d0mg")
 
 [node name="map_4_button" type="TextureButton" parent="."]
 layout_mode = 2
-offset_left = 686.002
-offset_top = 446.997
-offset_right = 1167.0
-offset_bottom = 880.997
-scale = Vector2(0.531786, 0.544065)
+offset_left = 656.002
+offset_top = 450.997
+offset_right = 1141.0
+offset_bottom = 750.997
+scale = Vector2(0.75, 0.75)
 texture_normal = ExtResource("6_t0e6w")
 
 [connection signal="pressed" from="map_1_button" to="." method="_on_map_1_button_pressed"]
