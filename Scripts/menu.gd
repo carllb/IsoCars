@@ -19,7 +19,7 @@ func _on_github_pressed() -> void:
 
 func _on_artist_pressed() -> void:
 	#TODO: fill in artist URL
-	OS.shell_open("https://art.com") 
+	OS.shell_open("https://twitter.com/corvidscorpse") 
 
 func _on_test_pressed() -> void:
 	#TODO: what is the point of this button?

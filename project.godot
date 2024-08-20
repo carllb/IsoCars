@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="IsoCars"
-run/main_scene="res://Scenes/menu.tscn"
+run/main_scene="res://Scenes/level_select.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/image="res://assets/temporary/splash.png"
 config/icon="res://icon.svg"

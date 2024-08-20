@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://cqslop8oktq1j"]
+
+[ext_resource type="Script" path="res://Scripts/level_select.gd" id="1_88wvu"]
+[ext_resource type="Texture2D" uid="uid://b4o0cjgfiyp6o" path="res://assets/temporary/background.png" id="2_j168o"]
+[ext_resource type="Texture2D" uid="uid://duwc85o0wjohs" path="res://assets/sprites/map1.png" id="3_msug1"]
+[ext_resource type="Texture2D" uid="uid://c171pps6ltsth" path="res://assets/sprites/map2.png" id="4_ekf0y"]
+[ext_resource type="Texture2D" uid="uid://clwxn1t7pwbhq" path="res://assets/sprites/map3.png" id="5_3d0mg"]
+[ext_resource type="Texture2D" uid="uid://bv7gjw3iftl8" path="res://assets/sprites/map4.png" id="6_t0e6w"]
+
+[node name="level_select" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 6.28319
+mouse_force_pass_scroll_events = false
+script = ExtResource("1_88wvu")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.473976, 0.473976, 0.473976, 1)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_j168o")
+
+[node name="map_1_button" type="TextureButton" parent="."]
+layout_mode = 2
+offset_left = 299.001
+offset_top = 204.999
+offset_right = 554.001
+offset_bottom = 463.999
+scale = Vector2(0.837056, 0.784385)
+texture_normal = ExtResource("3_msug1")
+
+[node name="map_2_button" type="TextureButton" parent="."]
+layout_mode = 2
+offset_left = 671.001
+offset_top = 201.997
+offset_right = 1210.0
+offset_bottom = 709.997
+scale = Vector2(0.484789, 0.449534)
+texture_normal = ExtResource("4_ekf0y")
+
+[node name="map_3_button" type="TextureButton" parent="."]
+layout_mode = 2
+offset_left = 248.002
+offset_top = 452.999
+offset_right = 871.002
+offset_bottom = 960.999
+scale = Vector2(0.484789, 0.449534)
+texture_normal = ExtResource("5_3d0mg")
+
+[node name="map_4_button" type="TextureButton" parent="."]
+layout_mode = 2
+offset_left = 686.002
+offset_top = 446.997
+offset_right = 1167.0
+offset_bottom = 880.997
+scale = Vector2(0.531786, 0.544065)
+texture_normal = ExtResource("6_t0e6w")
+
+[connection signal="pressed" from="map_1_button" to="." method="_on_map_1_button_pressed"]
+[connection signal="pressed" from="map_2_button" to="." method="_on_map_2_button_pressed"]
+[connection signal="pressed" from="map_3_button" to="." method="_on_map_3_button_pressed"]
+[connection signal="pressed" from="map_4_button" to="." method="_on_map_4_button_pressed"]
