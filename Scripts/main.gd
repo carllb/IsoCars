@@ -20,7 +20,6 @@ class_name TDLevel
 
 var level_conf = parse_json("Config/level.json")
 
-
 var score
 var level = 0
 var current_wave = []

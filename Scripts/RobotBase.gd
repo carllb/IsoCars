@@ -28,6 +28,7 @@ func initilize(_damage: Array[int] = damage_array, _sprites = sprites,
 	$Sprite2D.texture = sprites[0]
 	projectile_type = _projectile_type
 	$ShotTimer.set_wait_time(1/fire_rate)
+
 	if _projectile_type == 'FIRE':
 		pew_sound = $fire_pew
 	elif _projectile_type == 'ICE':

@@ -1,5 +1,8 @@
 extends Control
 
+func _ready():
+		AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), linear_to_db(0))
+	
 func _on_play_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/ui.tscn")
 
@@ -12,6 +15,8 @@ func _on_play_mouse_entered() -> void:
 func _on_slider_value_changed(value: float) -> void:
 	var lab : Label = get_node("MarginContainer/VBoxContainer/Volume/Value") 
 	lab.text = str(value)
+	
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), linear_to_db(float(value)/100.0))
 
 
 func _on_github_pressed() -> void:

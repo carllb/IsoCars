@@ -11,6 +11,7 @@ var value: ValueComponent
 var pos :Array[Vector2] 
 var dead: bool = false
 var type: String = 'Normal'
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$AnimatedSprite2D.animation = "drive_right"
