@@ -2,8 +2,8 @@ extends Node2D
 
 class_name TDLevel
 
-@export var mob_scene: PackedScene
-@export var mob_path: PackedScene
+@export var mob_scene: PackedScene = load("res://Scenes/car.tscn")
+@export var mob_path: PackedScene 
 @export var db_dot: Sprite2D
 
 @export_category("Gold Settings")
@@ -55,7 +55,7 @@ var blank_texture: Texture2D = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	mob_path = Global.mob_path
 
 func wave_factory(_level: int) -> Array:
 	var ret = []
@@ -74,7 +74,7 @@ func wave_factory(_level: int) -> Array:
 			var value_comp = ValueComponent.new(enemy["reward"])
 			var size = enemy['size']
 			var type = enemy['type']
-			var delay = enemy['delay']
+			#var delay = enemy['delay']
 			var car = car_factory(health_comp, speed_comp, value_comp, size, type)
 			
 			ret.append(car)
@@ -143,7 +143,6 @@ func _on_car_death(reward_gold: ValueComponent):
 
 func _on_car_pass():
 	lives-=1
-	print(lives)
 
 const placable_tiles: Array[Vector2i] = [Vector2i(0,4)]
 var placed_tiles = {}
@@ -215,7 +214,7 @@ func select_tower(tower: RobotBase):
 			if (button.get_class() == "Button") ||(button.get_class() == "Label"):
 				button.set_link(tower)
 
-	
+
 func build_normal_car(car):
 	var health = 3
 	var armor = 5

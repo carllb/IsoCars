@@ -8,7 +8,7 @@ extends Control
 
 var current_tower: RobotBase = null
 var curr_tower_cost: ValueComponent = null
-
+var level
 @onready var levelLabel : Label = get_node("MainPanel/VerticalContainer/Top Bar/Level")
 @onready var moneyLabel : Label = get_node("MainPanel/VerticalContainer/Top Bar/Money")
 @onready var spentLabel : Label = get_node("MainPanel/VerticalContainer/Top Bar/MoneySpent")
@@ -17,8 +17,9 @@ var curr_tower_cost: ValueComponent = null
 @onready var gameWin: GameOverScreen = get_node("MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer/SubViewport/GameWin")
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
+	level = Global.level_choice
+	$MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer/SubViewport.add_child(level) # Replace with function body.
+	game_scene = level
 func clear_selected_tower():
 	if (null != current_tower):
 		current_tower.queue_free()
@@ -27,6 +28,7 @@ func clear_selected_tower():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
+
 	var mpos: Vector2 = game_viewport.get_mouse_position()
 	game_scene.update_pointer_position(mpos, current_tower)
 	
@@ -40,10 +42,12 @@ func _process(_delta):
 		#get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
 		gameOver.initilize(game_scene.get_money_spent().get_value(),
 						   game_scene.get_cars_killed())
+		$MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer/SubViewport.move_child($MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer/SubViewport/GameOver,-1)
 		gameOver.visible = true
 	elif game_scene.is_game_won():
 		gameWin.initilize(game_scene.get_money_spent().get_value(),
 						   game_scene.get_cars_killed())
+		$MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer/SubViewport.move_child($MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer/SubViewport/GameWin,-1)
 		gameWin.visible = true
 
 func _on_add_tower_pressed(tower: PackedScene, cost: ValueComponent):
@@ -78,7 +82,7 @@ func _on_add_ice_tower_add_tower_pressed(tower: PackedScene, cost: ValueComponen
 		current_tower = tower.instantiate()
 		current_tower.initilize([1,0,15],[preload("res://assets/sprites/purple_left.png"),preload("res://assets/sprites/purple_right.png")],
 						'ICE')
-		current_tower.set_fire_rate(4)
+		current_tower.set_fire_rate(3)
 		curr_tower_cost = cost
 
 func _on_sub_viewport_container_gui_input(event: InputEvent):
