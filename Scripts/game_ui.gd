@@ -53,7 +53,8 @@ func _on_add_tower_pressed(tower: PackedScene, cost: ValueComponent):
 
 	if (can_afford):
 		current_tower = tower.instantiate()
-		current_tower.initilize([5,0,0],[preload("res://assets/sprites/blue_left.png"),preload("res://assets/sprites/blue_right.png")])
+		current_tower.initilize([5,0,0],[preload("res://assets/sprites/blue_left.png"),preload("res://assets/sprites/blue_right.png")],
+							'PHYSICAL')
 		curr_tower_cost = cost
 		
 		
@@ -64,7 +65,8 @@ func _on_add_fire_tower_add_tower_pressed(tower: PackedScene, cost: ValueCompone
 
 	if (can_afford):
 		current_tower = tower.instantiate()
-		current_tower.initilize([0,3,0],[preload("res://assets/sprites/orange_left.png"),preload("res://assets/sprites/orange_right.png")])
+		current_tower.initilize([0,3,0],[preload("res://assets/sprites/orange_left.png"),preload("res://assets/sprites/orange_right.png")],
+						'FIRE')
 		curr_tower_cost = cost
 
 func _on_add_ice_tower_add_tower_pressed(tower: PackedScene, cost: ValueComponent) -> void:
@@ -74,7 +76,9 @@ func _on_add_ice_tower_add_tower_pressed(tower: PackedScene, cost: ValueComponen
 
 	if (can_afford):
 		current_tower = tower.instantiate()
-		current_tower.initilize([1,0,15],[preload("res://assets/sprites/purple_left.png"),preload("res://assets/sprites/purple_right.png")])
+		current_tower.initilize([1,0,15],[preload("res://assets/sprites/purple_left.png"),preload("res://assets/sprites/purple_right.png")],
+						'ICE')
+		current_tower.set_fire_rate(4)
 		curr_tower_cost = cost
 
 func _on_sub_viewport_container_gui_input(event: InputEvent):
@@ -100,3 +104,6 @@ func _on_sub_viewport_container_gui_input(event: InputEvent):
 
 
 	
+func _on_wave_start_pressed() -> void:
+	game_scene.get_node("MobTimer").start(1)
+	$"MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/GridContainer3/Wave Start".queue_free() # Replace with function body.

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcmblhwx02iu6"
-path="res://.godot/imported/background_tilemap_test1.png-d915028a719721918506dd54905f2f51.ctex"
+uid="uid://bj66m7u4cl4ag"
+path="res://.godot/imported/ice_shot.png-90fc988fac0e5914bfbc53e9cf8e9e48.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/temporary/background_tilemap_test1.png"
-dest_files=["res://.godot/imported/background_tilemap_test1.png-d915028a719721918506dd54905f2f51.ctex"]
+source_file="res://assets/sprites/ice_shot.png"
+dest_files=["res://.godot/imported/ice_shot.png-90fc988fac0e5914bfbc53e9cf8e9e48.ctex"]
 
 [params]
 

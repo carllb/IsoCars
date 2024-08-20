@@ -21,7 +21,7 @@ func _process(_delta: float) -> void:
 	
 func apply_slow(slowdown_percent: float):
 	slowed = true
-	slowed_speed = slowed_speed * (1 - (slowdown_percent / 100))
+	slowed_speed = max(slowed_speed * ( (100-slowdown_percent)/100 ),50)
 	print(slowdown_percent)
 
 	

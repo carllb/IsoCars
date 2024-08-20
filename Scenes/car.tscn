@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bc3lfejnfa42e"]
+[gd_scene load_steps=14 format=3 uid="uid://bc3lfejnfa42e"]
 
 [ext_resource type="Script" path="res://Scripts/car.gd" id="1_0y4b7"]
 [ext_resource type="Texture2D" uid="uid://cupobdo6gl0p1" path="res://assets/temporary/explosion00.png" id="2_goiy1"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://blupispf6dn8y" path="res://assets/temporary/explosion04.png" id="6_2cg8g"]
 [ext_resource type="Texture2D" uid="uid://c8aiyeqc4qm2a" path="res://assets/sprites/red_car_50_left.png" id="7_og0pd"]
 [ext_resource type="Texture2D" uid="uid://dpmfme1alqlsp" path="res://assets/sprites/red_car_50_right.png" id="8_1ib3h"]
+[ext_resource type="AudioStream" uid="uid://c0l8c0mbi1xcy" path="res://assets/sounds/boom.wav" id="10_y0lub"]
+[ext_resource type="AudioStream" uid="uid://dbw3vfgaaldh1" path="res://assets/sounds/hit.wav" id="11_gculk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ynjxy"]
 animations = [{
@@ -64,7 +66,7 @@ script = ExtResource("1_0y4b7")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_ynjxy")
-animation = &"death2"
+animation = &"drive_left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 0.837758
@@ -80,6 +82,14 @@ one_shot = true
 
 [node name="BurnTimer" type="Timer" parent="."]
 wait_time = 0.2
+
+[node name="boom" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_y0lub")
+volume_db = -20.306
+
+[node name="hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_gculk")
+volume_db = -20.0
 
 [connection signal="timeout" from="SlowDownTimer" to="." method="_on_slow_down_timer_timeout"]
 [connection signal="timeout" from="BurnTimer" to="." method="_on_burn_timer_timeout"]
