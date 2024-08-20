@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnce7iocxnxd4"]
+[gd_scene load_steps=7 format=3 uid="uid://dnce7iocxnxd4"]
 
 [ext_resource type="Script" path="res://Scripts/RobotBase.gd" id="1_aemv3"]
 [ext_resource type="Texture2D" uid="uid://byv56p1cetw4d" path="res://assets/sprites/blue_right.png" id="2_5kppx"]
+[ext_resource type="AudioStream" uid="uid://du8tj6ho84ci3" path="res://assets/sounds/base_pew.wav" id="3_fb7dm"]
+[ext_resource type="AudioStream" uid="uid://budktvm8dynat" path="res://assets/sounds/ice_pew.wav" id="4_qycrl"]
+[ext_resource type="AudioStream" uid="uid://dtf8xymndbwlu" path="res://assets/sounds/fire_pew.wav" id="5_ew0l0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_osixj"]
 resource_local_to_scene = true
@@ -26,6 +29,15 @@ texture = ExtResource("2_5kppx")
 [node name="ShotTimer" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
+
+[node name="base_pew" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_fb7dm")
+
+[node name="ice_pew" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_qycrl")
+
+[node name="fire_pew" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ew0l0")
 
 [connection signal="area_exited" from="Range2D" to="." method="_on_range_2d_area_exited"]
 [connection signal="body_entered" from="Range2D" to="." method="_on_range_2d_body_entered"]

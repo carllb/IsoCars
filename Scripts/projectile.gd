@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 class_name Projectile
 
+
 var Speed : int
 var target : Node2D
 var pathName = ''
@@ -20,7 +21,6 @@ func initilize(_damage_array: Array[int] = [1,0,0], _target : Node2D = null,
 	$Sprite2D.texture = sprites[damage_types.find(_projectile_type)]
 
 func _physics_process(_delta) -> void:
-
 	#Get the input direction and handle the movement
 	if is_instance_valid(target):
 		velocity = global_position.direction_to(target.get_child(0).global_position) * Speed

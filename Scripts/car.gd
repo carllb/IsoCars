@@ -59,6 +59,7 @@ func initilize(health_component: HealthComponent,
 	scale = scale*_size
 
 func take_damage(damage: float, _damage_type: String = 'PHYSICAL') -> void:
+	$hit.play()
 	if (_damage_type == "ICE")&&damage>0:
 		var slow_time = ($SlowDownTimer.time_left+1) / ($SlowDownTimer.time_left)
 		$SlowDownTimer.start(slow_time)
@@ -80,6 +81,7 @@ func sprite_override(new_sprites: Array[Resource]):
 
 func death(_killed:bool =false):
 	dead = true
+	$boom.play()
 	$AnimatedSprite2D.animation_finished.connect(_on_death_animation_done)
 	get_node("CollisionShape2D").queue_free()
 	if _killed:

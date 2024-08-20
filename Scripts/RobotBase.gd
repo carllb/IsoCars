@@ -2,7 +2,7 @@ extends Node2D
 
 class_name RobotBase
 
-var projectile = preload('res://Scenes/Projectile.tscn')
+@onready var projectile = preload('res://Scenes/Projectile.tscn')
 var projectile_type
 var rangeRadius: float = 200
 var damage_array: Array[int] = [1,0,0] 
@@ -12,6 +12,8 @@ var upgrade_count :int = 0
 var activeTarget
 var fire_rate : float =2
 var upgrade_cost : ValueComponent = ValueComponent.new(25)
+
+var pew_sound
 
 var sprites = [preload("res://assets/sprites/blue_left.png"),preload("res://assets/sprites/blue_right.png")]
 
@@ -26,6 +28,12 @@ func initilize(_damage: Array[int] = damage_array, _sprites = sprites,
 	$Sprite2D.texture = sprites[0]
 	projectile_type = _projectile_type
 	$ShotTimer.set_wait_time(1/fire_rate)
+	if _projectile_type == 'FIRE':
+		pew_sound = $fire_pew
+	elif _projectile_type == 'ICE':
+		pew_sound = $ice_pew
+	else:
+		pew_sound = $base_pew
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -81,6 +89,9 @@ func _on_timer_timeout() -> void:
 		await get_tree().process_frame
 		get_node('ProjectileDisconect').add_child(tempProjectile)
 		tempProjectile.global_position = $Range2D/range_circle.global_position
+		
+		pew_sound.play()
+
 	else:
 		find_target()
 		if activeTarget == null:
