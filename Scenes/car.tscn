@@ -55,7 +55,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fkpp8"]
-radius = 7.73051
+radius = 7.7305
 height = 15.461
 
 [node name="Car" type="CharacterBody2D"]
