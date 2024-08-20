@@ -12,11 +12,11 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if linked_tower == null:
-		text = 'No Robot Selected'
+		text = 'No Robot\nSelected'
 	elif linked_tower.get_upgrades() >=3 :
-		text = 'Tower at Max Upgrades'
+		text = 'Robot at\nMax Upgrades'
 	else:
-		text = 'Upgrade Cost \n'+str(linked_tower.upgrade_cost.get_value())+' gold'
+		text = 'Upgrade Cost\n'+str(linked_tower.upgrade_cost.get_value())+' gold'
 
 
 

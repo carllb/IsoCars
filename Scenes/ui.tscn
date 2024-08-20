@@ -1,19 +1,31 @@
-[gd_scene load_steps=13 format=3 uid="uid://ihsyt47xy8ml"]
+[gd_scene load_steps=24 format=3 uid="uid://ihsyt47xy8ml"]
 
 [ext_resource type="Script" path="res://Scripts/game_ui.gd" id="1_yl6ot"]
+[ext_resource type="FontFile" uid="uid://62xypgeq7duc" path="res://assets/temporary/edit-undo-brk-font/EditUndoBrk-RwaV.ttf" id="2_rete1"]
 [ext_resource type="Script" path="res://Scripts/place_tower_button.gd" id="3_t001j"]
 [ext_resource type="PackedScene" uid="uid://dnce7iocxnxd4" path="res://Scenes/BaseTower.tscn" id="4_dh5rx"]
+[ext_resource type="Texture2D" uid="uid://d1sx4g05c40ck" path="res://assets/temporary/Basic_button.png" id="5_au757"]
 [ext_resource type="Script" path="res://Scripts/range_upgrade.gd" id="5_v3ilj"]
 [ext_resource type="PackedScene" uid="uid://bc0nftc157djp" path="res://Scenes/game_over.tscn" id="6_37pde"]
 [ext_resource type="Script" path="res://Scripts/fire_rate_upgrade.gd" id="6_u56bo"]
 [ext_resource type="Script" path="res://Scripts/damage_phys_upgrade.gd" id="7_8c5av"]
 [ext_resource type="PackedScene" uid="uid://bdtneuck1hqpc" path="res://Scenes/game_win.tscn" id="7_p8lim"]
+[ext_resource type="Texture2D" uid="uid://dh5yc6fihuelk" path="res://assets/temporary/Fire_button.png" id="8_bhbmi"]
 [ext_resource type="Script" path="res://Scripts/damage_fire_upgrade.gd" id="8_f7qdi"]
+[ext_resource type="Texture2D" uid="uid://cs52jhvmt6ns2" path="res://assets/temporary/Ice_button.png" id="9_11bhf"]
 [ext_resource type="Script" path="res://Scripts/damage_ice_upgrade.gd" id="9_fot1l"]
+[ext_resource type="Texture2D" uid="uid://brdj38o3ptkff" path="res://assets/temporary/Blank_tower_button.png" id="10_1xsdk"]
+[ext_resource type="Texture2D" uid="uid://bn3tum3ap7vdd" path="res://assets/temporary/Upgrade_range_button.png" id="11_ogcqx"]
+[ext_resource type="Texture2D" uid="uid://eobp8racy8t" path="res://assets/temporary/Upgrade_fire_rate_button.png" id="13_umlei"]
 [ext_resource type="Script" path="res://Scripts/upgrade_cost.gd" id="13_yh4jb"]
+[ext_resource type="Texture2D" uid="uid://cemtbnf3calq3" path="res://assets/temporary/Upgrade_damage_button.png" id="15_fssmx"]
 [ext_resource type="Script" path="res://Scripts/wave_start.gd" id="16_nfvck"]
+[ext_resource type="Texture2D" uid="uid://dkj7ycwnqqi33" path="res://assets/temporary/Upgrade_fire_button.png" id="17_lr5cj"]
+[ext_resource type="Texture2D" uid="uid://bqe3gt5y875yb" path="res://assets/temporary/Upgrade_ice_button.png" id="19_5iyr2"]
+[ext_resource type="Texture2D" uid="uid://xfhiud40m4eh" path="res://assets/temporary/Start_Button.png" id="22_mnsw7"]
 
 [node name="UI" type="Control" node_paths=PackedStringArray("game_viewport")]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -55,24 +67,52 @@ vertical = true
 [node name="Top Bar" type="ColorRect" parent="MainPanel/VerticalContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-color = Color(0.30461, 0.115758, 0.354375, 1)
+color = Color(0.0862745, 0.180392, 0.298039, 1)
 
 [node name="Level" type="Label" parent="MainPanel/VerticalContainer/Top Bar"]
+texture_filter = 1
 layout_mode = 2
-offset_top = 27.0
-offset_right = 71.0
-offset_bottom = 50.0
-scale = Vector2(3, 3)
+offset_right = 200.0
+offset_bottom = 80.0
 tooltip_text = "Current Level"
+theme_override_colors/font_color = Color(0.737255, 0.752941, 0.85098, 1)
+theme_override_fonts/font = ExtResource("2_rete1")
+theme_override_font_sizes/font_size = 45
 text = "Level: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Money" type="Label" parent="MainPanel/VerticalContainer/Top Bar"]
+texture_filter = 1
 layout_mode = 0
-offset_left = 1151.0
-offset_top = 35.0
-offset_right = 1222.0
-offset_bottom = 71.0
+offset_left = 1067.0
+offset_top = 40.0
+offset_right = 1227.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(0.737255, 0.752941, 0.85098, 1)
+theme_override_fonts/font = ExtResource("2_rete1")
+theme_override_font_sizes/font_size = 35
 text = "gold: 0"
+vertical_alignment = 1
+
+[node name="Title" type="Label" parent="MainPanel/VerticalContainer/Top Bar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -33.5
+offset_right = 316.0
+offset_bottom = 33.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.737255, 0.752941, 0.85098, 1)
+theme_override_fonts/font = ExtResource("2_rete1")
+theme_override_font_sizes/font_size = 76
+text = "Scale Battle Defence"
+horizontal_alignment = 1
 
 [node name="MoneySpent" type="Label" parent="MainPanel/VerticalContainer/Top Bar"]
 visible = false
@@ -86,12 +126,16 @@ tooltip_text = "Current Level"
 text = "Total Money Spent: 0"
 
 [node name="Lives" type="Label" parent="MainPanel/VerticalContainer/Top Bar"]
+texture_filter = 1
 layout_mode = 0
-offset_left = 1150.0
-offset_top = 1.0
-offset_right = 1278.0
-offset_bottom = 44.0
+offset_left = 1060.0
+offset_right = 1220.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0.737255, 0.752941, 0.85098, 1)
+theme_override_fonts/font = ExtResource("2_rete1")
+theme_override_font_sizes/font_size = 35
 text = "Lives: 3"
+vertical_alignment = 1
 
 [node name="HorisontalContainer" type="BoxContainer" parent="MainPanel/VerticalContainer"]
 layout_mode = 2
@@ -106,7 +150,7 @@ stretch = true
 [node name="SubViewport" type="SubViewport" parent="MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer"]
 disable_3d = true
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(1012, 637)
 render_target_update_mode = 4
 
 [node name="GameOver" parent="MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer/SubViewport" instance=ExtResource("6_37pde")]
@@ -118,94 +162,179 @@ visible = false
 [node name="VBoxContainer" type="VBoxContainer" parent="MainPanel/VerticalContainer/HorisontalContainer"]
 layout_mode = 2
 size_flags_horizontal = 11
-size_flags_stretch_ratio = 0.14
+size_flags_stretch_ratio = 0.26
 
-[node name="GridContainer2" type="GridContainer" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer"]
+[node name="SideBar" type="ColorRect" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.737255, 0.752941, 0.85098, 1)
+
+[node name="Robot Header" type="Label" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/SideBar"]
+texture_filter = 1
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -130.0
+offset_right = 130.0
+offset_bottom = 45.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.0862745, 0.180392, 0.298039, 1)
+theme_override_fonts/font = ExtResource("2_rete1")
+theme_override_font_sizes/font_size = 50
+text = "Robots"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer2" type="GridContainer" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/SideBar"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -130.0
+offset_top = 45.0
+offset_right = 130.0
+offset_bottom = 305.0
+grow_horizontal = 2
 columns = 2
 
-[node name="add_tower" type="Button" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/GridContainer2"]
+[node name="add_tower" type="Button" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/SideBar/GridContainer2"]
 layout_mode = 2
-text = "Basic Tower 
-(100 gold)"
+icon = ExtResource("5_au757")
 script = ExtResource("3_t001j")
 tower_scene = ExtResource("4_dh5rx")
 tower_cost = 100
 
-[node name="add_fire_tower" type="Button" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/GridContainer2"]
+[node name="add_fire_tower" type="Button" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/SideBar/GridContainer2"]
 layout_mode = 2
-text = "Add Fire Tower 
-(100 gold)"
+icon = ExtResource("8_bhbmi")
 script = ExtResource("3_t001j")
 tower_scene = ExtResource("4_dh5rx")
 tower_cost = 100
 
-[node name="add_ice_tower" type="Button" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/GridContainer2"]
+[node name="add_ice_tower" type="Button" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/SideBar/GridContainer2"]
 layout_mode = 2
-text = "Add Ice Tower 
-(100 gold)"
+icon = ExtResource("9_11bhf")
 script = ExtResource("3_t001j")
 tower_scene = ExtResource("4_dh5rx")
 tower_cost = 100
 
-[node name="GridContainer" type="GridContainer" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer"]
+[node name="Blank Botton" type="Button" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/SideBar/GridContainer2"]
 layout_mode = 2
+icon = ExtResource("10_1xsdk")
+
+[node name="Upgrade Header" type="Label" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/SideBar"]
+texture_filter = 1
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -130.0
+offset_top = -12.5
+offset_right = 130.0
+offset_bottom = 32.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.0862745, 0.180392, 0.298039, 1)
+theme_override_fonts/font = ExtResource("2_rete1")
+theme_override_font_sizes/font_size = 50
+text = "Upgrades
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/SideBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -130.0
+offset_top = 32.5
+offset_right = 130.0
+offset_bottom = 244.5
+grow_horizontal = 2
+grow_vertical = 2
 columns = 2
 
-[node name="range_button" type="Button" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/GridContainer"]
+[node name="range_button" type="Button" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/SideBar/GridContainer"]
 layout_mode = 2
 disabled = true
-text = "Upgrade 
-Range"
+text = " 
+"
+icon = ExtResource("11_ogcqx")
+icon_alignment = 1
 script = ExtResource("5_v3ilj")
 
-[node name="fire_rate_button" type="Button" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/GridContainer"]
+[node name="fire_rate_button" type="Button" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/SideBar/GridContainer"]
 layout_mode = 2
 disabled = true
-text = "Upgrade 
-Fire Rate"
+icon = ExtResource("13_umlei")
+icon_alignment = 1
 script = ExtResource("6_u56bo")
 
-[node name="physical_button" type="Button" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/GridContainer"]
+[node name="physical_button" type="Button" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/SideBar/GridContainer"]
 layout_mode = 2
 disabled = true
-text = "Upgrade 
-Damage 
-(physical)"
+icon = ExtResource("15_fssmx")
+icon_alignment = 1
 script = ExtResource("7_8c5av")
 
-[node name="fire_button" type="Button" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/GridContainer"]
+[node name="fire_button" type="Button" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/SideBar/GridContainer"]
 layout_mode = 2
 disabled = true
-text = "Upgrade 
-Damage
-(fire)"
+icon = ExtResource("17_lr5cj")
+icon_alignment = 1
 script = ExtResource("8_f7qdi")
 
-[node name="ice_button" type="Button" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/GridContainer"]
+[node name="ice_button" type="Button" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/SideBar/GridContainer"]
 layout_mode = 2
 disabled = true
-text = "Upgrade 
-Damage
-(ice)"
+icon = ExtResource("19_5iyr2")
+icon_alignment = 1
 script = ExtResource("9_fot1l")
 
-[node name="upgrade_cost" type="Label" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/GridContainer"]
+[node name="upgrade_cost" type="Label" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/SideBar/GridContainer"]
 layout_mode = 2
-text = "Upgrades cost
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.0862745, 0.180392, 0.298039, 1)
+theme_override_fonts/font = ExtResource("2_rete1")
+theme_override_font_sizes/font_size = 20
+text = "Upgrade Cost
 0 gold"
+horizontal_alignment = 1
+vertical_alignment = 1
 script = ExtResource("13_yh4jb")
 
-[node name="GridContainer3" type="GridContainer" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer"]
-layout_mode = 2
+[node name="GridContainer3" type="GridContainer" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/SideBar"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -130.0
+offset_top = -67.0
+offset_right = 130.0
+offset_bottom = 41.0
+grow_horizontal = 2
+grow_vertical = 0
 
-[node name="Wave Start" type="Button" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/GridContainer3"]
+[node name="Wave Start" type="Button" parent="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/SideBar/GridContainer3"]
+layout_direction = 1
 layout_mode = 2
-text = "Start Game"
+size_flags_horizontal = 4
+size_flags_vertical = 8
+icon = ExtResource("22_mnsw7")
 script = ExtResource("16_nfvck")
 
 [connection signal="gui_input" from="MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer" to="." method="_on_sub_viewport_container_gui_input"]
-[connection signal="add_tower_pressed" from="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/GridContainer2/add_tower" to="." method="_on_add_tower_pressed"]
-[connection signal="add_tower_pressed" from="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/GridContainer2/add_fire_tower" to="." method="_on_add_fire_tower_add_tower_pressed"]
-[connection signal="add_tower_pressed" from="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/GridContainer2/add_ice_tower" to="." method="_on_add_ice_tower_add_tower_pressed"]
-[connection signal="pressed" from="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/GridContainer3/Wave Start" to="." method="_on_wave_start_pressed"]
+[connection signal="add_tower_pressed" from="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/SideBar/GridContainer2/add_tower" to="." method="_on_add_tower_pressed"]
+[connection signal="add_tower_pressed" from="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/SideBar/GridContainer2/add_fire_tower" to="." method="_on_add_fire_tower_add_tower_pressed"]
+[connection signal="add_tower_pressed" from="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/SideBar/GridContainer2/add_ice_tower" to="." method="_on_add_ice_tower_add_tower_pressed"]
+[connection signal="pressed" from="MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/SideBar/GridContainer3/Wave Start" to="." method="_on_wave_start_pressed"]

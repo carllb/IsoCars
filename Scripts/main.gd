@@ -209,7 +209,7 @@ func map_clicked(pos: Vector2,
 	return valid_tile
 
 func select_tower(tower: RobotBase):
-		for button in $"../../../VBoxContainer/GridContainer".get_children():
+		for button in $"../../../VBoxContainer/SideBar/GridContainer".get_children():
 			if (button.get_class() == "Button") ||(button.get_class() == "Label"):
 				button.set_link(tower)
 
