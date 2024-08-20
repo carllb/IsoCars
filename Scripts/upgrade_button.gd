@@ -5,7 +5,7 @@ extends Button
 @export var upgrade_cost : ValueComponent = ValueComponent.new(25)
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	game_scene = get_tree().get_root().get_node('UI').game_scene
+	game_scene = Global.level_choice
 	#print(get_tree().get_root().get_node('UI').game_scene.gold.get_value())
 	pass
 	

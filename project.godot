@@ -11,11 +11,15 @@ config_version=5
 [application]
 
 config/name="IsoCars"
-run/main_scene="res://Scenes/level_select.tscn"
+run/main_scene="res://Scenes/menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/image="res://assets/temporary/splash.png"
 config/icon="res://icon.svg"
 boot_splash/minimum_display_time=2000
+
+[autoload]
+
+Global="*res://Scripts/global.gd"
 
 [display]
 

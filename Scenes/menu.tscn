@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://dl2x3s6jqs6rt"]
 
-[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_4d65e"]
-[ext_resource type="Texture2D" uid="uid://b4o0cjgfiyp6o" path="res://assets/temporary/background.png" id="2_j168o"]
-[ext_resource type="Texture2D" uid="uid://h1blef765stq" path="res://assets/temporary/Play_Button.png" id="3_p6g0j"]
-[ext_resource type="Texture2D" uid="uid://i0vhndxkeflk" path="res://assets/temporary/Exit_Button.png" id="4_evn5u"]
-[ext_resource type="Texture2D" uid="uid://d2ousaks5f07f" path="res://assets/temporary/volume-label.png" id="5_ofwls"]
-[ext_resource type="Texture2D" uid="uid://chyuge1yvhem3" path="res://assets/temporary/github-mark.png" id="6_swpel"]
-[ext_resource type="Texture2D" uid="uid://vwfwkf8w4pma" path="res://assets/temporary/artist.png" id="7_b4v11"]
+[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_lbhxa"]
+[ext_resource type="Texture2D" uid="uid://b4o0cjgfiyp6o" path="res://assets/temporary/background.png" id="2_7la3x"]
+[ext_resource type="Texture2D" uid="uid://chyuge1yvhem3" path="res://assets/temporary/github-mark.png" id="2_jk186"]
+[ext_resource type="Texture2D" uid="uid://h1blef765stq" path="res://assets/temporary/Play_Button.png" id="3_6n5ny"]
+[ext_resource type="Texture2D" uid="uid://vwfwkf8w4pma" path="res://assets/temporary/artist.png" id="3_d2ehc"]
+[ext_resource type="Texture2D" uid="uid://i0vhndxkeflk" path="res://assets/temporary/Exit_Button.png" id="4_26cwg"]
+[ext_resource type="Texture2D" uid="uid://d2ousaks5f07f" path="res://assets/temporary/volume-label.png" id="5_e3457"]
 
 [sub_resource type="Theme" id="Theme_kmcbc"]
 Button/colors/font_color = Color(0.727817, 0.123842, 0.723654, 1)
@@ -21,13 +21,13 @@ grow_horizontal = 2
 grow_vertical = 2
 rotation = 6.28319
 mouse_force_pass_scroll_events = false
-script = ExtResource("1_4d65e")
+script = ExtResource("1_lbhxa")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("2_j168o")
+texture = ExtResource("2_7la3x")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -50,7 +50,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 6
 size_flags_stretch_ratio = 0.0
 tooltip_text = "Play"
-icon = ExtResource("3_p6g0j")
+icon = ExtResource("3_6n5ny")
 flat = true
 
 [node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
@@ -58,7 +58,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 tooltip_text = ":("
-icon = ExtResource("4_evn5u")
+icon = ExtResource("4_26cwg")
 flat = true
 
 [node name="Volume" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
@@ -67,7 +67,7 @@ tooltip_text = "Volume"
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Volume"]
 layout_mode = 2
-texture = ExtResource("5_ofwls")
+texture = ExtResource("5_e3457")
 
 [node name="Slider" type="HSlider" parent="MarginContainer/VBoxContainer/Volume"]
 layout_mode = 2
@@ -97,13 +97,13 @@ size_flags_vertical = 8
 [node name="Github" type="Button" parent="Links/HBoxContainer"]
 layout_mode = 2
 tooltip_text = "Github"
-icon = ExtResource("6_swpel")
+icon = ExtResource("2_jk186")
 flat = true
 
 [node name="Artist" type="Button" parent="Links/HBoxContainer"]
 layout_mode = 2
 tooltip_text = "Artist"
-icon = ExtResource("7_b4v11")
+icon = ExtResource("3_d2ehc")
 flat = true
 icon_alignment = 1
 vertical_icon_alignment = 0

@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=4 uid="uid://b1vytrs547nhh"]
+[gd_scene load_steps=9 format=4 uid="uid://b1vytrs547nhh"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_60lre"]
 [ext_resource type="PackedScene" uid="uid://bc3lfejnfa42e" path="res://Scenes/car.tscn" id="2_0vb4k"]
-[ext_resource type="PackedScene" uid="uid://blcpsgxirfvtg" path="res://Scenes/mob_path.tscn" id="3_lhr7g"]
+[ext_resource type="PackedScene" uid="uid://blcpsgxirfvtg" path="res://Scenes/mob_path1.tscn" id="3_lhr7g"]
 [ext_resource type="Texture2D" uid="uid://bmhn8y3urhkyl" path="res://assets/background/color_tile_grid.png" id="4_sw2u7"]
 [ext_resource type="Texture2D" uid="uid://cpd8vkrmp2opn" path="res://assets/temporary/mouse.png" id="5_g8370"]
+[ext_resource type="PackedScene" uid="uid://b65g0mdbkskhw" path="res://Scenes/mob_path3.tscn" id="6_fj1r1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ufy20"]
 texture = ExtResource("4_sw2u7")
@@ -61,7 +62,6 @@ texture = ExtResource("5_g8370")
 
 [node name="Dummy" type="Node2D" parent="."]
 
-[node name="MobPath2D_Dummy" parent="Dummy" instance=ExtResource("3_lhr7g")]
-visible = false
+[node name="Path2D" parent="Dummy" instance=ExtResource("6_fj1r1")]
 
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]

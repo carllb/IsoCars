@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=4 uid="uid://d3qdva6rk1xkp"]
+
+[gd_scene load_steps=8 format=4 uid="uid://bk3jdr2bcwl1j"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_tmp6v"]
 [ext_resource type="PackedScene" uid="uid://bc3lfejnfa42e" path="res://Scenes/car.tscn" id="2_olyx2"]
 [ext_resource type="Texture2D" uid="uid://bmhn8y3urhkyl" path="res://assets/background/color_tile_grid.png" id="4_74mk5"]
-[ext_resource type="PackedScene" uid="uid://blcpsgxirfvtg" path="res://Scenes/mob_path.tscn" id="4_b15tf"]
+[ext_resource type="PackedScene" uid="uid://blcpsgxirfvtg" path="res://Scenes/mob_path1.tscn" id="4_b15tf"]
 [ext_resource type="Texture2D" uid="uid://cpd8vkrmp2opn" path="res://assets/temporary/mouse.png" id="5_cpb1x"]
 [ext_resource type="AudioStream" uid="uid://csqn5m6mmtck5" path="res://assets/sounds/One Man Symphony - Destruction Bringer (Free) - 04 Standard Encounter Theme 01.wav" id="6_ghfds"]
 
@@ -63,7 +64,6 @@ texture = ExtResource("5_cpb1x")
 [node name="Dummy" type="Node2D" parent="."]
 
 [node name="MobPath2D_Dummy" parent="Dummy" instance=ExtResource("4_b15tf")]
-visible = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_ghfds")

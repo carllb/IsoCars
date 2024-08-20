@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://b65g0mdbkskhw"]
+
+[sub_resource type="Curve2D" id="Curve2D_e7nce"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -107, -36, 0, 0, 0, 0, 359, 237, 0, 0, 0, 0, 605, 93, 0, 0, 0, 0, 795, 210, 0, 0, 0, 0, 701, 268, 0, 0, 0, 0, 591, 209, 0, 0, 0, 0, 156, 479, 0, 0, 0, 0, 254, 541, 0, 0, 0, 0, 349, 477, 0, 0, 0, 0, 552, 603, 0, 0, 0, 0, 744, 477, 0, 0, 0, 0, 1239, 777)
+}
+point_count = 12
+
+[node name="Path2D" type="Path2D"]
+curve = SubResource("Curve2D_e7nce")
+
+[node name="PathFollow2D2" type="PathFollow2D" parent="."]
+position = Vector2(-107, -36)
+rotation = 0.52994
+rotates = false
