@@ -85,11 +85,11 @@ wait_time = 0.2
 
 [node name="boom" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_y0lub")
-volume_db = -20.306
+volume_db = -5.0
 
 [node name="hit" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_gculk")
-volume_db = -20.0
+volume_db = -5.0
 
 [connection signal="timeout" from="SlowDownTimer" to="." method="_on_slow_down_timer_timeout"]
 [connection signal="timeout" from="BurnTimer" to="." method="_on_burn_timer_timeout"]
