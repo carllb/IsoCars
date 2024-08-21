@@ -13,8 +13,8 @@ func _on_play_mouse_entered() -> void:
 	pass # Do something on mouse hover?
 
 func _on_slider_value_changed(value: float) -> void:
-	var lab : Label = get_node("MarginContainer/VBoxContainer/Volume/Value") 
-	lab.text = str(value)
+	#var lab : Label = get_node("MarginContainer/VBoxContainer/Volume/Value") 
+	#lab.text = str(value)
 	
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), linear_to_db(float(value)/100.0))
 
