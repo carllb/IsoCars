@@ -8,7 +8,7 @@
 		"reward": 10,
 		"type": "Normal",
 		"copies": 9,
-		"delay": 0.4,
+		"delay": 1,
 		"size": 2
 	  },
 	  {
@@ -30,7 +30,7 @@
 		"reward": 1,
 		"type": "Normal",
 		"copies": 14,
-		"delay": 0.3,
+		"delay": 1,
 		"size": 2
 	  },
 	  {
@@ -52,7 +52,7 @@
 		"reward": 2,
 		"type": "Small",
 		"copies": 40,
-		"delay": 0.05,
+		"delay": 0.76,
 		"size": 1
 	  },
 	  {
