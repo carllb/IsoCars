@@ -1,51 +1,107 @@
-[gd_scene load_steps=4 format=3 uid="uid://bc0nftc157djp"]
+[gd_scene load_steps=8 format=3 uid="uid://bc0nftc157djp"]
 
 [ext_resource type="Script" path="res://Scripts/game_over.gd" id="1_1stpt"]
+[ext_resource type="Texture2D" uid="uid://b4o0cjgfiyp6o" path="res://assets/temporary/background.png" id="2_mix6x"]
+[ext_resource type="Texture2D" uid="uid://brdj38o3ptkff" path="res://assets/temporary/Blank_tower_button.png" id="3_1n4lw"]
+[ext_resource type="Theme" uid="uid://cf1dw4h8tksc8" path="res://assets/temporary/PixelFont.tres" id="4_6hhse"]
+[ext_resource type="FontFile" uid="uid://buepruxk83v2h" path="res://Scenes/EditUndoBrk-RwaV.ttf" id="5_7vxn4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cbrdk"]
 font_size = 54
-font_color = Color(0, 0, 0, 1)
+font_color = Color(0.737255, 0.752941, 0.85098, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ie7px"]
-font_color = Color(0, 0, 0, 1)
+font = ExtResource("5_7vxn4")
+font_size = 18
+font_color = Color(0.737255, 0.752941, 0.85098, 1)
 
 [node name="GameOver" type="Node2D"]
 script = ExtResource("1_1stpt")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_right = 1012.0
+offset_bottom = 720.0
+grow_vertical = 0
+size_flags_stretch_ratio = 0.0
+texture = ExtResource("2_mix6x")
+expand_mode = 2
+stretch_mode = 3
+
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 1287.0
-offset_bottom = 723.0
-color = Color(1, 1, 1, 0.443137)
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_right = 1012.0
+offset_bottom = 720.0
+grow_vertical = 0
+color = Color(1, 1, 1, 0.623529)
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 250.0
+offset_top = 219.0
+offset_right = 762.0
+offset_bottom = 469.0
+texture = ExtResource("3_1n4lw")
 
 [node name="Game Over Label" type="Label" parent="."]
-offset_left = 398.0
-offset_top = 217.0
-offset_right = 691.0
-offset_bottom = 291.0
+offset_left = 350.0
+offset_top = 240.0
+offset_right = 662.0
+offset_bottom = 310.0
+theme = ExtResource("4_6hhse")
+theme_override_colors/font_color = Color(0.737255, 0.752941, 0.85098, 1)
+theme_override_colors/font_shadow_color = Color(0.737255, 0.752941, 0.85098, 1)
+theme_override_colors/font_outline_color = Color(0.737255, 0.752941, 0.85098, 1)
 text = "Game Over"
 label_settings = SubResource("LabelSettings_cbrdk")
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="MainMenuButton" type="Button" parent="."]
-offset_left = 422.0
-offset_top = 379.0
-offset_right = 664.0
-offset_bottom = 444.0
+[node name="TextureRect3" type="ColorRect" parent="."]
+offset_left = 400.0
+offset_top = 320.0
+offset_right = 612.0
+offset_bottom = 380.0
+color = Color(0.737255, 0.752941, 0.85098, 1)
+
+[node name="MainMenuButton" type="Button" parent="TextureRect3"]
+layout_mode = 0
+offset_right = 212.0
+offset_bottom = 60.0
+theme = ExtResource("4_6hhse")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_disabled_color = Color(0.0862745, 0.180392, 0.298039, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.0862745, 0.180392, 0.298039, 1)
+theme_override_colors/font_hover_color = Color(0.0862745, 0.180392, 0.298039, 1)
+theme_override_colors/font_pressed_color = Color(0.0862745, 0.180392, 0.298039, 1)
+theme_override_colors/font_focus_color = Color(0.0862745, 0.180392, 0.298039, 1)
+theme_override_colors/font_color = Color(0.0862745, 0.180392, 0.298039, 1)
+theme_override_colors/font_outline_color = Color(0.0862745, 0.180392, 0.298039, 1)
+theme_override_font_sizes/font_size = 22
 text = "Exit to Main Menu"
+flat = true
 
 [node name="MoneyLabel" type="Label" parent="."]
-offset_left = 404.0
-offset_top = 318.0
-offset_right = 523.0
-offset_bottom = 341.0
+offset_left = 512.0
+offset_top = 400.0
+offset_right = 662.0
+offset_bottom = 425.0
 text = "Money Spent: 0"
 label_settings = SubResource("LabelSettings_ie7px")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="CarsLabel" type="Label" parent="."]
-offset_left = 585.0
-offset_top = 318.0
-offset_right = 684.0
-offset_bottom = 341.0
+offset_left = 350.0
+offset_top = 400.0
+offset_right = 500.0
+offset_bottom = 425.0
 text = "Cars Killed: 0"
 label_settings = SubResource("LabelSettings_ie7px")
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[connection signal="pressed" from="MainMenuButton" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="TextureRect3/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
