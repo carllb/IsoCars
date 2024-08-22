@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://c6rnmm5g4stfg"]
+[gd_scene load_steps=11 format=4 uid="uid://c6rnmm5g4stfg"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_kld8r"]
 [ext_resource type="PackedScene" uid="uid://bc3lfejnfa42e" path="res://Scenes/car.tscn" id="2_eqiah"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cp7px68lbh06d" path="res://assets/sprites/coffee_mug_2.png" id="5_y0r5i"]
 [ext_resource type="PackedScene" uid="uid://dbbsd751yb2oe" path="res://Scenes/mob_path4.tscn" id="6_k832x"]
 [ext_resource type="Texture2D" uid="uid://c70bvktq3j55m" path="res://assets/sprites/tape_2.png" id="6_x0s3o"]
+[ext_resource type="PackedScene" uid="uid://b2w42i85lh8yt" path="res://Scenes/cursor.tscn" id="8_l6p74"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ufy20"]
 texture = ExtResource("4_v2ip8")
@@ -40,12 +41,11 @@ tile_shape = 1
 tile_size = Vector2i(100, 60)
 sources/9 = SubResource("TileSetAtlasSource_ufy20")
 
-[node name="Chris3" type="Node2D" node_paths=PackedStringArray("db_dot")]
+[node name="Chris3" type="Node2D"]
 position = Vector2(1, 0)
 script = ExtResource("1_kld8r")
 mob_scene = ExtResource("2_eqiah")
 mob_path = ExtResource("3_2mayn")
-db_dot = NodePath("")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
@@ -82,5 +82,7 @@ texture = ExtResource("6_x0s3o")
 [node name="Dummy" type="Node2D" parent="."]
 
 [node name="Path2D" parent="Dummy" instance=ExtResource("6_k832x")]
+
+[node name="Sprite_2D" parent="." instance=ExtResource("8_l6p74")]
 
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
