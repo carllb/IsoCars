@@ -58,7 +58,7 @@ func _ready() -> void:
 	db_dot = $Sprite_2D
 	print(db_dot)
 
-func wave_factory(_level: int) -> Array:
+func wave_factory(_level: int) -> Array: # returns [[car, delay], [car, delay], ...]
 	var ret = []
 	# Have parsed all the available levels
 	if len(level_conf["levels"]) <= level - 1:
@@ -75,10 +75,10 @@ func wave_factory(_level: int) -> Array:
 			var value_comp = ValueComponent.new(enemy["reward"])
 			var size = enemy['size']
 			var type = enemy['type']
-			#var delay = enemy['delay']
+			var delay = enemy['delay']
 			var car = car_factory(health_comp, speed_comp, value_comp, size, type)
 			
-			ret.append(car)
+			ret.append([car, delay])
 	return ret
 
 func car_factory(health_comp: HealthComponent,
@@ -133,8 +133,11 @@ func _on_mob_timer_timeout() -> void:
 			# Create a new instance of the Mob scene.
 			var path = mob_path.instantiate()
 			# Get new car and add to scene
-			var car = current_wave.pop_front()
-			$MobTimer.start(log((car.health.health/200)+1)+1)
+			var enemy = current_wave.pop_front()
+			var car = enemy[0]
+			var delay = enemy[1]
+			$MobTimer.start(float(delay))
+			#$MobTimer.start(log((car.health.health/200)+1)+1)
 			path.get_child(0).add_child(car)
 			add_child(path)
 
