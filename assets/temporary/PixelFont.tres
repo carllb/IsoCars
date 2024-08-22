@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cf1dw4h8tksc8"]
+
+[ext_resource type="FontFile" uid="uid://buepruxk83v2h" path="res://Scenes/EditUndoBrk-RwaV.ttf" id="1_o4dfp"]
+
+[resource]
+default_font = ExtResource("1_o4dfp")
+default_font_size = 50

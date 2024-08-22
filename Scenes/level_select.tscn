@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cqslop8oktq1j"]
+[gd_scene load_steps=8 format=3 uid="uid://cqslop8oktq1j"]
 
 [ext_resource type="Script" path="res://Scripts/level_select.gd" id="1_88wvu"]
 [ext_resource type="Texture2D" uid="uid://b4o0cjgfiyp6o" path="res://assets/temporary/background.png" id="2_j168o"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c171pps6ltsth" path="res://assets/sprites/map2.png" id="4_ekf0y"]
 [ext_resource type="Texture2D" uid="uid://clwxn1t7pwbhq" path="res://assets/sprites/map3.png" id="5_3d0mg"]
 [ext_resource type="Texture2D" uid="uid://bv7gjw3iftl8" path="res://assets/sprites/map4.png" id="6_t0e6w"]
+[ext_resource type="Theme" uid="uid://cf1dw4h8tksc8" path="res://assets/temporary/PixelFont.tres" id="7_dr8vv"]
 
 [node name="level_select" type="Control"]
 layout_mode = 3
@@ -19,49 +20,86 @@ mouse_force_pass_scroll_events = false
 script = ExtResource("1_88wvu")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-modulate = Color(0.791999, 0.791999, 0.791999, 1)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1280.0
+offset_bottom = 720.0
 texture = ExtResource("2_j168o")
 
-[node name="map_1_button" type="TextureButton" parent="."]
-layout_mode = 2
-offset_left = 273.001
-offset_top = 210.999
-offset_right = 758.001
-offset_bottom = 510.999
-scale = Vector2(0.75, 0.75)
-texture_normal = ExtResource("3_msug1")
+[node name="HBoxContainer2" type="HBoxContainer" parent="TextureRect"]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 470.0
+offset_right = 965.0
+offset_bottom = 670.0
 
-[node name="map_2_button" type="TextureButton" parent="."]
+[node name="map_3_button" type="TextureButton" parent="TextureRect/HBoxContainer2"]
 layout_mode = 2
-offset_left = 660.001
-offset_top = 210.997
-offset_right = 1145.0
-offset_bottom = 510.997
-scale = Vector2(0.75, 0.75)
-texture_normal = ExtResource("4_ekf0y")
-
-[node name="map_3_button" type="TextureButton" parent="."]
-layout_mode = 2
-offset_left = 271.002
-offset_top = 448.999
-offset_right = 756.002
-offset_bottom = 748.999
-scale = Vector2(0.75, 0.75)
+size_flags_horizontal = 2
 texture_normal = ExtResource("5_3d0mg")
 
-[node name="map_4_button" type="TextureButton" parent="."]
+[node name="map_4_button" type="TextureButton" parent="TextureRect/HBoxContainer2"]
 layout_mode = 2
-offset_left = 656.002
-offset_top = 450.997
-offset_right = 1141.0
-offset_bottom = 750.997
-scale = Vector2(0.75, 0.75)
+size_flags_horizontal = 10
 texture_normal = ExtResource("6_t0e6w")
 
-[connection signal="pressed" from="map_1_button" to="." method="_on_map_1_button_pressed"]
-[connection signal="pressed" from="map_2_button" to="." method="_on_map_2_button_pressed"]
-[connection signal="pressed" from="map_3_button" to="." method="_on_map_3_button_pressed"]
-[connection signal="pressed" from="map_4_button" to="." method="_on_map_4_button_pressed"]
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect"]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 220.0
+offset_right = 965.0
+offset_bottom = 420.0
+
+[node name="map_1_button" type="TextureButton" parent="TextureRect/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+texture_normal = ExtResource("3_msug1")
+
+[node name="map_2_button" type="TextureButton" parent="TextureRect/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+texture_normal = ExtResource("4_ekf0y")
+
+[node name="Map_1_label" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 567.001
+offset_top = 241.997
+offset_right = 578.001
+offset_bottom = 286.997
+theme = ExtResource("7_dr8vv")
+theme_override_colors/font_color = Color(0.0862745, 0.180392, 0.298039, 1)
+text = "1"
+
+[node name="Map_2_label" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 911.001
+offset_top = 303.996
+offset_right = 936.001
+offset_bottom = 348.996
+theme = ExtResource("7_dr8vv")
+theme_override_colors/font_color = Color(0.0862745, 0.180392, 0.298039, 1)
+text = "2"
+
+[node name="Map_3_label" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 470.003
+offset_top = 566.998
+offset_right = 495.003
+offset_bottom = 611.998
+theme = ExtResource("7_dr8vv")
+theme_override_colors/font_color = Color(0.0862745, 0.180392, 0.298039, 1)
+text = "3"
+
+[node name="Map_4_label" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 762.002
+offset_top = 540.997
+offset_right = 787.002
+offset_bottom = 585.997
+theme = ExtResource("7_dr8vv")
+theme_override_colors/font_color = Color(0.0862745, 0.180392, 0.298039, 1)
+text = "4"
+
+[connection signal="pressed" from="TextureRect/HBoxContainer2/map_3_button" to="." method="_on_map_3_button_pressed"]
+[connection signal="pressed" from="TextureRect/HBoxContainer2/map_4_button" to="." method="_on_map_4_button_pressed"]
+[connection signal="pressed" from="TextureRect/HBoxContainer/map_1_button" to="." method="_on_map_1_button_pressed"]
+[connection signal="pressed" from="TextureRect/HBoxContainer/map_2_button" to="." method="_on_map_2_button_pressed"]

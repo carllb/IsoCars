@@ -14,7 +14,7 @@ config/name="IsoCars"
 run/main_scene="res://Scenes/menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/image="res://assets/temporary/splash.png"
-config/icon="res://icon.svg"
+config/icon="res://icon.png"
 boot_splash/minimum_display_time=2000
 
 [autoload]
@@ -47,3 +47,4 @@ mouse_button_right={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+textures/vram_compression/import_etc2_astc=true
