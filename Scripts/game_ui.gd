@@ -28,27 +28,29 @@ func clear_selected_tower():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-
+	
 	var mpos: Vector2 = game_viewport.get_mouse_position()
-	game_scene.update_pointer_position(mpos, current_tower)
-	
-	levelLabel.text = "Level: " + str(game_scene.get_level())
-	moneyLabel.text = "Gold: "+str(game_scene.get_money().get_value()) 
-	spentLabel.text = "Total Spent: " + str(game_scene.get_money_spent().get_value()) + " gold"
-	livesLabel.text = "Lives: " + str(game_scene.get_lives())
-	
-	game_scene.update_pointer_position(mpos, current_tower)
-	if game_scene.get_lives()<1:
-		#get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
-		gameOver.initilize(game_scene.get_money_spent().get_value(),
-						   game_scene.get_cars_killed())
-		$MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer/SubViewport.move_child($MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer/SubViewport/GameOver,-1)
-		gameOver.visible = true
-	elif game_scene.is_game_won():
-		gameWin.initilize(game_scene.get_money_spent().get_value(),
-						   game_scene.get_cars_killed())
-		$MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer/SubViewport.move_child($MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer/SubViewport/GameWin,-1)
-		gameWin.visible = true
+	print(game_viewport.get_mouse_position())
+	if mpos != null:
+		game_scene.update_pointer_position(mpos, current_tower)
+		
+		levelLabel.text = "Level: " + str(game_scene.get_level())
+		moneyLabel.text = "Gold: "+str(game_scene.get_money().get_value()) 
+		spentLabel.text = "Total Spent: " + str(game_scene.get_money_spent().get_value()) + " gold"
+		livesLabel.text = "Lives: " + str(game_scene.get_lives())
+		
+		game_scene.update_pointer_position(mpos, current_tower)
+		if game_scene.get_lives()<1:
+			#get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
+			gameOver.initilize(game_scene.get_money_spent().get_value(),
+							   game_scene.get_cars_killed())
+			$MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer/SubViewport.move_child($MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer/SubViewport/GameOver,-1)
+			gameOver.visible = true
+		elif game_scene.is_game_won():
+			gameWin.initilize(game_scene.get_money_spent().get_value(),
+							   game_scene.get_cars_killed())
+			$MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer/SubViewport.move_child($MainPanel/VerticalContainer/HorisontalContainer/SubViewportContainer/SubViewport/GameWin,-1)
+			gameWin.visible = true
 
 func _on_add_tower_pressed(tower: PackedScene, cost: ValueComponent):
 	var can_afford: bool = game_scene.get_money().can_afford(cost)

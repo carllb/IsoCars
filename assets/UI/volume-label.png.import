@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs52jhvmt6ns2"
-path="res://.godot/imported/Ice_button.png-c91f7d77caea4db865d0f1f14f96bdf4.ctex"
+uid="uid://d2ousaks5f07f"
+path="res://.godot/imported/volume-label.png-12fd3be038c5951fd9ffd45061b7332a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/temporary/Ice_button.png"
-dest_files=["res://.godot/imported/Ice_button.png-c91f7d77caea4db865d0f1f14f96bdf4.ctex"]
+source_file="res://assets/UI/volume-label.png"
+dest_files=["res://.godot/imported/volume-label.png-12fd3be038c5951fd9ffd45061b7332a.ctex"]
 
 [params]
 

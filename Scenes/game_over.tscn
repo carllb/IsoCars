@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://bc0nftc157djp"]
 
 [ext_resource type="Script" path="res://Scripts/game_over.gd" id="1_1stpt"]
-[ext_resource type="Texture2D" uid="uid://b4o0cjgfiyp6o" path="res://assets/temporary/background.png" id="2_mix6x"]
-[ext_resource type="Texture2D" uid="uid://brdj38o3ptkff" path="res://assets/temporary/Blank_tower_button.png" id="3_1n4lw"]
+[ext_resource type="Texture2D" uid="uid://b4o0cjgfiyp6o" path="res://assets/background/background.png" id="2_mix6x"]
+[ext_resource type="Texture2D" uid="uid://brdj38o3ptkff" path="res://assets/UI/Blank_tower_button.png" id="3_1n4lw"]
 [ext_resource type="Theme" uid="uid://cf1dw4h8tksc8" path="res://assets/temporary/PixelFont.tres" id="4_6hhse"]
 [ext_resource type="FontFile" uid="uid://buepruxk83v2h" path="res://Scenes/EditUndoBrk-RwaV.ttf" id="5_7vxn4"]
 

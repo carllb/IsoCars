@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2w42i85lh8yt"]
+
+[ext_resource type="Texture2D" uid="uid://c5nm375qkdo6r" path="res://assets/temporary/mouse.png" id="1_le0wy"]
+
+[node name="Sprite_2D" type="Sprite2D"]
+texture = ExtResource("1_le0wy")

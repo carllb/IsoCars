@@ -13,7 +13,7 @@ config_version=5
 config/name="IsoCars"
 run/main_scene="res://Scenes/menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-boot_splash/image="res://assets/temporary/splash.png"
+boot_splash/image="res://assets/background/splash.png"
 config/icon="res://icon.png"
 boot_splash/minimum_display_time=2000
 

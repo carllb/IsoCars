@@ -4,7 +4,7 @@ class_name TDLevel
 
 @export var mob_scene: PackedScene = load("res://Scenes/car.tscn")
 @export var mob_path: PackedScene 
-@export var db_dot: Sprite2D
+@export var db_dot: Sprite2D 
 
 @export_category("Gold Settings")
 @export var starting_gold: int = 200
@@ -55,6 +55,8 @@ var blank_texture: Texture2D = null
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	mob_path = Global.mob_path
+	db_dot = $Sprite_2D
+	print(db_dot)
 
 func wave_factory(_level: int) -> Array:
 	var ret = []
@@ -161,6 +163,7 @@ func update_pointer_position(pos: Vector2,
 							 tower: RobotBase) -> bool:
 	var tile_coord: Vector2i = tile_map.local_to_map(pos)
 	var tile_pos: Vector2 = tile_map.map_to_local(tile_coord)
+	print(db_dot)
 	db_dot.position = tile_pos
 	var valid_tile: bool = is_placable_tile(tile_coord)
 	

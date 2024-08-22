@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://dl2x3s6jqs6rt"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_lbhxa"]
-[ext_resource type="Texture2D" uid="uid://b4o0cjgfiyp6o" path="res://assets/temporary/background.png" id="2_7la3x"]
-[ext_resource type="Texture2D" uid="uid://chyuge1yvhem3" path="res://assets/temporary/github-mark.png" id="2_jk186"]
-[ext_resource type="Texture2D" uid="uid://h1blef765stq" path="res://assets/temporary/Play_Button.png" id="3_6n5ny"]
-[ext_resource type="Texture2D" uid="uid://vwfwkf8w4pma" path="res://assets/temporary/artist.png" id="3_d2ehc"]
-[ext_resource type="Texture2D" uid="uid://i0vhndxkeflk" path="res://assets/temporary/Exit_Button.png" id="4_26cwg"]
-[ext_resource type="Texture2D" uid="uid://d2ousaks5f07f" path="res://assets/temporary/volume-label.png" id="5_e3457"]
+[ext_resource type="Texture2D" uid="uid://b4o0cjgfiyp6o" path="res://assets/background/background.png" id="2_7la3x"]
+[ext_resource type="Texture2D" uid="uid://chyuge1yvhem3" path="res://assets/UI/github-mark.png" id="2_jk186"]
+[ext_resource type="Texture2D" uid="uid://h1blef765stq" path="res://assets/UI/Play_Button.png" id="3_6n5ny"]
+[ext_resource type="Texture2D" uid="uid://vwfwkf8w4pma" path="res://assets/UI/artist.png" id="3_d2ehc"]
+[ext_resource type="Texture2D" uid="uid://i0vhndxkeflk" path="res://assets/UI/Exit_Button.png" id="4_26cwg"]
+[ext_resource type="Texture2D" uid="uid://d2ousaks5f07f" path="res://assets/UI/volume-label.png" id="5_e3457"]
 
 [sub_resource type="Theme" id="Theme_kmcbc"]
 Button/colors/font_color = Color(0.727817, 0.123842, 0.723654, 1)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://h1blef765stq"
-path="res://.godot/imported/Play_Button.png-40e4888d1ee0af7bfd95483afb9d7a98.ctex"
+uid="uid://brdj38o3ptkff"
+path="res://.godot/imported/Blank_tower_button.png-a1af59c10517c13c27da44486c997a49.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/temporary/Play_Button.png"
-dest_files=["res://.godot/imported/Play_Button.png-40e4888d1ee0af7bfd95483afb9d7a98.ctex"]
+source_file="res://assets/UI/Blank_tower_button.png"
+dest_files=["res://.godot/imported/Blank_tower_button.png-a1af59c10517c13c27da44486c997a49.ctex"]
 
 [params]
 
