@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://eobp8racy8t"
-path="res://.godot/imported/Upgrade_fire_rate_button.png-d0782d8b60dbcf839c4f61cdb75670b6.ctex"
+uid="uid://chyuge1yvhem3"
+path="res://.godot/imported/github-mark.png-76dea95b640acf8ae1746fa806dbe6cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/temporary/Upgrade_fire_rate_button.png"
-dest_files=["res://.godot/imported/Upgrade_fire_rate_button.png-d0782d8b60dbcf839c4f61cdb75670b6.ctex"]
+source_file="res://assets/UI/github-mark.png"
+dest_files=["res://.godot/imported/github-mark.png-76dea95b640acf8ae1746fa806dbe6cf.ctex"]
 
 [params]
 

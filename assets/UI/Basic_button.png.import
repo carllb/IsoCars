@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgs3is34h8u8n"
-path="res://.godot/imported/Blank_upgrade_button.png-5ea76383100e62a0051e0e97072cb6d8.ctex"
+uid="uid://d1sx4g05c40ck"
+path="res://.godot/imported/Basic_button.png-48cd210e3aa44dc85baad5074e882262.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/temporary/Blank_upgrade_button.png"
-dest_files=["res://.godot/imported/Blank_upgrade_button.png-5ea76383100e62a0051e0e97072cb6d8.ctex"]
+source_file="res://assets/UI/Basic_button.png"
+dest_files=["res://.godot/imported/Basic_button.png-48cd210e3aa44dc85baad5074e882262.ctex"]
 
 [params]
 

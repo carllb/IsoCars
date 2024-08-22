@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqe3gt5y875yb"
-path="res://.godot/imported/Upgrade_ice_button.png-170f4f9315891e1c8b030d67cf0683a2.ctex"
+uid="uid://dv0dd5te4lj1"
+path="res://.godot/imported/splash.png-22060001541cc8caa7a119c8624d5c50.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/temporary/Upgrade_ice_button.png"
-dest_files=["res://.godot/imported/Upgrade_ice_button.png-170f4f9315891e1c8b030d67cf0683a2.ctex"]
+source_file="res://assets/background/splash.png"
+dest_files=["res://.godot/imported/splash.png-22060001541cc8caa7a119c8624d5c50.ctex"]
 
 [params]
 

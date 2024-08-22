@@ -1,10 +1,9 @@
-[gd_scene load_steps=11 format=4 uid="uid://bk3jdr2bcwl1j"]
+[gd_scene load_steps=10 format=4 uid="uid://bk3jdr2bcwl1j"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_tmp6v"]
 [ext_resource type="PackedScene" uid="uid://bc3lfejnfa42e" path="res://Scenes/car.tscn" id="2_olyx2"]
 [ext_resource type="Texture2D" uid="uid://bmhn8y3urhkyl" path="res://assets/background/color_tile_grid.png" id="4_74mk5"]
 [ext_resource type="PackedScene" uid="uid://blcpsgxirfvtg" path="res://Scenes/mob_path1.tscn" id="4_b15tf"]
-[ext_resource type="Texture2D" uid="uid://cpd8vkrmp2opn" path="res://assets/temporary/mouse.png" id="5_cpb1x"]
 [ext_resource type="Texture2D" uid="uid://cp7px68lbh06d" path="res://assets/sprites/coffee_mug_2.png" id="5_woklo"]
 [ext_resource type="AudioStream" uid="uid://csqn5m6mmtck5" path="res://assets/sounds/One Man Symphony - Destruction Bringer (Free) - 04 Standard Encounter Theme 01.wav" id="6_ghfds"]
 [ext_resource type="Texture2D" uid="uid://c70bvktq3j55m" path="res://assets/sprites/tape_2.png" id="6_pger5"]
@@ -46,7 +45,7 @@ position = Vector2(1, 0)
 script = ExtResource("1_tmp6v")
 mob_scene = ExtResource("2_olyx2")
 mob_path = ExtResource("4_b15tf")
-db_dot = NodePath("cursor_sprite")
+db_dot = NodePath("")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
@@ -79,9 +78,6 @@ scale = Vector2(2, 2)
 texture = ExtResource("6_pger5")
 
 [node name="MobTimer" type="Timer" parent="."]
-
-[node name="cursor_sprite" type="Sprite2D" parent="."]
-texture = ExtResource("5_cpb1x")
 
 [node name="Dummy" type="Node2D" parent="."]
 
