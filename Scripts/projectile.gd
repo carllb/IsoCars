@@ -22,14 +22,17 @@ func initilize(_damage_array: Array[int] = [1,0,0], _target : Node2D = null,
 
 func _physics_process(_delta) -> void:
 	#Get the input direction and handle the movement
-	if is_instance_valid(target):
-		velocity = global_position.direction_to(target.get_child(0).global_position) * Speed
-
-		look_at(target.global_position)
-		move_and_slide()
 	if !is_instance_valid(target):
 		queue_free()
-
+		
+		
+	elif target.get_child_count()==0:
+		queue_free()
+	else:
+		velocity = global_position.direction_to(target.get_child(0).global_position) * Speed
+		look_at(target.global_position)
+		move_and_slide()
+		
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is Car:
