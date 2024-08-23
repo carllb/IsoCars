@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_tmp6v"]
 [ext_resource type="PackedScene" uid="uid://bc3lfejnfa42e" path="res://Scenes/car.tscn" id="2_olyx2"]
 [ext_resource type="Texture2D" uid="uid://bmhn8y3urhkyl" path="res://assets/background/color_tile_grid.png" id="4_74mk5"]
-[ext_resource type="PackedScene" uid="uid://b2w42i85lh8yt" path="res://Scenes/cursor.tscn" id="4_wojk3"]
+[ext_resource type="PackedScene" path="res://Scenes/cursor.tscn" id="4_wojk3"]
 [ext_resource type="Texture2D" uid="uid://cp7px68lbh06d" path="res://assets/sprites/coffee_mug_2.png" id="5_woklo"]
 [ext_resource type="AudioStream" uid="uid://csqn5m6mmtck5" path="res://assets/sounds/One Man Symphony - Destruction Bringer (Free) - 04 Standard Encounter Theme 01.wav" id="6_ghfds"]
 [ext_resource type="Texture2D" uid="uid://c70bvktq3j55m" path="res://assets/sprites/tape_2.png" id="6_pger5"]
