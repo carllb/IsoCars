@@ -3,7 +3,7 @@ extends Node2D
 class_name TDLevel
 
 @export var mob_scene: PackedScene = load("res://Scenes/car.tscn")
-@export var mob_path: PackedScene 
+@export var path_2d :Path2D
 @export var db_dot: Sprite2D 
 
 @export_category("Gold Settings")
@@ -54,17 +54,17 @@ var blank_texture: Texture2D = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	mob_path = Global.mob_path
+	path_2d  = get_node('PathShape2D')
+	current_wave = wave_factory(1)
 	db_dot = $Sprite_2D
-	print(db_dot)
 
 func wave_factory(_level: int) -> Array: # returns [[car, delay], [car, delay], ...]
 	var ret = []
 	# Have parsed all the available levels
-	if len(level_conf["levels"]) <= level - 1:
+	if len(level_conf["levels"]) <= _level - 1:
 		return ret
 	
-	var cur_level = level_conf["levels"][level-1]
+	var cur_level = level_conf["levels"][_level-1]
 	# Parse all of the available enenmies in the level
 	for enemy in cur_level:
 		# enemy may have multiple copies
@@ -76,9 +76,8 @@ func wave_factory(_level: int) -> Array: # returns [[car, delay], [car, delay], 
 			var size = enemy['size']
 			var type = enemy['type']
 			var delay = enemy['delay']
-			var car = car_factory(health_comp, speed_comp, value_comp, size, type)
-			
-			ret.append([car, delay])
+			#var car = car_factory(health_comp, speed_comp, value_comp, size, type)
+			ret.append([health_comp, speed_comp, value_comp, size, type, delay])
 	return ret
 
 func car_factory(health_comp: HealthComponent,
@@ -86,60 +85,71 @@ func car_factory(health_comp: HealthComponent,
 				 value_comp: ValueComponent,
 				size:float,
 				type:String) -> Car:
+					
 	var car: Car = mob_scene.instantiate()
 	car.initilize(health_comp, speed_comp, value_comp, _on_car_death, _on_car_pass, size, type)
-
+	
 	
 	return car
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	
+	#stops game if run out of lives
 	if get_lives() < 1:
 		game_stop = true
 		$MobTimer.stop()
+		
+	#checks if there is no more cars in queue or on the level
+	if current_wave == []  and get_car_count()==0:
+		#checks if it is last level and does not start first level automatically
+		#timer check to avoid skipping first level
+		if len(level_conf["levels"]) > level and level>0 and $MobTimer.time_left==0:			
+			current_wave = wave_factory(level)
+			level+=1
+			gold.add_value(curr_level_reward)
+			curr_level_reward.change_by_percent(level_reward_percent_increase)
+			$MobTimer.start(5)
+		#if no more waves game is won
+		elif len(level_conf["levels"]) <= level:
+			game_won = true
+			game_stop = true
+			# No more levels defined :(
 	
-func get_mob_count() -> int:
+func get_car_count() -> int:
 	var ret = 0
-	for child in get_children():
-		if child is Path2D:
+	#checks for followed path count
+	for child in path_2d.get_children():
+		if child is PathFollow2D:
 			ret += 1
 	return ret
 
 
 func _on_mob_timer_timeout() -> void:
-	
 	if game_stop:
 		# if game is not running don't spawn things
+		$MobTimer.stop()
 		return
-	
-	# Current wave is empty
-	if current_wave == [] and get_mob_count() == 0:
-		if 0 < level && !game_won:
-			gold.add_value(curr_level_reward)
-			curr_level_reward.change_by_percent(level_reward_percent_increase)
-		level+=1
-		current_wave = wave_factory(level)
-		if current_wave == []:
-
-			game_won = true
-			game_stop = true
-			# No more levels defined :(
-
-			level -= 1
-
 	# There are cars left in the current wave
-	else:
-		if current_wave != []:
-			# Create a new instance of the Mob scene.
-			var path = mob_path.instantiate()
-			# Get new car and add to scene
+	if current_wave != []:
+
+			# Get next car statistics
 			var enemy = current_wave.pop_front()
-			var car = enemy[0]
-			var delay = enemy[1]
+			#make a car from those statistics
+			var car = car_factory(enemy[0], enemy[1], enemy[2], enemy[3], enemy[4])
+			#sets delay as last entry in array
+			var delay = enemy[-1]
+			#makes path follow to progress track the car and put it on the track 
+			var path_follow_2d =  PathFollow2D.new()
+			path_follow_2d.rotates =false #fix graphic rotation
+			path_follow_2d.add_child(car)
+			path_2d.add_child(path_follow_2d)
+			#starts a timer until next car would spawn
 			$MobTimer.start(float(delay))
-			#$MobTimer.start(log((car.health.health/200)+1)+1)
-			path.get_child(0).add_child(car)
-			add_child(path)
+			
+		
+
+	
 
 func _on_car_death(reward_gold: ValueComponent):
 	gold.add_value(reward_gold)
@@ -166,7 +176,6 @@ func update_pointer_position(pos: Vector2,
 							 tower: RobotBase) -> bool:
 	var tile_coord: Vector2i = tile_map.local_to_map(pos)
 	var tile_pos: Vector2 = tile_map.map_to_local(tile_coord)
-	print(db_dot)
 	db_dot.position = tile_pos
 	var valid_tile: bool = is_placable_tile(tile_coord)
 	
@@ -220,14 +229,14 @@ func select_tower(tower: RobotBase):
 				button.set_link(tower)
 
 
-func build_normal_car(car):
-	var health = 3
-	var armor = 5
-	var speed = 50
-	var reward = 5
-	var size = 1
-	var health_component: HealthComponent = HealthComponent.new(health, armor)
-	var speed_component: SpeedComponent = SpeedComponent.new(speed)
-	var value_component: ValueComponent = ValueComponent.new(reward)
-	car.initilize(health_component, speed_component, value_component, 
-					_on_car_death, _on_car_pass, size)
+#func build_normal_car(car):
+	#var health = 3
+	#var armor = 5
+	#var speed = 50
+	#var reward = 5
+	#var size = 1
+	#var health_component: HealthComponent = HealthComponent.new(health, armor)
+	#var speed_component: SpeedComponent = SpeedComponent.new(speed)
+	#var value_component: ValueComponent = ValueComponent.new(reward)
+	#car.initilize(health_component, speed_component, value_component, 
+					#_on_car_death, _on_car_pass, size)

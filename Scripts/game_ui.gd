@@ -30,7 +30,6 @@ func clear_selected_tower():
 func _process(_delta):
 	
 	var mpos: Vector2 = game_viewport.get_mouse_position()
-	print(game_viewport.get_mouse_position())
 	if mpos != null:
 		game_scene.update_pointer_position(mpos, current_tower)
 		
@@ -111,5 +110,6 @@ func _on_sub_viewport_container_gui_input(event: InputEvent):
 
 	
 func _on_wave_start_pressed() -> void:
-	game_scene.get_node("MobTimer").start(1)
+	game_scene.get_node("MobTimer").start(0.001)
+	game_scene.level = 1
 	$"MainPanel/VerticalContainer/HorisontalContainer/VBoxContainer/SideBar/GridContainer3/Wave Start".queue_free() # Replace with function body.

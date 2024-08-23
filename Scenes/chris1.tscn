@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=4 uid="uid://b82qquit5h0at"]
+[gd_scene load_steps=10 format=4 uid="uid://b82qquit5h0at"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_b6fge"]
 [ext_resource type="PackedScene" uid="uid://bc3lfejnfa42e" path="res://Scenes/car.tscn" id="2_ujdwo"]
-[ext_resource type="PackedScene" uid="uid://blcpsgxirfvtg" path="res://Scenes/mob_path1.tscn" id="3_667gb"]
 [ext_resource type="Texture2D" uid="uid://bmhn8y3urhkyl" path="res://assets/background/color_tile_grid.png" id="4_uff7d"]
 [ext_resource type="Texture2D" uid="uid://cp7px68lbh06d" path="res://assets/sprites/coffee_mug_2.png" id="5_3h8py"]
 [ext_resource type="Texture2D" uid="uid://c70bvktq3j55m" path="res://assets/sprites/tape_2.png" id="6_2okub"]
@@ -45,7 +44,6 @@ sources/9 = SubResource("TileSetAtlasSource_ufy20")
 position = Vector2(1, 0)
 script = ExtResource("1_b6fge")
 mob_scene = ExtResource("2_ujdwo")
-mob_path = ExtResource("3_667gb")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
@@ -79,10 +77,9 @@ texture = ExtResource("6_2okub")
 
 [node name="MobTimer" type="Timer" parent="."]
 
-[node name="Node" type="Node" parent="."]
+[node name="PathShape2D" parent="." instance=ExtResource("6_8fpl3")]
 
-[node name="Path2D" parent="Node" instance=ExtResource("6_8fpl3")]
-position = Vector2(1, 0)
+[node name="Node" type="Node" parent="."]
 
 [node name="Sprite_2D" parent="." instance=ExtResource("8_wid5q")]
 

@@ -4,7 +4,7 @@
 	  {
 		"health": 5,
 		"armor": 0,
-		"speed": 200,
+		"speed": 100,
 		"reward": 10,
 		"type": "Normal",
 		"copies": 9,

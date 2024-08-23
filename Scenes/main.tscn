@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_tmp6v"]
 [ext_resource type="PackedScene" uid="uid://bc3lfejnfa42e" path="res://Scenes/car.tscn" id="2_olyx2"]
 [ext_resource type="Texture2D" uid="uid://bmhn8y3urhkyl" path="res://assets/background/color_tile_grid.png" id="4_74mk5"]
-[ext_resource type="PackedScene" uid="uid://blcpsgxirfvtg" path="res://Scenes/mob_path1.tscn" id="4_b15tf"]
 [ext_resource type="PackedScene" uid="uid://b2w42i85lh8yt" path="res://Scenes/cursor.tscn" id="4_wojk3"]
 [ext_resource type="Texture2D" uid="uid://cp7px68lbh06d" path="res://assets/sprites/coffee_mug_2.png" id="5_woklo"]
 [ext_resource type="AudioStream" uid="uid://csqn5m6mmtck5" path="res://assets/sounds/One Man Symphony - Destruction Bringer (Free) - 04 Standard Encounter Theme 01.wav" id="6_ghfds"]
@@ -41,18 +40,21 @@ tile_shape = 1
 tile_size = Vector2i(100, 60)
 sources/9 = SubResource("TileSetAtlasSource_ufy20")
 
+[sub_resource type="Curve2D" id="Curve2D_5fber"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -103, -31, 0, 0, 0, 0, 65.345, 69.7534, 0, 0, 0, 0, 343, 241, 0, 0, 0, 0, 107, 389, 0, 0, 0, 0, 304, 505, 0, 0, 0, 0, 754, 242, 0, 0, 0, 0, 994, 391, 0, 0, 0, 0, 807, 508, 0, 0, 0, 0, 1240, 776)
+}
+point_count = 9
+
 [node name="Main" type="Node2D"]
 position = Vector2(1, 0)
 script = ExtResource("1_tmp6v")
 mob_scene = ExtResource("2_olyx2")
-mob_path = ExtResource("4_b15tf")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
 offset_right = 1280.0
 offset_bottom = 720.0
-
-[node name="Sprite_2D" parent="." instance=ExtResource("4_wojk3")]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(0, -1)
@@ -80,14 +82,16 @@ scale = Vector2(2, 2)
 texture = ExtResource("6_pger5")
 
 [node name="MobTimer" type="Timer" parent="."]
-
-[node name="Dummy" type="Node2D" parent="."]
-
-[node name="MobPath2D_Dummy" parent="Dummy" instance=ExtResource("4_b15tf")]
+one_shot = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_ghfds")
 volume_db = -10.895
 autoplay = true
+
+[node name="PathShape2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_5fber")
+
+[node name="Sprite_2D" parent="." instance=ExtResource("4_wojk3")]
 
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
