@@ -77,10 +77,9 @@ texture = ExtResource("6_2okub")
 
 [node name="MobTimer" type="Timer" parent="."]
 
-[node name="Node" type="Node" parent="."]
+[node name="PathShape2D" parent="." instance=ExtResource("6_8fpl3")]
 
-[node name="Path2D" parent="Node" instance=ExtResource("6_8fpl3")]
-position = Vector2(1, 0)
+[node name="Node" type="Node" parent="."]
 
 [node name="Sprite_2D" parent="." instance=ExtResource("8_wid5q")]
 
