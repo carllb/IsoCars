@@ -8,17 +8,18 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_cbrdk"]
 font_size = 54
-font_color = Color(0.737255, 0.752941, 0.85098, 1)
+font_color = Color(0.0862745, 0.180392, 0.298039, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ie7px"]
 font = ExtResource("5_7vxn4")
 font_size = 18
-font_color = Color(0.737255, 0.752941, 0.85098, 1)
+font_color = Color(0.0862745, 0.180392, 0.298039, 1)
 
 [node name="GameOver" type="Node2D"]
 script = ExtResource("1_1stpt")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -37,9 +38,10 @@ anchor_bottom = 1.0
 offset_right = 1012.0
 offset_bottom = 720.0
 grow_vertical = 0
-color = Color(1, 1, 1, 0.623529)
+color = Color(1, 1, 1, 0.376471)
 
 [node name="TextureRect2" type="TextureRect" parent="."]
+visible = false
 offset_left = 250.0
 offset_top = 219.0
 offset_right = 762.0
@@ -65,7 +67,7 @@ offset_left = 400.0
 offset_top = 320.0
 offset_right = 612.0
 offset_bottom = 380.0
-color = Color(0.737255, 0.752941, 0.85098, 1)
+color = Color(0.737255, 0.752941, 0.85098, 0.584314)
 
 [node name="MainMenuButton" type="Button" parent="TextureRect3"]
 layout_mode = 0
