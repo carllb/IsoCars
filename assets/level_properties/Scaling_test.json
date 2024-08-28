@@ -1,0 +1,91 @@
+{
+ "levels": [
+  [
+   {
+    "health": 5.0,
+    "armor": 0.0,
+    "speed": 50,
+    "reward": 5,
+    "type": "Normal",
+    "copies": 10,
+    "delay": 1,
+    "size": 2,
+    "frequency": 1
+   }
+  ],
+  [
+   {
+    "health": 7.0,
+    "armor": 0.0,
+    "speed": 52,
+    "reward": 5,
+    "type": "Normal",
+    "copies": 25,
+    "delay": 1,
+    "size": 2,
+    "frequency": 1
+   }
+  ],
+  [
+   {
+    "health": 9.0,
+    "armor": 0.0,
+    "speed": 55,
+    "reward": 6,
+    "type": "Normal",
+    "copies": 40,
+    "delay": 1,
+    "size": 2,
+    "frequency": 1
+   },
+   {
+    "health": 3.0,
+    "armor": 0.0,
+    "speed": 100,
+    "reward": 30,
+    "type": "Fast",
+    "copies": 5,
+    "delay": 0.5,
+    "size": 1,
+    "frequency": 3
+   }
+  ],
+  [
+   {
+    "health": 11.0,
+    "armor": 0.0,
+    "speed": 57,
+    "reward": 6,
+    "type": "Normal",
+    "copies": 55,
+    "delay": 1,
+    "size": 2,
+    "frequency": 1
+   }
+  ],
+  [
+   {
+    "health": 13.0,
+    "armor": 0.0,
+    "speed": 60,
+    "reward": 7,
+    "type": "Normal",
+    "copies": 70,
+    "delay": 1,
+    "size": 2,
+    "frequency": 1
+   },
+   {
+    "health": 50.0,
+    "armor": 0.0,
+    "speed": 50,
+    "reward": 50,
+    "type": "Boss",
+    "copies": 1,
+    "delay": 4,
+    "size": 3,
+    "frequency": 5
+   }
+  ]
+ ]
+}
