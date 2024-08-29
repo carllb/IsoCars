@@ -18,7 +18,7 @@ class_name TDLevel
 @onready var gold_spent: ValueComponent = ValueComponent.new(0)
 @onready var curr_level_reward: ValueComponent = ValueComponent.new(starting_level_reward)
 
-var level_conf = parse_json("res://assets/level_properties/level.json")
+var level_conf = parse_json("res://assets/level_properties/Scaling_test.json")
 
 var score
 var level = 0
@@ -105,11 +105,12 @@ func _process(_delta: float) -> void:
 		#checks if it is last level and does not start first level automatically
 		#timer check to avoid skipping first level
 		if len(level_conf["levels"]) > level and level>0 and $MobTimer.time_left==0:			
-			current_wave = wave_factory(level)
 			level+=1
+			current_wave = wave_factory(level)			
 			gold.add_value(curr_level_reward)
 			curr_level_reward.change_by_percent(level_reward_percent_increase)
 			$MobTimer.start(5)
+			
 		#if no more waves game is won
 		elif len(level_conf["levels"]) <= level:
 			game_won = true
